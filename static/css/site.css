@@ -505,8 +505,9 @@ pre {
 @media (max-width: 29.99rem) {
   .nav-toggle-text { display: none; }
   .nav-toggle { padding: .6rem .65rem; }
-  .brand-title { font-size: .95rem; }
-  .brand-mark { font-size: .7rem; padding: .4rem .35rem .35rem; }
+  .brand-title { font-size: .82rem; }
+  .brand-mark { font-size: .62rem; padding: .38rem .32rem .34rem; }
+  .header-inner { gap: .4rem .5rem; }
 }
 .nav-toggle-bars { display: inline-grid; gap: 3px; }
 .nav-toggle-bars i { display: block; width: 16px; height: 2px; background: currentColor; }
@@ -516,6 +517,14 @@ html.js .primary-nav.is-open { display: block; }
 @media (min-width: 64rem) {
   html.js .nav-toggle { display: none; }
   html.js .primary-nav { display: block; }
+}
+@media (min-width: 64rem) { .nav-extra { display: none; } }
+
+/* while the navigation is a menu panel there is no room for a theme button
+   in the header, so it lives in the panel instead */
+@media (max-width: 63.99rem) {
+  html.js .header-inner > .theme-toggle { display: none; }
+  html.js .primary-nav.is-open .theme-toggle-inline { display: flex; }
 }
 
 /* the mobile menu becomes a full-width panel */
@@ -564,6 +573,21 @@ html.js .primary-nav.is-open { display: block; }
 .theme-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
 .theme-toggle:hover { background: var(--yellow); color: #17130f; }
 html.js .theme-toggle { display: inline-flex; }
+
+.theme-toggle-inline {
+  display: none;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  gap: .6rem;
+  padding: .6rem .6rem;
+  box-shadow: none;
+  border: 0;
+  background: none;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.theme-toggle-inline .theme-icon { flex: none; }
 
 .theme-icon { width: 20px; height: 20px; fill: currentColor; }
 .theme-icon-moon { display: none; }

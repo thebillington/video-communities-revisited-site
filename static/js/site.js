@@ -24,9 +24,9 @@
 
   /* --- light / dark theme ---------------------------------------------- */
 
-  var themeToggle = document.getElementById("theme-toggle");
+  var themeToggles = document.querySelectorAll(".theme-toggle");
 
-  if (themeToggle) {
+  if (themeToggles.length) {
     var root = document.documentElement;
     var query = window.matchMedia("(prefers-color-scheme: dark)");
     var STORAGE_KEY = "vcr-theme";
@@ -40,8 +40,12 @@
 
     function describe(theme) {
       var other = theme === "dark" ? "light" : "dark";
-      themeToggle.setAttribute("aria-label", "Switch to " + other + " theme");
-      themeToggle.setAttribute("title", "Switch to " + other + " theme");
+      Array.prototype.forEach.call(themeToggles, function (button) {
+        button.setAttribute("aria-label", "Switch to " + other + " theme");
+        button.setAttribute("title", "Switch to " + other + " theme");
+        var text = button.querySelector(".theme-toggle-text");
+        if (text) text.textContent = "Use the " + other + " theme";
+      });
     }
 
     function apply(theme) {
@@ -60,8 +64,10 @@
 
     describe(current());
 
-    themeToggle.addEventListener("click", function () {
-      apply(current() === "dark" ? "light" : "dark");
+    Array.prototype.forEach.call(themeToggles, function (button) {
+      button.addEventListener("click", function () {
+        apply(current() === "dark" ? "light" : "dark");
+      });
     });
 
     /* if the visitor has not chosen, keep following the operating system */
