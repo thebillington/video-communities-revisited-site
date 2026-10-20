@@ -15,6 +15,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="theme-color" content="#f7f3ec">
   <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
+  <link rel="stylesheet" href="../static/css/fonts.css">
   <link rel="stylesheet" href="../static/css/site.css">
 <link rel="stylesheet" href="../static/vendor/leaflet/leaflet.css">
 <link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.css">
@@ -26,8 +27,8 @@
   <p class="sample-notice" role="note">
     <span class="sample-notice-label">Sample content</span>
     This site is still being built. Entries marked <em>sample</em> are
-    placeholders, and bracketed text such as
-    <em>[University]</em> still needs replacing.
+    placeholders.<span class="sample-notice-more">, and bracketed text such as
+    <em>[University]</em> still needs replacing.</span>
   </p>
 
   <header class="site-header">
@@ -39,9 +40,9 @@
           <span class="brand-strap">Histories, legacies and futures of physical media in Britain</span>
         </span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
         <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
-        Menu
+        <span class="nav-toggle-text">Menu</span>
       </button>
       <nav id="primary-nav" class="primary-nav" aria-label="Main">
         <ul>
@@ -172,14 +173,11 @@
             data-status="closed">
           <th scope="row">
             Example Video (sample entry)
-<span class="chip chip-sample">sample</span>          </th>
-          <td>shop</td>
-          <td>Kendal</td>
-          <td>1983–2004</td>
-          <td>closed</td>
-        </tr>
-        <tr class="location-note">
-          <td colspan="5">A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources.</td>
+<span class="chip chip-sample">sample</span><p class="location-desc">A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources.</p>          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Kendal</td>
+          <td data-label="Years">1983–2004</td>
+          <td data-label="Status">closed</td>
         </tr>
         <tr id="place-example-scottish-video-archive"
             data-id="example-scottish-video-archive"
@@ -188,14 +186,11 @@
             data-status="open">
           <th scope="row">
             Example Video Archive (sample entry)
-<span class="chip chip-sample">sample</span><br><a class="table-link" href="https://example.org/archive">Website</a>          </th>
-          <td>archive</td>
-          <td>Glasgow</td>
-          <td>1990–</td>
-          <td>open</td>
-        </tr>
-        <tr class="location-note">
-          <td colspan="5">A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row.</td>
+<span class="chip chip-sample">sample</span><p class="location-desc">A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row.</p><a class="table-link" href="https://example.org/archive">Website</a>          </th>
+          <td data-label="Type">archive</td>
+          <td data-label="Town">Glasgow</td>
+          <td data-label="Years">1990–</td>
+          <td data-label="Status">open</td>
         </tr>
         <tr id="place-example-bristol-tape-club"
             data-id="example-bristol-tape-club"
@@ -204,14 +199,11 @@
             data-status="unknown">
           <th scope="row">
             Example Tape Club (sample entry)
-<span class="chip chip-sample">sample</span>          </th>
-          <td>club</td>
-          <td>Bristol</td>
-          <td>1988–1996</td>
-          <td>unknown</td>
-        </tr>
-        <tr class="location-note">
-          <td colspan="5">A members&#39; club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry.</td>
+<span class="chip chip-sample">sample</span><p class="location-desc">A members&#39; club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry.</p>          </th>
+          <td data-label="Type">club</td>
+          <td data-label="Town">Bristol</td>
+          <td data-label="Years">1988–1996</td>
+          <td data-label="Status">unknown</td>
         </tr>
         <tr id="place-example-wales-collection"
             data-id="example-wales-collection"
@@ -220,14 +212,11 @@
             data-status="unknown">
           <th scope="row">
             Example Private Collection (sample entry)
-<span class="chip chip-sample">sample</span>          </th>
-          <td>collection</td>
-          <td>Cardiff</td>
-          <td>1979–</td>
-          <td>unknown</td>
-        </tr>
-        <tr class="location-note">
-          <td colspan="5">A private Betamax and VHS collection opened to researchers by appointment. Sample row.</td>
+<span class="chip chip-sample">sample</span><p class="location-desc">A private Betamax and VHS collection opened to researchers by appointment. Sample row.</p>          </th>
+          <td data-label="Type">collection</td>
+          <td data-label="Town">Cardiff</td>
+          <td data-label="Years">1979–</td>
+          <td data-label="Status">unknown</td>
         </tr>
         <tr id="place-example-midlands-swap-meet"
             data-id="example-midlands-swap-meet"
@@ -236,14 +225,11 @@
             data-status="open">
           <th scope="row">
             Example Swap Meet (sample entry)
-<span class="chip chip-sample">sample</span>          </th>
-          <td>market</td>
-          <td>Birmingham</td>
-          <td>1996–</td>
-          <td>open</td>
-        </tr>
-        <tr class="location-note">
-          <td colspan="5">A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry.</td>
+<span class="chip chip-sample">sample</span><p class="location-desc">A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry.</p>          </th>
+          <td data-label="Type">market</td>
+          <td data-label="Town">Birmingham</td>
+          <td data-label="Years">1996–</td>
+          <td data-label="Status">open</td>
         </tr>
       </tbody>
     </table>
@@ -271,14 +257,14 @@
         <div class="footer-about">
           <p class="footer-title">Video Communities Revisited</p>
           <p class="footer-text">Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.</p>
-          <p class="footer-text">
-            <a href="../contact/">Contact</a> ·
-            <a href="../accessibility/">Accessibility</a> ·
-            <a href="../privacy/">Privacy and data</a>
-          </p>
+          <ul class="footer-inline">
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="../accessibility/">Accessibility</a></li>
+            <li><a href="../privacy/">Privacy and data</a></li>
+          </ul>
         </div>
         <div class="footer-group">
-          <h2 class="kicker">Project</h2>
+          <h2>Project</h2>
           <ul>
             <li><a href="../about/">About</a></li>
             <li><a href="../team/">Team and partners</a></li>
@@ -288,7 +274,7 @@
           </ul>
         </div>
         <div class="footer-group">
-          <h2 class="kicker">Take part</h2>
+          <h2>Take part</h2>
           <ul>
             <li><a href="../stories/">Stories</a></li>
             <li><a href="../get-involved/">Add a shop or community to the map</a></li>
@@ -296,7 +282,7 @@
           </ul>
         </div>
         <div class="footer-group">
-          <h2 class="kicker">Use and reuse</h2>
+          <h2>Use and reuse</h2>
           <ul>
             <li><a href="../resources/">Resources</a></li>
             <li><a href="../accessibility/">Accessibility</a></li>
@@ -313,7 +299,7 @@
         <p>
           Text licensed <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>;
           map data <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
-          Site built from open data · last build 20 October 2026.
+          Static site built from open data · last build 20 October 2026.
         </p>
       </div>
     </div>
