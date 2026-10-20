@@ -14,7 +14,16 @@
 
 /* --- tokens ------------------------------------------------------------- */
 
+/* The palette lives in three places:
+     1. :root                      the light theme
+     2. @media (prefers-color-scheme: dark)  dark theme when the visitor has
+        not chosen one - the site follows the operating system
+     3. :root.theme-dark           dark theme when the visitor chooses it
+   The dark values are declared once, as --d-* variables, and mapped into
+   the semantic names in rules 2 and 3. That keeps the two themes in step. */
+
 :root {
+  /* light theme: a printed flyer on newsprint */
   --paper: #efe8da;
   --paper-2: #e4dbc9;
   --surface: #fbf7ef;
@@ -47,6 +56,43 @@
   --cta-bg: #171310;
   --cta-fg: #efe8da;
 
+  /* the dark theme, declared once */
+  --d-paper: #0a0c0f;
+  --d-paper-2: #0f1318;
+  --d-surface: #161b22;
+  --d-surface-2: #1c222b;
+  --d-ink: #ece7dc;
+  --d-ink-soft: #b6ad9e;
+  --d-ink-faint: #9c9384;
+  --d-rule: #2b333d;
+  --d-rule-soft: #212831;
+  --d-red: #ff6a45;
+  --d-red-ink: #ff8f70;
+  --d-teal: #3fd3da;
+  --d-teal-ink: #7ae4e9;
+  --d-yellow: #ffc94d;
+  --d-focus: #ffd25e;
+  --d-shadow: rgba(0, 0, 0, .55);
+  --d-shadow-hard: #05070a;
+  --d-scan: rgba(255, 255, 255, .022);
+  --d-crt: rgba(0, 0, 0, .35);
+  --d-shell: #0d1014;
+  --d-shell-edge: #55606c;
+  --d-shell-stripe: #1f9aa3;
+  --d-strip-band: #0d1014;
+  --d-strip-hole: #6f7c88;
+  --d-cta-bg: #12171d;
+  --d-cta-fg: #ece7dc;
+
+  /* pieces that only differ in the dark theme */
+  --footer-bg: #171310;
+  --footer-fg: #efe8da;
+  --footer-muted: rgba(239, 232, 218, .7);
+  --footer-rule: rgba(239, 232, 218, .25);
+  --hero-shadow: #0b6b74;
+  --art-shadow: rgba(23, 19, 16, .22);
+  --tile-filter: none;
+
   --sans: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
 
@@ -58,37 +104,78 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #0a0c0f;
-    --paper-2: #0f1318;
-    --surface: #161b22;
-    --surface-2: #1c222b;
-    --ink: #ece7dc;
-    --ink-soft: #b6ad9e;
-    --ink-faint: #9c9384;
-    --rule: #2b333d;
-    --rule-soft: #212831;
-    --red: #ff6a45;
-    --red-ink: #ff8f70;
-    --teal: #3fd3da;
-    --teal-ink: #7ae4e9;
-    --yellow: #ffc94d;
-    --focus: #ffd25e;
-    --shadow: rgba(0, 0, 0, .55);
-    --shadow-hard: #05070a;
-    --scan: rgba(255, 255, 255, .022);
-    --crt: rgba(0, 0, 0, .35);
-    --shell: #0d1014;
-    --shell-edge: #55606c;
-    --shell-label: #f3ede1;
-    --shell-text: #171310;
-    --shell-window: #e4dccb;
-    --shell-stripe: #1f9aa3;
-    --strip-band: #0d1014;
-    --strip-hole: #6f7c88;
-    --cta-bg: #12171d;
-    --cta-fg: #ece7dc;
+  :root:not(.theme-light) {
+    --paper: var(--d-paper);
+    --paper-2: var(--d-paper-2);
+    --surface: var(--d-surface);
+    --surface-2: var(--d-surface-2);
+    --ink: var(--d-ink);
+    --ink-soft: var(--d-ink-soft);
+    --ink-faint: var(--d-ink-faint);
+    --rule: var(--d-rule);
+    --rule-soft: var(--d-rule-soft);
+    --red: var(--d-red);
+    --red-ink: var(--d-red-ink);
+    --teal: var(--d-teal);
+    --teal-ink: var(--d-teal-ink);
+    --yellow: var(--d-yellow);
+    --focus: var(--d-focus);
+    --shadow: var(--d-shadow);
+    --shadow-hard: var(--d-shadow-hard);
+    --scan: var(--d-scan);
+    --crt: var(--d-crt);
+    --shell: var(--d-shell);
+    --shell-edge: var(--d-shell-edge);
+    --shell-stripe: var(--d-shell-stripe);
+    --strip-band: var(--d-strip-band);
+    --strip-hole: var(--d-strip-hole);
+    --cta-bg: var(--d-cta-bg);
+    --cta-fg: var(--d-cta-fg);
+    --footer-bg: var(--d-surface);
+    --footer-fg: var(--d-ink);
+    --footer-muted: var(--d-ink-faint);
+    --footer-rule: var(--d-rule);
+    --hero-shadow: rgba(63, 211, 218, .3);
+    --art-shadow: rgba(0, 0, 0, .6);
+    --tile-filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.92) saturate(.75);
   }
+}
+
+/* an explicit choice from the visitor always wins */
+:root.theme-dark {
+  --paper: var(--d-paper);
+  --paper-2: var(--d-paper-2);
+  --surface: var(--d-surface);
+  --surface-2: var(--d-surface-2);
+  --ink: var(--d-ink);
+  --ink-soft: var(--d-ink-soft);
+  --ink-faint: var(--d-ink-faint);
+  --rule: var(--d-rule);
+  --rule-soft: var(--d-rule-soft);
+  --red: var(--d-red);
+  --red-ink: var(--d-red-ink);
+  --teal: var(--d-teal);
+  --teal-ink: var(--d-teal-ink);
+  --yellow: var(--d-yellow);
+  --focus: var(--d-focus);
+  --shadow: var(--d-shadow);
+  --shadow-hard: var(--d-shadow-hard);
+  --scan: var(--d-scan);
+  --crt: var(--d-crt);
+  --shell: var(--d-shell);
+  --shell-edge: var(--d-shell-edge);
+  --shell-stripe: var(--d-shell-stripe);
+  --strip-band: var(--d-strip-band);
+  --strip-hole: var(--d-strip-hole);
+  --cta-bg: var(--d-cta-bg);
+  --cta-fg: var(--d-cta-fg);
+  --footer-bg: var(--d-surface);
+  --footer-fg: var(--d-ink);
+  --footer-muted: var(--d-ink-faint);
+  --footer-rule: var(--d-rule);
+  --hero-shadow: rgba(63, 211, 218, .3);
+  --art-shadow: rgba(0, 0, 0, .6);
+  --tile-filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.92) saturate(.75);
 }
 
 /* --- reset -------------------------------------------------------------- */
@@ -459,6 +546,30 @@ html.js .primary-nav.is-open { display: block; }
   }
 }
 
+/* --- theme toggle ------------------------------------------------------- */
+
+.theme-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--surface);
+  color: var(--ink);
+  border: var(--border) solid var(--ink);
+  box-shadow: 3px 3px 0 var(--shadow);
+  padding: 0;
+  cursor: pointer;
+}
+.theme-toggle:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow); }
+.theme-toggle:hover { background: var(--yellow); color: #17130f; }
+html.js .theme-toggle { display: inline-flex; }
+
+.theme-icon { width: 20px; height: 20px; fill: currentColor; }
+.theme-icon-moon { display: none; }
+:root[data-theme="dark"] .theme-icon-sun { display: none; }
+:root[data-theme="dark"] .theme-icon-moon { display: block; }
+
 /* --- sample notice ------------------------------------------------------ */
 
 .sample-notice {
@@ -505,11 +616,8 @@ html.js .primary-nav.is-open { display: block; }
   .hero-inner { grid-template-columns: 1.3fr .7fr; }
 }
 .hero-title {
-  text-shadow: 3px 3px 0 var(--teal);
+  text-shadow: 3px 3px 0 var(--hero-shadow);
   margin-bottom: .75rem;
-}
-@media (prefers-color-scheme: dark) {
-  .hero-title { text-shadow: 3px 3px 0 rgba(63, 211, 218, .3); }
 }
 .hero-standfirst {
   font-size: 1.1rem;
@@ -531,7 +639,7 @@ html.js .primary-nav.is-open { display: block; }
   flex-direction: column;
   align-items: center;
   gap: .75rem;
-  filter: drop-shadow(6px 6px 0 var(--shadow));
+  filter: drop-shadow(6px 6px 0 var(--art-shadow));
 }
 .cassette { width: 100%; max-width: 360px; display: block; }
 .cassette-caption {
@@ -542,10 +650,6 @@ html.js .primary-nav.is-open { display: block; }
   color: var(--ink-faint);
   text-align: center;
 }
-@media (prefers-color-scheme: dark) {
-  .hero-art { filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, .6)); }
-}
-
 /* on-screen display badge, as on a tape deck */
 @media (max-width: 47.99rem) {
   .osd {
@@ -1101,10 +1205,8 @@ html.js .primary-nav.is-open { display: block; }
   padding: .1rem .35rem;
 }
 
-/* night mode map tiles */
-@media (prefers-color-scheme: dark) {
-  .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.92) contrast(.92) saturate(.75); }
-}
+/* the map tiles are inverted in the dark theme, so the map belongs to it */
+.leaflet-tile-pane { filter: var(--tile-filter); }
 
 /* --- forms --------------------------------------------------------------- */
 
@@ -1167,29 +1269,28 @@ html.js .primary-nav.is-open { display: block; }
 .site-footer {
   margin-top: clamp(2.5rem, 6vw, 4rem);
   padding-block: clamp(2rem, 5vw, 3rem) 1.5rem;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--footer-bg);
+  color: var(--footer-fg);
   font-size: .92rem;
 }
 @media (prefers-color-scheme: dark) {
-  .site-footer { background: var(--surface); color: var(--ink); border-top: 5px solid var(--teal); }
+  :root:not(.theme-light) .site-footer { border-top: 5px solid var(--teal); }
 }
+:root.theme-dark .site-footer { border-top: 5px solid var(--teal); }
 .footer-grid { display: grid; gap: 1.75rem; }
 @media (min-width: 48rem) { .footer-grid { grid-template-columns: 1.6fr repeat(3, 1fr); } }
 .footer-title { font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; }
-.footer-text { color: color-mix(in srgb, var(--paper) 78%, transparent); max-width: 36ch; }
+.footer-text { color: var(--footer-muted); max-width: 36ch; }
 .footer-inline { list-style: none; margin: .75rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 1rem; }
 .footer-inline a {
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: var(--paper);
+  color: var(--footer-fg);
   text-decoration: none;
-  border-bottom: 1px solid color-mix(in srgb, var(--paper) 30%, transparent);
+  border-bottom: 1px solid var(--footer-rule);
 }
-@media (prefers-color-scheme: dark) { .footer-inline a { color: var(--ink); } }
 .footer-inline a:hover { color: var(--yellow); }
-@media (prefers-color-scheme: dark) { .footer-text { color: var(--ink-soft); } }
 .footer-group h2 {
   font-family: var(--mono);
   font-size: .75rem;
@@ -1205,17 +1306,16 @@ html.js .primary-nav.is-open { display: block; }
   display: inline-flex;
   align-items: center;
   min-height: 44px;
-  color: var(--paper);
+  color: var(--footer-fg);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-@media (prefers-color-scheme: dark) { .footer-group a { color: var(--ink); } }
 .footer-group a:hover { color: var(--yellow); border-bottom-color: var(--yellow); }
 .footer-base {
   margin-top: 2.25rem;
   padding-top: 1.25rem;
-  border-top: 1px solid color-mix(in srgb, var(--paper) 25%, transparent);
-  color: color-mix(in srgb, var(--paper) 65%, transparent);
+  border-top: 1px solid var(--footer-rule);
+  color: var(--footer-muted);
   font-family: var(--mono);
   font-size: .75rem;
   line-height: 1.7;
@@ -1223,9 +1323,6 @@ html.js .primary-nav.is-open { display: block; }
   flex-wrap: wrap;
   gap: .5rem 2rem;
   justify-content: space-between;
-}
-@media (prefers-color-scheme: dark) {
-  .footer-base { color: var(--ink-faint); border-top-color: var(--rule); }
 }
 .footer-base p { margin: 0; max-width: 52ch; }
 .footer-base a { color: inherit; padding: 4px 3px; }

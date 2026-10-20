@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  /* --- mobile menu ---------------------------------------------------- */
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("primary-nav");
 
@@ -18,5 +20,61 @@
         toggle.focus();
       }
     });
+  }
+
+  /* --- light / dark theme ---------------------------------------------- */
+
+  var themeToggle = document.getElementById("theme-toggle");
+
+  if (themeToggle) {
+    var root = document.documentElement;
+    var query = window.matchMedia("(prefers-color-scheme: dark)");
+    var STORAGE_KEY = "vcr-theme";
+
+    /* the theme in force right now */
+    function current() {
+      if (root.classList.contains("theme-dark")) return "dark";
+      if (root.classList.contains("theme-light")) return "light";
+      return query.matches ? "dark" : "light";
+    }
+
+    function describe(theme) {
+      var other = theme === "dark" ? "light" : "dark";
+      themeToggle.setAttribute("aria-label", "Switch to " + other + " theme");
+      themeToggle.setAttribute("title", "Switch to " + other + " theme");
+    }
+
+    function apply(theme) {
+      root.classList.remove("theme-dark", "theme-light");
+      root.classList.add("theme-" + theme);
+      root.setAttribute("data-theme", theme);
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute("content", theme === "dark" ? "#0a0c0f" : "#efe8da");
+      try {
+        window.localStorage.setItem(STORAGE_KEY, theme);
+      } catch (error) {
+        /* storage is not available; the choice lasts for this page only */
+      }
+      describe(theme);
+    }
+
+    describe(current());
+
+    themeToggle.addEventListener("click", function () {
+      apply(current() === "dark" ? "light" : "dark");
+    });
+
+    /* if the visitor has not chosen, keep following the operating system */
+    var onSystemChange = function () {
+      if (root.classList.contains("theme-dark") || root.classList.contains("theme-light")) return;
+      var theme = query.matches ? "dark" : "light";
+      root.setAttribute("data-theme", theme);
+      describe(theme);
+    };
+    if (query.addEventListener) {
+      query.addEventListener("change", onSystemChange);
+    } else if (query.addListener) {
+      query.addListener(onSystemChange);
+    }
   }
 })();

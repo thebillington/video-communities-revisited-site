@@ -3,7 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+  <meta name="theme-color" content="#efe8da">
+  <script>
+    /* Applied before the page paints, so the chosen theme never flashes. */
+    (function () {
+      var root = document.documentElement;
+      root.className = root.className.replace('no-js', 'js');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var stored = null;
+      try { stored = window.localStorage.getItem('vcr-theme'); } catch (e) { /* private mode */ }
+      if (stored === 'dark' || stored === 'light') {
+        root.classList.add('theme-' + stored);
+        root.setAttribute('data-theme', stored);
+      } else {
+        root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      }
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute('content', root.getAttribute('data-theme') === 'dark' ? '#0a0c0f' : '#efe8da');
+      }
+    })();
+  </script>
   <title>Events · Video Communities Revisited</title>
   <meta name="description" content="Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.">
   <link rel="canonical" href="https://thebillington.co.uk/video-communities-revisited-site/events/">
@@ -13,7 +33,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thebillington.co.uk/video-communities-revisited-site/events/">
   <meta name="twitter:card" content="summary">
-  <meta name="theme-color" content="#f7f3ec">
   <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
   <link rel="stylesheet" href="../static/css/fonts.css">
   <link rel="stylesheet" href="../static/css/site.css">
@@ -66,6 +85,17 @@
           </li>
         </ul>
       </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5"/>
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M19.8 4.2l-2.9 2.9M7.1 16.9l-2.9 2.9"/>
+          </g>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+        </svg>
+      </button>
     </div>
   </header>
 
