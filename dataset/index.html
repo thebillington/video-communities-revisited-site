@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efe8da">
+  <script>
+    /* Applied before the page paints, so the chosen theme never flashes. */
+    (function () {
+      var root = document.documentElement;
+      root.className = root.className.replace('no-js', 'js');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var stored = null;
+      try { stored = window.localStorage.getItem('vcr-theme'); } catch (e) { /* private mode */ }
+      if (stored === 'dark' || stored === 'light') {
+        root.classList.add('theme-' + stored);
+        root.setAttribute('data-theme', stored);
+      } else {
+        root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      }
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute('content', root.getAttribute('data-theme') === 'dark' ? '#0a0c0f' : '#efe8da');
+      }
+    })();
+  </script>
+  <title>The dataset · Video Communities Revisited</title>
+  <meta name="description" content="Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.">
+  <link rel="canonical" href="https://thebillington.co.uk/video-communities-revisited-site/dataset/">
+  <meta property="og:site_name" content="Video Communities Revisited">
+  <meta property="og:title" content="The dataset">
+  <meta property="og:description" content="Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thebillington.co.uk/video-communities-revisited-site/dataset/">
+  <meta name="twitter:card" content="summary">
+  <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
+  <link rel="stylesheet" href="../static/css/fonts.css?v=9be13255">
+  <link rel="stylesheet" href="../static/css/site.css?v=9be13255">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Video Communities Revisited: a dataset of video communities in Britain",
+  "description": "Video shops, rental businesses, clubs, swap meets, archives and collections recorded in Britain, with the dates they were trading and the source of each record.",
+  "url": "https://thebillington.co.uk/video-communities-revisited-site/dataset/",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "creator": { "@type": "Organization", "name": "Video Communities Revisited" },
+  "isAccessibleForFree": true,
+  "keywords": "video rental, VHS, video shops, Britain, physical media, local history",
+  "distribution": [
+    { "@type": "DataDownload", "encodingFormat": "application/geo+json", "contentUrl": "https://thebillington.co.uk/video-communities-revisited-site/map/locations.geojson" },
+    { "@type": "DataDownload", "encodingFormat": "text/csv", "contentUrl": "https://thebillington.co.uk/video-communities-revisited-site/map/locations.csv" },
+    { "@type": "DataDownload", "encodingFormat": "application/json", "contentUrl": "https://thebillington.co.uk/video-communities-revisited-site/map/locations.json" }
+  ]
+}
+</script>
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <p class="sample-notice" role="note">
+    <span class="sample-notice-label">Sample content</span>
+    This site is still being built. Entries marked <em>sample</em> are
+    placeholders.<span class="sample-notice-more">, and bracketed text such as
+    <em>[University]</em> still needs replacing.</span>
+  </p>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true">VCR</span>
+        <span class="brand-text">
+          <span class="brand-title">Video Communities Revisited</span>
+          <span class="brand-strap">Histories, legacies and futures of physical media in Britain</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li>
+            <a href="../about/">About</a>
+          </li>
+          <li>
+            <a href="../research/">Research</a>
+          </li>
+          <li>
+            <a href="../outputs/">Outputs</a>
+          </li>
+          <li>
+            <a href="../stories/">Stories</a>
+          </li>
+          <li>
+            <a href="../map/">Map</a>
+          </li>
+          <li>
+            <a href="../events/">Events</a>
+          </li>
+          <li>
+            <a href="../get-involved/">Get involved</a>
+          </li>
+        </ul>
+        <div class="nav-extra">
+          <button class="theme-toggle theme-toggle-inline" type="button">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="5"/>
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M19.8 4.2l-2.9 2.9M7.1 16.9l-2.9 2.9"/>
+              </g>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+            </svg>
+            <span class="theme-toggle-text">Use the dark theme</span>
+          </button>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5"/>
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M19.8 4.2l-2.9 2.9M7.1 16.9l-2.9 2.9"/>
+          </g>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+<div class="wrap">
+  <header class="page-header">
+    <p class="kicker">The data</p>
+    <h1 class="page-title">The dataset</h1>
+    <p class="page-subtitle">
+      247 places, with the years they were trading and the
+      source of every record. Free to use, free to cite, and built to be
+      checked.
+    </p>
+  </header>
+
+  <section class="band-tight">
+    <h2 class="section-title">Download</h2>
+    <p class="button-row">
+      <a class="btn" href="../map/locations.geojson">GeoJSON</a>
+      <a class="btn" href="../map/locations.csv">CSV</a>
+      <a class="btn" href="../map/locations.json">JSON</a>
+    </p>
+    <p class="dataset-licence">
+      The curated data is released under
+      <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>:
+      no attribution required, though we would be glad of it. The Companies
+      House records it contains are
+      <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">OGL v3</a>,
+      and the OpenStreetMap layer is
+      <a rel="license" href="https://www.openstreetmap.org/copyright">ODbL 1.0</a>
+      and is kept separate for that reason.
+    </p>
+  </section>
+
+  <section class="band-tight">
+    <h2 class="section-title">What is in a record</h2>
+    <div class="field-table">
+      <div class="field-row">
+        <p class="field-name"><code>id</code></p>
+        <p class="field-about">A short unique slug for the place. It is also the anchor of its entry on the map.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>name</code></p>
+        <p class="field-about">What the place was called, as the source gives it.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>type</code></p>
+        <p class="field-about">shop, chain, club, market, archive, collection, label, venue or trace.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>status</code></p>
+        <p class="field-about">open if the source says it was trading, closed if it was not, unknown if nobody said.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>active_from / active_to</code></p>
+        <p class="field-about">The years it was trading, as far as they are known.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>date_basis</code></p>
+        <p class="field-about">register, reported, current or unknown: how the years were established.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>incorporated / dissolved</code></p>
+        <p class="field-about">The dates a company was registered and closed, from Companies House.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>address / town / region / postcode</code></p>
+        <p class="field-about">Where it was. For a company this is the registered office.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>lat / lng</code></p>
+        <p class="field-about">The position, geocoded from the postcode or the address.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>sic_codes</code></p>
+        <p class="field-about">The standard industrial classification, where the record comes from the register.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>source / source_url / retrieved</code></p>
+        <p class="field-about">Where the record came from, the link to it, and when we took it.</p>
+      </div>
+      <div class="field-row">
+        <p class="field-name"><code>confidence / verified</code></p>
+        <p class="field-about">How much we trust the record, and whether a person has checked it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-tight">
+    <h2 class="section-title">How the dates work</h2>
+    <div class="prose">
+      <p>
+        Every record says when it was trading, and how we know:
+      </p>
+      <ul>
+        <li>
+          <strong>register</strong> - the company was incorporated on one
+          date and dissolved on another. Exact, and from
+          <a href="https://find-and-update.company-information.service.gov.uk/">Companies House</a>.
+        </li>
+        <li>
+          <strong>reported</strong> - a community source gave a year or a
+          range of years. Usually right, occasionally approximate.
+        </li>
+        <li>
+          <strong>current</strong> - the source said the place was trading
+          when it was written, so the year is the year of the source.
+        </li>
+        <li>
+          <strong>unknown</strong> - nothing was recorded. These entries are
+          in the list but hidden whenever you filter by year, and the map says
+          how many it has hidden.
+        </li>
+      </ul>
+      <p>
+        The <a href="../map/">map</a> filters by these years, so
+        you can ask what was trading in Britain in 1985, or in 2015, and see
+        where it was.
+      </p>
+    </div>
+  </section>
+
+  <section class="band-tight band-tint">
+    <h2 class="section-title">Citing this dataset</h2>
+    <div class="prose">
+      <p>
+        Please cite the dataset rather than the website, and cite the record
+        you used. A reference will look like this:
+      </p>
+      <p class="citation">
+        Video Communities Revisited (2026). <em>Video Communities Revisited:
+        a dataset of video communities in Britain</em>, version 1.0.
+        [DOI to be assigned].
+      </p>
+      <p>
+        A DOI is being arranged so the dataset can be cited permanently. The
+        <a href="../sources/">sources page</a> lists where each
+        record came from, and every record carries its own source and the
+        date it was retrieved.
+      </p>
+      <p>
+        Corrections are welcome and will be credited: mail
+        <a href="mailto:hello@example.ac.uk">hello@example.ac.uk</a> or use the
+        <a href="../get-involved/">contribution form</a>.
+      </p>
+    </div>
+  </section>
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <p class="footer-title">Video Communities Revisited</p>
+          <p class="footer-text">Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.</p>
+          <ul class="footer-inline">
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="../accessibility/">Accessibility</a></li>
+            <li><a href="../privacy/">Privacy and data</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Project</h2>
+          <ul>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../team/">Team and partners</a></li>
+            <li><a href="../research/">Research</a></li>
+            <li><a href="../outputs/">Outputs</a></li>
+            <li><a href="../news/">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Take part</h2>
+          <ul>
+            <li><a href="../stories/">Stories</a></li>
+            <li><a href="../get-involved/">Add a shop or community to the map</a></li>
+            <li><a href="../events/">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Use and reuse</h2>
+          <ul>
+            <li><a href="../resources/">Resources</a></li>
+            <li><a href="../accessibility/">Accessibility</a></li>
+            <li><a href="../privacy/">Privacy and data</a></li>
+            <li><a href="../dataset/">The dataset</a></li>
+            <li><a href="../sources/">Sources</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>
+          Funded by the Arts and Humanities Research Council (AHRC). Award [Award reference, e.g. AH/X000000/1].
+          Views are the project's own.
+        </p>
+        <p>
+          Text licensed <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>;
+          map data <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
+          Static site built from open data · last build 20 October 2026.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../static/js/site.js?v=9be13255" defer></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#efe8da">
+  <script>
+    /* Applied before the page paints, so the chosen theme never flashes. */
+    (function () {
+      var root = document.documentElement;
+      root.className = root.className.replace('no-js', 'js');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var stored = null;
+      try { stored = window.localStorage.getItem('vcr-theme'); } catch (e) { /* private mode */ }
+      if (stored === 'dark' || stored === 'light') {
+        root.classList.add('theme-' + stored);
+        root.setAttribute('data-theme', stored);
+      } else {
+        root.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      }
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.setAttribute('content', root.getAttribute('data-theme') === 'dark' ? '#0a0c0f' : '#efe8da');
+      }
+    })();
+  </script>
+  <title>Sources · Video Communities Revisited</title>
+  <meta name="description" content="Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.">
+  <link rel="canonical" href="https://thebillington.co.uk/video-communities-revisited-site/sources/">
+  <meta property="og:site_name" content="Video Communities Revisited">
+  <meta property="og:title" content="Sources">
+  <meta property="og:description" content="Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thebillington.co.uk/video-communities-revisited-site/sources/">
+  <meta name="twitter:card" content="summary">
+  <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
+  <link rel="stylesheet" href="../static/css/fonts.css?v=9be13255">
+  <link rel="stylesheet" href="../static/css/site.css?v=9be13255">
+</head>
+<body class="">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <p class="sample-notice" role="note">
+    <span class="sample-notice-label">Sample content</span>
+    This site is still being built. Entries marked <em>sample</em> are
+    placeholders.<span class="sample-notice-more">, and bracketed text such as
+    <em>[University]</em> still needs replacing.</span>
+  </p>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="../">
+        <span class="brand-mark" aria-hidden="true">VCR</span>
+        <span class="brand-text">
+          <span class="brand-title">Video Communities Revisited</span>
+          <span class="brand-strap">Histories, legacies and futures of physical media in Britain</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+        <span class="nav-toggle-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="nav-toggle-text">Menu</span>
+      </button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Main">
+        <ul>
+          <li>
+            <a href="../about/">About</a>
+          </li>
+          <li>
+            <a href="../research/">Research</a>
+          </li>
+          <li>
+            <a href="../outputs/">Outputs</a>
+          </li>
+          <li>
+            <a href="../stories/">Stories</a>
+          </li>
+          <li>
+            <a href="../map/">Map</a>
+          </li>
+          <li>
+            <a href="../events/">Events</a>
+          </li>
+          <li>
+            <a href="../get-involved/">Get involved</a>
+          </li>
+        </ul>
+        <div class="nav-extra">
+          <button class="theme-toggle theme-toggle-inline" type="button">
+            <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <circle cx="12" cy="12" r="5"/>
+              <g stroke="currentColor" stroke-width="2" stroke-linecap="square">
+                <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M19.8 4.2l-2.9 2.9M7.1 16.9l-2.9 2.9"/>
+              </g>
+            </svg>
+            <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+            </svg>
+            <span class="theme-toggle-text">Use the dark theme</span>
+          </button>
+        </div>
+      </nav>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5"/>
+          <g stroke="currentColor" stroke-width="2" stroke-linecap="square">
+            <path d="M12 1v4M12 19v4M1 12h4M19 12h4M4.2 4.2l2.9 2.9M16.9 16.9l2.9 2.9M19.8 4.2l-2.9 2.9M7.1 16.9l-2.9 2.9"/>
+          </g>
+        </svg>
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+<div class="wrap">
+  <header class="page-header">
+    <p class="kicker">Where the data comes from</p>
+    <h1 class="page-title">Sources</h1>
+    <p class="page-subtitle">
+      The map is assembled from directories that already exist. This page
+      names them, says what we took and under what terms, and points you at
+      the places where you can add something yourself.
+    </p>
+  </header>
+
+  <section class="band-tight">
+    <div class="prose">
+      <p>
+        Two rules govern everything below. We take facts - names, towns,
+        addresses, dates - and not other people's prose or photographs. And
+        we link back, so the people who did the work get the credit and the
+        traffic.
+      </p>
+      <p>
+        Where a source can be collected from automatically we do that, slowly
+        and politely, obeying its <code>robots.txt</code>. Where it cannot -
+        because it is a closed social group, or behind a login, or because
+        the site asks automated visitors not to come - a person reads it and
+        enters the records by hand.
+      </p>
+    </div>
+  </section>
+
+  <section class="band-tight">
+    <h2 class="section-title">The directories</h2>
+    <div class="source-list">
+      <article class="card source-card">
+        <p class="kicker kicker--plain">community blog · collected automatically</p>
+        <h3>
+<a href="https://hamandeggerfiles.blogspot.com/" rel="noopener">The Ham and Egger Files</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> All rights reserved. Used for research with attribution and a link back.</p>
+<p>A monthly survey of video shops still trading in Britain, with notes on former shops, ghost signs and video-shop-themed venues. The closest thing to a live national directory that exists.</p>        <p class="source-contribute">
+          <a href="https://hamandeggerfiles.blogspot.com/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">community blog · collected automatically</p>
+        <h3>
+<a href="https://vivavhs.co.uk/ex-rental-a-video-store-graveyard/" rel="noopener">VivaVHS: Ex-Rental - A Video Store Graveyard</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> All rights reserved. Used for research with attribution and a link back.</p>
+<p>Former shops identified from the address stickers on ex-rental tapes, with street address and postcode. The most geocodable historical list there is.</p>        <p class="source-contribute">
+          <a href="https://vivavhs.co.uk/ex-rental-a-video-store-graveyard/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">community blog · collected automatically</p>
+        <h3>
+<a href="https://futureshockvideo.biz/active-video-stores" rel="noopener">Future Shock Video - Index of Active Video Rental Stores</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> All rights reserved. Used for research with attribution and a link back.</p>
+<p>A working list of shops that still rent physical media, mostly North American, but it invites additions from anywhere in the world.</p>        <p class="source-contribute">
+          <a href="https://futureshockvideo.biz/active-video-stores" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">open data · collected automatically</p>
+        <h3>
+<a href="https://find-and-update.company-information.service.gov.uk/" rel="noopener">Companies House</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Open Government Licence v3.0 (contains public sector information)</p>
+<p>The register of every company that has ever traded in Britain. The coverage layer of the dataset: SIC 77220 &#34;Renting of video tapes and disks&#34; and its predecessor 77182 &#34;Video rental&#34; identify video rental businesses, and each record carries the registered address and the incorporation and dissolution dates. Collected with tools/fetch_companies_house.py, which uses the official API when a production key is available.</p>        <p class="source-contribute">
+          <a href="https://find-and-update.company-information.service.gov.uk/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">open data · collected automatically</p>
+        <h3>
+<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Open Database License (ODbL) 1.0 - attribution and share-alike</p>
+<p>Places tagged shop=video, shop=dvd or shop=movies, and video clubs. Held as a separate layer with its own licence, never merged into the curated dataset, and shown on the map with attribution.</p>        <p class="source-contribute">
+          <a href="https://www.openstreetmap.org/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">forum · read by hand</p>
+        <h3>
+<a href="https://tapeheads.co.uk/" rel="noopener">Tapeheads</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Forum posts are the contributors&#39; own; used with attribution.</p>
+<p>The busiest British forum for tape collectors. Threads about shops, repairs and tapes for sale are a rich source of names, towns and dates.</p>        <p class="source-contribute">
+          <a href="https://tapeheads.co.uk/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">forum · read by hand</p>
+        <h3>
+<a href="https://www.vintage-radio.net/forum/" rel="noopener">UK Vintage Radio Repair and Restoration Forum</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Forum posts are the contributors&#39; own; used with attribution.</p>
+<p>Long threads remembering local rental shops, with names and towns but usually no address. A good source for the historical strand.</p>        <p class="source-contribute">
+          <a href="https://www.vintage-radio.net/forum/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">social · read by hand</p>
+        <h3>
+<a href="https://www.reddit.com/r/vhs/" rel="noopener">Reddit: r/vhs</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Reddit content is user-generated; used with attribution under the Reddit terms.</p>
+<p>Threads ask which rental shops still exist and which have closed. Reddit is not scraped: the threads are read by a person and the shops are added by hand, which is what Reddit&#39;s terms ask for.</p>        <p class="source-contribute">
+          <a href="https://www.reddit.com/r/vhs/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">social · read by hand</p>
+        <h3>
+<a href="https://www.facebook.com/groups/" rel="noopener">Facebook group: VHS Swap UK</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Group members&#39; posts; used with attribution.</p>
+<p>An active group for swapping tapes across Britain. Closed group, so nothing is fetched: a member of the project reads it and adds entries.</p>        <p class="source-contribute">
+          <a href="https://www.facebook.com/groups/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">photo archive · read by hand</p>
+        <h3>
+<a href="https://photoarchive.merton.gov.uk/" rel="noopener">Merton Memories Photographic Archive</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Borough of Merton; used for research with attribution.</p>
+<p>Local authority photographs of shops, with dates and street addresses. A model for the kind of council archive the project could work with.</p>        <p class="source-contribute">
+          <a href="https://photoarchive.merton.gov.uk/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">trade press · read by hand</p>
+        <h3>
+<a href="https://www.worldradiohistory.com/" rel="noopener">World Radio History: Video Business and Video Viewer</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Public archive of scanned trade press; use with attribution.</p>
+<p>Scanned UK trade magazines from the video boom, 1980s to 1990s, with distributor dealer lists and news of openings and closures. The richest archival source for the historical strand, and machine readable.</p>        <p class="source-contribute">
+          <a href="https://www.worldradiohistory.com/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+      <article class="card source-card">
+        <p class="kicker kicker--plain">trade press · read by hand</p>
+        <h3>
+<a href="https://www.bva.org.uk/" rel="noopener">British Video Association directory</a>
+        </h3>
+        <p class="source-licence"><span class="popup-label">Terms</span> Trade body directory; used with attribution.</p>
+<p>The trade body for UK physical media. Its directory lists distributors, retailers and wholesalers, and the archives run from 1980 onwards.</p>        <p class="source-contribute">
+          <a href="https://www.bva.org.uk/" rel="noopener">Add something to this source →</a>
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="band-tight band-tint">
+    <h2 class="section-title">Add a place yourself</h2>
+    <div class="prose">
+      <p>
+        If a shop, club, swap meet, archive or collection is missing, we want
+        to hear about it - and we would rather hear about it from you than
+        find it in a search engine. The
+        <a href="../get-involved/">contribution form</a> asks for
+        the name, the town, roughly when it traded, and whatever you
+        remember. The <a href="../map/">map</a> is the quickest
+        way to see what is already there.
+      </p>
+      <p>
+        If you maintain one of the directories above and would rather we did
+        not scrape it, say so and we will stop and ask the people who run it
+        instead.
+      </p>
+    </div>
+  </section>
+</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <p class="footer-title">Video Communities Revisited</p>
+          <p class="footer-text">Video Communities Revisited is a research project on the role of physical screen media — VHS, Betamax, DVD, rental shops, collectors, swap meets and boutique labels — in forming communities in Britain, past and present.</p>
+          <ul class="footer-inline">
+            <li><a href="../contact/">Contact</a></li>
+            <li><a href="../accessibility/">Accessibility</a></li>
+            <li><a href="../privacy/">Privacy and data</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Project</h2>
+          <ul>
+            <li><a href="../about/">About</a></li>
+            <li><a href="../team/">Team and partners</a></li>
+            <li><a href="../research/">Research</a></li>
+            <li><a href="../outputs/">Outputs</a></li>
+            <li><a href="../news/">News</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Take part</h2>
+          <ul>
+            <li><a href="../stories/">Stories</a></li>
+            <li><a href="../get-involved/">Add a shop or community to the map</a></li>
+            <li><a href="../events/">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-group">
+          <h2>Use and reuse</h2>
+          <ul>
+            <li><a href="../resources/">Resources</a></li>
+            <li><a href="../accessibility/">Accessibility</a></li>
+            <li><a href="../privacy/">Privacy and data</a></li>
+            <li><a href="../dataset/">The dataset</a></li>
+            <li><a href="../sources/">Sources</a></li>
+            <li><a href="../contact/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>
+          Funded by the Arts and Humanities Research Council (AHRC). Award [Award reference, e.g. AH/X000000/1].
+          Views are the project's own.
+        </p>
+        <p>
+          Text licensed <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>;
+          map data <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
+          Static site built from open data · last build 20 October 2026.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../static/js/site.js?v=9be13255" defer></script>
+</body>
+</html>

@@ -1329,18 +1329,32 @@ html.js .theme-toggle { display: inline-flex; }
   .location-table .location-desc { max-width: none; }
 }
 
-/* leaflet, tuned to the design */
+/* Leaflet, tuned to the design.
+   Leaflet's own stylesheet is loaded after ours, so these rules are scoped
+   to .leaflet-container to win on specificity: without that the popup keeps
+   its white background and light text vanishes on it. */
 .leaflet-container { font-family: var(--sans); background: var(--paper-2); }
-.leaflet-popup-content-wrapper {
+.leaflet-container .leaflet-popup-content-wrapper {
   border: var(--border) solid var(--ink);
   border-radius: 0;
   background: var(--surface);
   color: var(--ink);
   box-shadow: 4px 4px 0 var(--shadow);
 }
-.leaflet-popup-content { font-size: .9rem; margin: .8rem 1rem; }
-.leaflet-popup-tip { border: 2px solid var(--ink); background: var(--surface); }
-.leaflet-control-zoom a {
+.leaflet-container .leaflet-popup-content {
+  font-size: .9rem;
+  margin: .9rem 1rem;
+  color: var(--ink);
+}
+.leaflet-container .leaflet-popup-tip {
+  border: var(--border) solid var(--ink);
+  background: var(--surface);
+}
+.leaflet-container .leaflet-popup-close-button {
+  color: var(--ink) !important;
+  padding: .6rem .7rem 0 0;
+}
+.leaflet-container .leaflet-control-zoom a {
   border-radius: 0 !important;
   border: var(--border) solid var(--ink) !important;
   color: var(--ink) !important;
@@ -1351,16 +1365,16 @@ html.js .theme-toggle { display: inline-flex; }
   height: 40px !important;
   line-height: 38px !important;
 }
-.leaflet-control-attribution {
+.leaflet-container .leaflet-control-attribution {
   background: var(--surface) !important;
   color: var(--ink-soft) !important;
   font-family: var(--mono) !important;
   font-size: .7rem !important;
 }
-.leaflet-control-attribution a { color: var(--teal-ink) !important; }
+.leaflet-container .leaflet-control-attribution a { color: var(--teal-ink) !important; }
 @media (max-width: 47.99rem) {
-  .leaflet-control-zoom a { width: 44px !important; height: 44px !important; line-height: 42px !important; }
-  .leaflet-touch .leaflet-bar a:first-child { margin-top: 0; }
+  .leaflet-container .leaflet-control-zoom a { width: 44px !important; height: 44px !important; line-height: 42px !important; }
+  .leaflet-container .leaflet-touch .leaflet-bar a:first-child { margin-top: 0; }
 }
 
 /* markers: chunky pixel diamonds */
@@ -1427,7 +1441,7 @@ html.js .theme-toggle { display: inline-flex; }
 }
 .popup-status-open { color: #1d6b3f; }
 @media (prefers-color-scheme: dark) { .popup-status-open { color: #7dd6a4; } }
-.leaflet-tooltip {
+.leaflet-container .leaflet-tooltip {
   font-family: var(--mono);
   font-size: .72rem;
   background: var(--ink);
@@ -1436,6 +1450,7 @@ html.js .theme-toggle { display: inline-flex; }
   border-radius: 0;
   box-shadow: 2px 2px 0 var(--shadow);
 }
+.leaflet-container .leaflet-tooltip-top:before { border-top-color: var(--ink); }
 .popup-source {
   margin-top: .5rem;
   font-family: var(--mono);
@@ -1575,6 +1590,43 @@ html.js .theme-toggle { display: inline-flex; }
 }
 .footer-base p { margin: 0; max-width: 52ch; }
 .footer-base a { color: inherit; padding: 4px 3px; }
+
+/* --- sources and dataset ------------------------------------------------ */
+
+.source-list { display: grid; gap: 1rem; }
+@media (min-width: 48rem) { .source-list { grid-template-columns: repeat(2, 1fr); } }
+.source-card h3 { margin-bottom: .4rem; }
+.source-card h3 a { color: var(--ink); text-decoration: none; }
+.source-card h3 a:hover { color: var(--red-ink); text-decoration: underline; }
+.source-licence { font-size: .85rem; }
+.source-licence .popup-label { margin-right: .2rem; }
+.source-contribute { font-family: var(--mono); font-size: .78rem; margin-bottom: 0; }
+
+.dataset-licence { max-width: var(--measure); color: var(--ink-soft); }
+.field-table { display: grid; gap: 0; border-top: var(--border) solid var(--rule); }
+.field-row {
+  display: grid;
+  gap: .15rem 1rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+}
+@media (min-width: 44rem) { .field-row { grid-template-columns: 16rem 1fr; } }
+.field-name { margin: 0; }
+.field-name code {
+  font-size: .82rem;
+  background: var(--surface-2);
+  border: 1px solid var(--rule);
+  padding: .1rem .35rem;
+  color: var(--ink);
+}
+.field-about { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+.citation {
+  border-left: 5px solid var(--red);
+  background: var(--surface-2);
+  padding: .9rem 1rem;
+  font-size: .95rem;
+  max-width: var(--measure);
+}
 
 /* --- stats --------------------------------------------------------------- */
 
