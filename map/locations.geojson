@@ -6,22 +6,26 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -2.7449,
-     54.3284
+     -2.9646802,
+     57.6760865
     ]
    },
    "properties": {
-    "id": "example-northern-video-shop",
-    "name": "Example Video (sample entry)",
+    "id": "ch-sc251100",
+    "name": "BANFF VIDEO LIBRARY LIMITED",
     "type": "shop",
     "status": "closed",
-    "years": "1983–2004",
-    "town": "Kendal",
-    "region": "North West",
-    "address": "1 Example Street",
-    "description": "A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources.",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Buckie",
+    "region": "Banffshire",
+    "address": "1a Cluny Square",
+    "description": "",
     "url": "",
-    "sample": true
+    "source": "Companies House",
+    "sample": false
    }
   },
   {
@@ -29,45 +33,107 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -4.2518,
-     55.8642
+     -0.64949,
+     51.90544
     ]
    },
    "properties": {
-    "id": "example-scottish-video-archive",
-    "name": "Example Video Archive (sample entry)",
-    "type": "archive",
+    "id": "ch-04815908",
+    "name": "BOX OFFICE 24 LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "Leighton Buzzard",
+    "region": "Bedfordshire",
+    "address": "3 Plover Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.64949,
+     51.90544
+    ]
+   },
+   "properties": {
+    "id": "ch-04787127",
+    "name": "MULTICOUNTRY CONSULTANTS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "Leighton Buzzard",
+    "region": "Bedfordshire",
+    "address": "3 Plover Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.47708,
+     52.13603
+    ]
+   },
+   "properties": {
+    "id": "ch-13569898",
+    "name": "VANYA KIRILOVA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Bedford",
+    "region": "Bedfordshire",
+    "address": "28 Grafton Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.77518,
+     51.4056799
+    ]
+   },
+   "properties": {
+    "id": "ch-07079907",
+    "name": "DYNAMIC MEDIA SOLUTIONS LIMITED",
+    "type": "shop",
     "status": "open",
-    "years": "1990–",
-    "town": "Glasgow",
-    "region": "Scotland",
-    "address": "",
-    "description": "A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row.",
-    "url": "https://example.org/archive",
-    "sample": true
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -2.5879,
-     51.4545
-    ]
-   },
-   "properties": {
-    "id": "example-bristol-tape-club",
-    "name": "Example Tape Club (sample entry)",
-    "type": "club",
-    "status": "unknown",
-    "years": "1988–1996",
-    "town": "Bristol",
-    "region": "South West",
-    "address": "",
-    "description": "A members' club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry.",
+    "years": "",
+    "active_from": 2009,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Bracknell",
+    "region": "Berkshire",
+    "address": "Unit 7 Bilton Industrial Estate Lovelace",
+    "description": "",
     "url": "",
-    "sample": true
+    "source": "Companies House",
+    "sample": false
    }
   },
   {
@@ -75,45 +141,5696 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -3.1791,
-     51.4816
+     -0.8306683,
+     51.7234776
     ]
    },
    "properties": {
-    "id": "example-wales-collection",
-    "name": "Example Private Collection (sample entry)",
-    "type": "collection",
-    "status": "unknown",
-    "years": "1979–",
-    "town": "Cardiff",
-    "region": "Wales",
-    "address": "",
-    "description": "A private Betamax and VHS collection opened to researchers by appointment. Sample row.",
-    "url": "",
-    "sample": true
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -1.8904,
-     52.4862
-    ]
-   },
-   "properties": {
-    "id": "example-midlands-swap-meet",
-    "name": "Example Swap Meet (sample entry)",
-    "type": "market",
+    "id": "ch-16587233",
+    "name": "PLAYBACK VIDEO LTD",
+    "type": "shop",
     "status": "open",
-    "years": "1996–",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Princes Risborough",
+    "region": "Bucks",
+    "address": "10 High Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.1861511,
+     51.6589917
+    ]
+   },
+   "properties": {
+    "id": "ch-17421257",
+    "name": "MOVIE ONE LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Blackwood",
+    "region": "Caerphilly",
+    "address": "Unit 20, Penmaen Small Business Centre, Block D Penmaen Road Pontllanfraith",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-ni609466",
+    "name": "DVDS & MORE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Gortin",
+    "region": "Co. Tyrone",
+    "address": "31 Lenamore Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.3902258,
+     53.097112
+    ]
+   },
+   "properties": {
+    "id": "ch-15438288",
+    "name": "80S VIDEO SHOP LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2024,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Alfreton",
+    "region": "Derbyshire",
+    "address": "11 King Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.525142,
+     50.7233766
+    ]
+   },
+   "properties": {
+    "id": "ch-05727812",
+    "name": "ASPECT FILM AND VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2006,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Exeter",
+    "region": "Devon",
+    "address": "5 Barnfield Crescent",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.84151,
+     50.7447299
+    ]
+   },
+   "properties": {
+    "id": "ch-02724846",
+    "name": "UTRILLO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1992,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Bournemouth",
+    "region": "Dorset",
+    "address": "149 Queens Park Avenue",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.1438737,
+     52.9541821
+    ]
+   },
+   "properties": {
+    "id": "ch-01615434",
+    "name": "INTERMEDIA FILM AND VIDEO (NOTTINGHAM) LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1982,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "Bulwell",
+    "region": "East Midlands",
+    "address": "14-18 Broad Street Nottingham",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07083520",
+    "name": "AMPLE FILM & VIDEO PRODUCERS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07177717",
+    "name": "NATURAL FILM & VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07177726",
+    "name": "NATURAL FILM & VIDEO PRODUCERS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07193355",
+    "name": "NATURAL VIDEO & FILM EDITS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07193281",
+    "name": "NATURAL VIDEO & FILM EFFECTS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07193447",
+    "name": "NATURAL VIDEO & FILM LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07068491",
+    "name": "TIDY VIDEO & FILM EDITS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07068523",
+    "name": "TIDY VIDEO & FILM EFFECTS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1864203,
+     51.0699585
+    ]
+   },
+   "properties": {
+    "id": "ch-07062511",
+    "name": "TIDY VIDEO & FILM LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Crowborough",
+    "region": "East Sussex",
+    "address": "The Pines Boars Head",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.93073,
+     53.87276
+    ]
+   },
+   "properties": {
+    "id": "ch-06641962",
+    "name": "REAL VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2008,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "York",
+    "region": "East Yorkshire",
+    "address": "Middleton House Main Street East Cottingwith",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0723805,
+     51.4536999
+    ]
+   },
+   "properties": {
+    "id": "ch-05151417",
+    "name": "414 FILM & VIDEO PRODUCTIONS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2004,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "",
+    "region": "England",
+    "address": "241 Crystal Palace Road London",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.194381,
+     51.5069085
+    ]
+   },
+   "properties": {
+    "id": "ch-02165090",
+    "name": "FILM & VIDEO DESIGN LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1987,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "",
+    "region": "England",
+    "address": "136 Kensington Church Street London",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.09453,
+     51.50094
+    ]
+   },
+   "properties": {
+    "id": "ch-02266757",
+    "name": "FILM AND VIDEO UMBRELLA LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1988,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "",
+    "region": "England",
+    "address": "8 Vine Yard London",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.203572,
+     51.4734433
+    ]
+   },
+   "properties": {
+    "id": "ch-01691031",
+    "name": "ORIGINAL FILM VIDEO PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1983,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "",
+    "region": "England",
+    "address": "84 Saint Dionis Road London",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0836674,
+     51.5256346
+    ]
+   },
+   "properties": {
+    "id": "ch-13820970",
+    "name": "SEYONS DREAM ARTS LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2021,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "England",
+    "address": "86-90 Paul Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.1312225,
+     52.9919179
+    ]
+   },
+   "properties": {
+    "id": "video-future-783e29",
+    "name": "Video Future",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Longton",
+    "region": "England",
+    "address": "Longton, Stoke-on-Trent, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.21746,
+     51.5980599
+    ]
+   },
+   "properties": {
+    "id": "ch-03668870",
+    "name": "A K VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1998,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Romford",
+    "region": "Essex",
+    "address": "Suite D, The Business Centre Faringdon Avenue",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.0638622,
+     51.7655348
+    ]
+   },
+   "properties": {
+    "id": "ch-09379521",
+    "name": "VIDEO AUDIO MASTER LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Harlow",
+    "region": "Essex",
+    "address": "Unit 9 Marbridge House Harolds Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.3620112,
+     51.6998268
+    ]
+   },
+   "properties": {
+    "id": "ch-04738327",
+    "name": "A TOUCH OF DUTCH LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Dursley",
+    "region": "Gloucestershire",
+    "address": "23 Chapel Street Cam",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1238358,
+     51.5148159
+    ]
+   },
+   "properties": {
+    "id": "ch-12512075",
+    "name": "SPESO SHOP LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2021,
+    "date_basis": "register",
+    "town": "London",
+    "region": "Greater London",
+    "address": "71-75 Shelton Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2468776,
+     51.4718149
+    ]
+   },
+   "properties": {
+    "id": "ch-12333466",
+    "name": "THE VIDEO CLUB PRODUCTIONS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2019,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "London",
+    "region": "Greater London",
+    "address": "56 Station Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.377596,
+     53.56398799999999
+    ]
+   },
+   "properties": {
+    "id": "b-v-c-bolton-video-centre-517dde",
+    "name": "B.V.C. - Bolton Video Centre",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Little Lever",
+    "region": "Greater Manchester",
+    "address": "Little Lever, Bolton, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.4556333,
+     53.5678444
+    ]
+   },
+   "properties": {
+    "id": "deane-video-centre-ff9aa2",
+    "name": "Deane Video Centre",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Bolton",
+    "region": "Greater Manchester",
+    "address": "Deane, Bolton BL3, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.13234,
+     53.43314
+    ]
+   },
+   "properties": {
+    "id": "ch-09504423",
+    "name": "IN HOUSE ENTERTAINMENT LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Stockport",
+    "region": "Greater Manchester",
+    "address": "42 42 Matley Green",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0962911,
+     53.487615
+    ]
+   },
+   "properties": {
+    "id": "jubilee-films-76fa90",
+    "name": "Jubilee Films",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Ashton-under-Lyne",
+    "region": "Greater Manchester",
+    "address": "Old St, Ashton-under-Lyne OL6, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2514164,
+     53.4742504
+    ]
+   },
+   "properties": {
+    "id": "the-movie-box-263f40",
+    "name": "The Movie Box",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Manchester",
+    "region": "Greater Manchester",
+    "address": "345 Deansgate, Manchester M3 4LG, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.49467,
+     51.1926
+    ]
+   },
+   "properties": {
+    "id": "ch-02865510",
+    "name": "INTERNATIONAL FILM & VIDEO SERVICES LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1993,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Andover",
+    "region": "Hampshire",
+    "address": "Home Orchard Home Orchard Upper Clatford",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.99,
+     50.99593
+    ]
+   },
+   "properties": {
+    "id": "ch-05408582",
+    "name": "THE VIDEO SHOP LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2005,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "Ramsdean, Petersfield",
+    "region": "Hampshire",
+    "address": "Room 2 Finance House Rookery Business Park",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.1033599,
+     51.24907
+    ]
+   },
+   "properties": {
+    "id": "ch-08475530",
+    "name": "VIDEO STREAM MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2013,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Basingstoke",
+    "region": "Hampshire",
+    "address": "49 Coates Close Brighton Hill",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.3832659,
+     51.5821691
+    ]
+   },
+   "properties": {
+    "id": "ch-10744598",
+    "name": "BUSHEY FILM AND VIDEO PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2017,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "Pinner",
+    "region": "Hertfordshire",
+    "address": "109 Hill Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0588996,
+     52.0758058
+    ]
+   },
+   "properties": {
+    "id": "ch-06694951",
+    "name": "DIGITAL FILM AND VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2008,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Royston",
+    "region": "Hertfordshire",
+    "address": "Tan House 15 South End Bassingbourn",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.3965545,
+     51.67508530000001
+    ]
+   },
+   "properties": {
+    "id": "gtv-tv-video-5c0190",
+    "name": "GTV TV & Video",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Watford",
+    "region": "Hertfordshire",
+    "address": "356 St Albans Rd, Watford WD24 6PQ, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2529533,
+     51.6589824
+    ]
+   },
+   "properties": {
+    "id": "ch-07403646",
+    "name": "PRIMETIME SWADLINCOTE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2015,
+    "date_basis": "register",
+    "town": "Borehamwood",
+    "region": "Hertfordshire",
+    "address": "Suite 7 Elstree House Elstree Way",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1647747,
+     51.6701587
+    ]
+   },
+   "properties": {
+    "id": "ch-07330192",
+    "name": "MEDIA CIRCUS VIDEO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Barnet",
+    "region": "Herts",
+    "address": "30 Kingwell Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.01839,
+     51.40776
+    ]
+   },
+   "properties": {
+    "id": "ch-04939269",
+    "name": "DRESSAGE MASTERS VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "Bromley",
+    "region": "Kent",
+    "address": "Leonard House 5-7 Newman Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.45528,
+     53.74425
+    ]
+   },
+   "properties": {
+    "id": "ch-13823323",
+    "name": "MOVIE DIRECT LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Blackburn",
+    "region": "Lancashire",
+    "address": "38 Hastings Close",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.45528,
+     53.74425
+    ]
+   },
+   "properties": {
+    "id": "ch-12822426",
+    "name": "MOVIES DIRECT LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Blackburn",
+    "region": "Lancashire",
+    "address": "38 Hastings Close",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.8302712,
+     53.6733955
+    ]
+   },
+   "properties": {
+    "id": "ch-08987569",
+    "name": "VIDEO MEDIA PRESENTATION LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2014,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Preston",
+    "region": "Lancs",
+    "address": "Windgate House Office 6, No 5 Tarleton Business Park Tarleton",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.6348397,
+     52.9215413
+    ]
+   },
+   "properties": {
+    "id": "ch-07010237",
+    "name": "MARTIN BROADLEY IN-STORE VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Grantham",
+    "region": "Lincolnshire",
+    "address": "Unit 5 Belton Lane Industrial Estate",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.5436469,
+     53.223651
+    ]
+   },
+   "properties": {
+    "id": "ch-10985693",
+    "name": "VIDEO MEDIA STUDIO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2017,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "Lincoln",
+    "region": "Lincolnshire",
+    "address": "142b High Street 142b High Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1779004,
+     51.6127397
+    ]
+   },
+   "properties": {
+    "id": "ch-01610694",
+    "name": "FAMILY VIDEO LIBRARY (LONDON) LIMITED(THE)",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1982,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "North Finchley",
+    "region": "London",
+    "address": "Pearl Assurance House 319 Ballards Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4276961,
+     51.5746725
+    ]
+   },
+   "properties": {
+    "id": "ch-13533857",
+    "name": "THROWBACKTV LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "Ruislip,",
+    "region": "London,",
+    "address": "2nd Floor College House 17 King Edwards Road,",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4404586,
+     51.8985275
+    ]
+   },
+   "properties": {
+    "id": "shahenshah-videos-323337",
+    "name": "Shahenshah Videos",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Luton",
+    "region": "Luton",
+    "address": "Alder Cres, Luton LU3, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.3401177,
+     51.5802785
+    ]
+   },
+   "properties": {
+    "id": "ch-06564249",
+    "name": "ARTIKAL FILMS AND VIDEO PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2008,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "Harrow",
+    "region": "Middlesex",
+    "address": "132-134 College Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4036155,
+     51.5888434
+    ]
+   },
+   "properties": {
+    "id": "ch-02400350",
+    "name": "BURBANK INTERNATIONAL VIDEO & FILMS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1989,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Pinner",
+    "region": "Middlesex",
+    "address": "2 High Road Eastcote",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.35185,
+     51.56474
+    ]
+   },
+   "properties": {
+    "id": "ch-07620920",
+    "name": "HUXLEY FILM & VIDEO SERVICES LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2015,
+    "date_basis": "register",
+    "town": "South Harrow",
+    "region": "Middlesex",
+    "address": "Pentax House South Hill Avenue",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-04052024",
+    "name": "M.G. FILMS & VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2000,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "Edgware",
+    "region": "Middlesex",
+    "address": "3rd Floor Rear Middlesex House 29-45 High Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.5561023,
+     53.9964654
+    ]
+   },
+   "properties": {
+    "id": "ch-07364120",
+    "name": "QOOB LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Harrogate",
+    "region": "North Yorkshire",
+    "address": "37 Kent Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.702074,
+     52.5104953
+    ]
+   },
+   "properties": {
+    "id": "ch-02146319",
+    "name": "INTERNATIONAL MEDIA COMMUNICATIONS (VIDEO) LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1987,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Corby",
+    "region": "Northamptonshire",
+    "address": "C/O Tayto Group Limited Princewood Road Earlstrees Industrial Estate",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.605742,
+     52.2917055
+    ]
+   },
+   "properties": {
+    "id": "ch-02650356",
+    "name": "WHITE HOUSE VIDEOS LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 1991,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Rushden",
+    "region": "Northants",
+    "address": "155 Wellingborough Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.1994419,
+     52.9560374
+    ]
+   },
+   "properties": {
+    "id": "ch-13771685",
+    "name": "APNAFLIX LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Nottingham",
+    "region": "Nottinghamshire",
+    "address": "26 Woodhall Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.09962,
+     51.3774
+    ]
+   },
+   "properties": {
+    "id": "ch-03004782",
+    "name": "VIDEO U.K. (RETAIL) LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1994,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "Roberts Mews",
+    "region": "Orpington, Kent",
+    "address": "C/O Le Fort & Company Britannia House",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.32778,
+     52.06754
+    ]
+   },
+   "properties": {
+    "id": "ch-07789113",
+    "name": "BACKLIGHT FILM AND VIDEO PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Banbury",
+    "region": "Oxon",
+    "address": "22 Fergusson Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.2663902,
+     55.7603472
+    ]
+   },
+   "properties": {
+    "id": "ch-sc257888",
+    "name": "FILM AND VIDEO RIGHTS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "West Linton",
+    "region": "Peeblesshire",
+    "address": "Lamancha House Lamancha",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.7159681,
+     52.692117
+    ]
+   },
+   "properties": {
+    "id": "ch-06814206",
+    "name": "CARADOC DVD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "Shrewsbury",
+    "region": "Shropshire",
+    "address": "Emstrey House Shrewsbury Business Park",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.49553,
+     53.37412
+    ]
+   },
+   "properties": {
+    "id": "ch-08219277",
+    "name": "ARTIST FILM AND VIDEO PRODUCTION LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2015,
+    "date_basis": "register",
+    "town": "Sheffield",
+    "region": "South Yorkshire",
+    "address": "51 Clarkegrove Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.3428199,
+     53.5028999
+    ]
+   },
+   "properties": {
+    "id": "ch-07775404",
+    "name": "VIDEO GAMES (WATH) LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2011,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Rotherham",
+    "region": "South Yorkshire",
+    "address": "75 High Street Wath-Upon-Dearne",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.4374309,
+     53.460914
+    ]
+   },
+   "properties": {
+    "id": "video-rentals-f463c2",
+    "name": "Video Rentals",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "The Village Top Shop in Thorpe Hesley",
+    "region": "South Yorkshire",
+    "address": "Thorpe Hesley, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.7159125,
+     52.2517816
+    ]
+   },
+   "properties": {
+    "id": "northgate-video-dvd-44b01c",
+    "name": "Northgate Video & DVD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Bury St Edmunds (still operating",
+    "region": "Suffolk",
+    "address": "74 Northgate St, Bury St Edmunds, Bury Saint Edmunds IP33 1JD, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.4368818,
+     52.08260809999999
+    ]
+   },
+   "properties": {
+    "id": "tvl-allstar-video-9f15b8",
+    "name": "TVL Allstar Video",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Haverhill (still operating)",
+    "region": "Suffolk",
+    "address": "T V L Allstar Video, Haverhill CB9 8HB, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.79873,
+     51.2158
+    ]
+   },
+   "properties": {
+    "id": "ch-04954843",
+    "name": "BLUECHIP DATA LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2003,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "Farnham",
+    "region": "Surrey",
+    "address": "9 St. Georges Yard",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.09389,
+     51.26936
+    ]
+   },
+   "properties": {
+    "id": "ch-03849496",
+    "name": "CRANLEIGH PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1999,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Caterham",
+    "region": "Surrey",
+    "address": "8 Aldercombe Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.108157,
+     51.3838798
+    ]
+   },
+   "properties": {
+    "id": "ch-12514618",
+    "name": "EV ENTERPRISES & TRADING LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2020,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Croydon",
+    "region": "Surrey",
+    "address": "330 London Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.5556867,
+     51.3319921
+    ]
+   },
+   "properties": {
+    "id": "ch-01606500",
+    "name": "VIDEO FILM WORLD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1982,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Woking",
+    "region": "Surrey",
+    "address": "Oakleigh Castle Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.9558875,
+     51.6166329
+    ]
+   },
+   "properties": {
+    "id": "video-express-f42483",
+    "name": "Video Express",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Swansea",
+    "region": "Swansea",
+    "address": "St Helen's Rd, Swansea SA1 4BE, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.71639,
+     52.20056
+    ]
+   },
+   "properties": {
+    "id": "ch-07418246",
+    "name": "GAMES SURFER LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Stratford Upon Avon",
+    "region": "Warwickshire",
+    "address": "43 Cordelia Close",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.26498,
+     52.39448
+    ]
+   },
+   "properties": {
+    "id": "ch-oc349942",
+    "name": "WEB VIDEO STORE LLP",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Rugby",
+    "region": "Warwickshire",
+    "address": "Boughton Leigh House Brownsover Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.9108219,
+     52.4909156
+    ]
+   },
+   "properties": {
+    "id": "ch-05533437",
+    "name": "EAT DRINK FILM VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2005,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "",
+    "region": "West Midlands",
+    "address": "69 Great Hampton Street Birmingham",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8516714,
+     52.4737526
+    ]
+   },
+   "properties": {
+    "id": "ch-13404809",
+    "name": "MIRZA VIDEO ENTERTAINMENT LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2025,
+    "date_basis": "register",
     "town": "Birmingham",
     "region": "West Midlands",
-    "address": "",
-    "description": "A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry.",
+    "address": "315 Green Lane Small Heath",
+    "description": "",
     "url": "",
-    "sample": true
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.7922846,
+     50.7317478
+    ]
+   },
+   "properties": {
+    "id": "ch-07805727",
+    "name": "REFLEX DVD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Chichester",
+    "region": "West Sussex",
+    "address": "1st Floor 119 High Street Selsey",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.7922846,
+     50.7317478
+    ]
+   },
+   "properties": {
+    "id": "ch-09034209",
+    "name": "SELSEY DVD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2014,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Selsey",
+    "region": "West Sussex",
+    "address": "1st Floor, 119 High Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.510392,
+     53.8457546
+    ]
+   },
+   "properties": {
+    "id": "ch-07071313",
+    "name": "2EAZI LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Leeds",
+    "region": "West Yorkshire",
+    "address": "6 Norman Place",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.54027,
+     53.79417
+    ]
+   },
+   "properties": {
+    "id": "ch-06887147",
+    "name": "VENDAFILM LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Leeds",
+    "region": "West Yorkshire",
+    "address": "27 Flax House Navigation Walk Dock Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.5396453,
+     53.7961178
+    ]
+   },
+   "properties": {
+    "id": "video-years-e12407",
+    "name": "Video Years",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Leeds (still operating)",
+    "region": "West Yorkshire",
+    "address": "7B Crown St, Leeds LS2 7DA, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.596815,
+     51.4561365
+    ]
+   },
+   "properties": {
+    "id": "20th-century-flicks-05d7a5",
+    "name": "20th Century Flicks",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Bristol (still operating",
+    "region": "West of England",
+    "address": "19 Christmas Steps, Bristol BS1 5BS, UK",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2038559,
+     51.3052062
+    ]
+   },
+   "properties": {
+    "id": "ch-04458252",
+    "name": "VIDEO FILM SERVICES (STUDIO) LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2002,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Trowbridge",
+    "region": "Wiltshire",
+    "address": "17 Everleigh Close",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2500728,
+     52.3888238
+    ]
+   },
+   "properties": {
+    "id": "ch-08777736",
+    "name": "VIDEODROME LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2013,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Kidderminster",
+    "region": "Worcestershire",
+    "address": "3 Church Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0994837,
+     53.7117606
+    ]
+   },
+   "properties": {
+    "id": "ch-11472471",
+    "name": "ACROMUDDLE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "Todmorden",
+    "region": "Yorkshire",
+    "address": "Suite 1 Fielden House 41 Rochdale Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.596725,
+     51.4561438
+    ]
+   },
+   "properties": {
+    "id": "20th-century-flicks-b850ce",
+    "name": "20th Century Flicks",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Bristol",
+    "region": "",
+    "address": "",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.4577906,
+     53.8108083
+    ]
+   },
+   "properties": {
+    "id": "ch-07630099",
+    "name": "2MZ VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "Leeds",
+    "region": "",
+    "address": "66 Brian Crescent",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.4626599,
+     53.5888444
+    ]
+   },
+   "properties": {
+    "id": "ch-11405748",
+    "name": "AERONCYBEX LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "Bolton",
+    "region": "",
+    "address": "546 Chorley Old Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.27287,
+     51.52855
+    ]
+   },
+   "properties": {
+    "id": "ch-15288539",
+    "name": "AGRM SHOP LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "7 Coronation Road, Dephna House, Launchese #105",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1421063,
+     51.5184925
+    ]
+   },
+   "properties": {
+    "id": "ch-15188674",
+    "name": "ALBERTRAM LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "85 Great Portland Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1779004,
+     51.6127397
+    ]
+   },
+   "properties": {
+    "id": "ch-02445361",
+    "name": "APOLLO VIDEO FILM HIRE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1989,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Pearl Assurance House 319 Ballards Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2314733,
+     53.4812238
+    ]
+   },
+   "properties": {
+    "id": "ch-11473814",
+    "name": "APOLLO VIDEO STORE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2021,
+    "date_basis": "register",
+    "town": "Manchester",
+    "region": "",
+    "address": "5th Floor Fourways House 57 Hilton Street Oscillate Recordings",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.61305,
+     51.4671553
+    ]
+   },
+   "properties": {
+    "id": "ch-10817330",
+    "name": "ASPECT FILM AND VIDEO EBT LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2017,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Bristol",
+    "region": "",
+    "address": "2-10 Kings Parade Mews Kings Parade Avenue",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0710447,
+     51.491709
+    ]
+   },
+   "properties": {
+    "id": "ch-10146713",
+    "name": "AUDIO VISUAL 365 LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2016,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "11 Alma Grove",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.08373,
+     51.5112717
+    ]
+   },
+   "properties": {
+    "id": "ch-14919808",
+    "name": "AVA VIDEO MEDIA CO., LTD.",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "20 Fenchurch St",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.4801654,
+     51.7125398
+    ]
+   },
+   "properties": {
+    "id": "ch-01338685",
+    "name": "AVROHURST LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1977,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "Essex",
+    "region": "",
+    "address": "186 Beehive Lane Chelmsford",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1014495,
+     51.5219362
+    ]
+   },
+   "properties": {
+    "id": "ch-13472602",
+    "name": "BIG ISSUE EBIKES BRISTOL LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "82 St John Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0067581,
+     51.5271039
+    ]
+   },
+   "properties": {
+    "id": "ch-12038414",
+    "name": "BLACKBULL LIGHTING FOR FILM, TELEVISION AND VIDEO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2019,
+    "active_to": 2021,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "3 Mills Three Mill Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0629627,
+     51.5632939
+    ]
+   },
+   "properties": {
+    "id": "ch-12816102",
+    "name": "BLOCKBUSTER STUDIOS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "54a Geldeston Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4334384,
+     51.6439949
+    ]
+   },
+   "properties": {
+    "id": "ch-02992298",
+    "name": "BROADCAST & PROFESSIONAL FINANCE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1994,
+    "active_to": 2015,
+    "date_basis": "register",
+    "town": "Watford",
+    "region": "",
+    "address": "Building 7 Croxley Green Business Park Hatters Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0883597,
+     51.5266775
+    ]
+   },
+   "properties": {
+    "id": "ch-16215054",
+    "name": "BUNDLES SHOP LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2025,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "128 City Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-14743211",
+    "name": "CAMBRIDGE FILM & VIDEO COMPANY LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Cardiff",
+    "region": "",
+    "address": "14743211 - COMPANIES HOUSE DEFAULT ADDRESS",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.21155,
+     51.64895
+    ]
+   },
+   "properties": {
+    "id": "ch-13149091",
+    "name": "CB MEDIA VIDEO SERVICES LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "Blackwood",
+    "region": "",
+    "address": "16 Lon Rhymni Gellihaf",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-ni710777",
+    "name": "CJAICO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2024,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Belfast",
+    "region": "",
+    "address": "13 Moyle Walk",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2069595,
+     51.4768353
+    ]
+   },
+   "properties": {
+    "id": "ch-12999425",
+    "name": "CRYSTAL CLEAR MEDIA SERVICES LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "30 Chesilton Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-ni024602",
+    "name": "DE FACTO FILM AND VIDEO PRODUCTION LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1990,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Londonderry",
+    "region": "",
+    "address": "43 Clarendon Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.4334384,
+     51.6439949
+    ]
+   },
+   "properties": {
+    "id": "ch-03276140",
+    "name": "DE LAGE LANDEN TECHNOLOGY FINANCE UK LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1996,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Watford",
+    "region": "",
+    "address": "Building 7 Croxley Green Business Park Hatters Lane",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1238358,
+     51.5148159
+    ]
+   },
+   "properties": {
+    "id": "ch-13049304",
+    "name": "DEUTSCHE INDUSTRIE VIDEO SYSTEM LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2020,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "71-75 Shelton Street Covent Garden",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1227445,
+     51.4757837
+    ]
+   },
+   "properties": {
+    "id": "ch-13708758",
+    "name": "DH SCOOTERS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "233 South Lambeth Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0506625,
+     52.2189108
+    ]
+   },
+   "properties": {
+    "id": "ch-16877682",
+    "name": "DISC EXPRESS LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Cambridge",
+    "region": "",
+    "address": "57 Vickers Way Upper Cambourne",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-15034345",
+    "name": "EIUTE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Cardiff",
+    "region": "",
+    "address": "15034345 - COMPANIES HOUSE DEFAULT ADDRESS",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-15152151",
+    "name": "ENCERPOW LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Cardiff",
+    "region": "",
+    "address": "15152151 - COMPANIES HOUSE DEFAULT ADDRESS",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.073108,
+     53.5745692
+    ]
+   },
+   "properties": {
+    "id": "ch-08746633",
+    "name": "ENJOY RENTALS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2013,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Grimsby",
+    "region": "",
+    "address": "6-8 Freeman Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.190922,
+     51.4095641
+    ]
+   },
+   "properties": {
+    "id": "ch-07007007",
+    "name": "ENTERTAINMENT POD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Assist House 25 Lombard Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.4869,
+     51.56671
+    ]
+   },
+   "properties": {
+    "id": "ch-13618508",
+    "name": "EVRIT PLUS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Basildon",
+    "region": "",
+    "address": "11 Maplin Gardens",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.47529,
+     53.7928
+    ]
+   },
+   "properties": {
+    "id": "ch-07388090",
+    "name": "EXTREME VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Blackburn",
+    "region": "",
+    "address": "42 Durham Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.07901,
+     51.37963
+    ]
+   },
+   "properties": {
+    "id": "ch-10916516",
+    "name": "FAMOUS VIDEO LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2017,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Croydon",
+    "region": "",
+    "address": "117 Academy Gardens",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0561965,
+     51.5472926
+    ]
+   },
+   "properties": {
+    "id": "ch-13817454",
+    "name": "FANGYUAN INFORMATION SERVICE CO., LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Unit G1 Capital House 61 Amhurst Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.29987,
+     51.6107299
+    ]
+   },
+   "properties": {
+    "id": "ch-06723184",
+    "name": "FARDIS MEDIA LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2008,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "21 Howberry Close Edgware",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.2107699,
+     51.9966
+    ]
+   },
+   "properties": {
+    "id": "ch-07665401",
+    "name": "FILM & VIDEO ENGINEERING LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Ipswich",
+    "region": "",
+    "address": "Webbs Chandlery Pin Mill",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.1553449,
+     51.3249336
+    ]
+   },
+   "properties": {
+    "id": "ch-07903118",
+    "name": "FILM AND VIDEO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "Sevenoaks",
+    "region": "",
+    "address": "Iconic House London Road Polhill Halstead",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.20037,
+     51.57306
+    ]
+   },
+   "properties": {
+    "id": "ch-06856901",
+    "name": "FILMNIGHT UK LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2009,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Olympia House Armitage Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.38342,
+     51.46645
+    ]
+   },
+   "properties": {
+    "id": "ch-04168649",
+    "name": "FORTMAY LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2001,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Middlesex",
+    "region": "",
+    "address": "78 Cambridge Road Hounslow",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0221799,
+     51.50177
+    ]
+   },
+   "properties": {
+    "id": "ch-13061244",
+    "name": "FUTURE VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Flat 1805, 1, Bagshaw Building Wards Place",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.6272474,
+     55.4584212
+    ]
+   },
+   "properties": {
+    "id": "fast-forward-88d6fd",
+    "name": "Fast Forward",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Ayr",
+    "region": "",
+    "address": "",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.25502,
+     51.62553
+    ]
+   },
+   "properties": {
+    "id": "ch-16167150",
+    "name": "GAME SURGE RENTALS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2025,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "13 North Dene",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.3006484,
+     53.4729355
+    ]
+   },
+   "properties": {
+    "id": "ch-09826994",
+    "name": "GAS FILM & VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Salford",
+    "region": "",
+    "address": "6th Floor The Landing Media City Uk",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.5331222,
+     51.4815101
+    ]
+   },
+   "properties": {
+    "id": "ch-16822210",
+    "name": "GOD MODE GAME RENTALS LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Bristol",
+    "region": "",
+    "address": "8 Lambrook Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.76347,
+     53.77476
+    ]
+   },
+   "properties": {
+    "id": "ch-16507869",
+    "name": "GODZILLA LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2025,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Bradford",
+    "region": "",
+    "address": "4 Hastings Avenue",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.43227,
+     53.39867
+    ]
+   },
+   "properties": {
+    "id": "ch-13195815",
+    "name": "GP VIDEO LIBRARY LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Sheffield",
+    "region": "",
+    "address": "Unit 1 Riverside Court Don Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.0706501,
+     55.7819017
+    ]
+   },
+   "properties": {
+    "id": "ch-sc678702",
+    "name": "GREENWOODS RESTAURANT LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "Hamilton",
+    "region": "",
+    "address": "9 Donaldson Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.9291313,
+     54.5940761
+    ]
+   },
+   "properties": {
+    "id": "ch-ni691098",
+    "name": "GXKMEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2022,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Belfast",
+    "region": "",
+    "address": "NI691098 - COMPANIES HOUSE DEFAULT ADDRESS 2nd Floor The Linenhall 32-38 Linenhall Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.5724742,
+     54.8632938
+    ]
+   },
+   "properties": {
+    "id": "ch-04608277",
+    "name": "HOI POLLOI (FILM & VIDEO) LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2002,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Co Durham",
+    "region": "",
+    "address": "Rowlands House, Portobello Road Birtley",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.1904992,
+     53.4463382
+    ]
+   },
+   "properties": {
+    "id": "ch-16847348",
+    "name": "HUSKY PROVIDERS LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Manchester",
+    "region": "",
+    "address": "3 Barlow Road Levenshulme",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.01304,
+     51.47483
+    ]
+   },
+   "properties": {
+    "id": "ch-09893596",
+    "name": "IMOSION FILM AND VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "10 Penns Almshouses Greenwich South Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.6108706,
+     51.4396356
+    ]
+   },
+   "properties": {
+    "id": "ch-17043136",
+    "name": "INKWE STUDIOS LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Bristol",
+    "region": "",
+    "address": "119 Chessel Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1944072,
+     51.5992493
+    ]
+   },
+   "properties": {
+    "id": "ch-15650357",
+    "name": "INSTALLATION AND DESIGN LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2024,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "24-26, Arcadia Avenue Fin009/14940",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.66609,
+     50.78895
+    ]
+   },
+   "properties": {
+    "id": "ch-11128766",
+    "name": "IPLAY RENTALS LTD.",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2018,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Bognor Regis",
+    "region": "",
+    "address": "Business Incubation Centre Upper Bognor Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.10153,
+     51.5635199
+    ]
+   },
+   "properties": {
+    "id": "ch-13112475",
+    "name": "JALOUX FILM AND VIDEO HIRE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2022,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "3d Somerfield Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.3003038,
+     52.6207496
+    ]
+   },
+   "properties": {
+    "id": "jf-drake-1235a5",
+    "name": "JF Drake",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Norfolk",
+    "region": "",
+    "address": "219-221 Queens Road, Norwich, Norfolk",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8565784,
+     52.5176372
+    ]
+   },
+   "properties": {
+    "id": "ch-15347546",
+    "name": "JOBS UK KENDAL LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2023,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Birmingham",
+    "region": "",
+    "address": "270 Slade Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8565784,
+     52.5176372
+    ]
+   },
+   "properties": {
+    "id": "ch-14911667",
+    "name": "JOBS UK TELFORD LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Birmingham",
+    "region": "",
+    "address": "270 Slade Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2406778,
+     53.4286214
+    ]
+   },
+   "properties": {
+    "id": "jack-beanstalk-video-d60124",
+    "name": "Jack Beanstalk Video",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Manchester",
+    "region": "",
+    "address": "142-144 Burton Road, West Didsbury, Manchester",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -5.54207,
+     50.11831
+    ]
+   },
+   "properties": {
+    "id": "ch-03172196",
+    "name": "LABRYS FILM & VIDEO PRODUCTIONS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1996,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Penzance",
+    "region": "",
+    "address": "11 Alverton Terrace Alverton Terrace",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.5007141,
+     52.3533419
+    ]
+   },
+   "properties": {
+    "id": "ch-16690651",
+    "name": "LHCM GROUP LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Mildenhall",
+    "region": "",
+    "address": "82a James Carter Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0883597,
+     51.5266775
+    ]
+   },
+   "properties": {
+    "id": "ch-17141092",
+    "name": "LIGHT AND SALT LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "128 City Road, London Ec1v 2nx",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0937515,
+     51.5308149
+    ]
+   },
+   "properties": {
+    "id": "ch-11696208",
+    "name": "LOOPKEY FILMS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "20-22 Wenlock Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.59851,
+     51.50547
+    ]
+   },
+   "properties": {
+    "id": "ch-13485766",
+    "name": "MASALA LIFE FILMS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Slough",
+    "region": "",
+    "address": "Flat 5 114 Windsor Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.96545,
+     53.44053
+    ]
+   },
+   "properties": {
+    "id": "ch-15276770",
+    "name": "MAYFIELD VIEWS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Liverpool",
+    "region": "",
+    "address": "64 Bardsay Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.7043331,
+     50.788082
+    ]
+   },
+   "properties": {
+    "id": "ch-04327926",
+    "name": "MEDIA VIDEO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2001,
+    "active_to": 2013,
+    "date_basis": "register",
+    "town": "West Sussex",
+    "region": "",
+    "address": "9 Merton Close Bognor Regis",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.9500291,
+     51.9465942
+    ]
+   },
+   "properties": {
+    "id": "ch-07190899",
+    "name": "MNS WORLD LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Colchester",
+    "region": "",
+    "address": "10 St Margaret's Cross Wick Road Langham",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1779965,
+     51.5116564
+    ]
+   },
+   "properties": {
+    "id": "ch-13377072",
+    "name": "MOP INVESTMENTS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2021,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "109 Lancaster Gate",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1254086,
+     50.8362795
+    ]
+   },
+   "properties": {
+    "id": "ch-05618182",
+    "name": "MOVIES PLUS 247 LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2005,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "East Sussex",
+    "region": "",
+    "address": "86 Lewes Road Brighton",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.120033,
+     50.7949549
+    ]
+   },
+   "properties": {
+    "id": "movies-bc923a",
+    "name": "Movies",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Hampshire",
+    "region": "",
+    "address": "123 Winter Road, Southsea, Hampshire",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.09496,
+     51.5159499
+    ]
+   },
+   "properties": {
+    "id": "ch-09310870",
+    "name": "NEMORIN CREATIVE FILM & VIDEO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2014,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "C/O RRS DEPARTMENT S&W Partners Llp 45 Gresham Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.82321,
+     52.06824
+    ]
+   },
+   "properties": {
+    "id": "ch-08320034",
+    "name": "NICHOLS TRADING LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Milton Keynes",
+    "region": "",
+    "address": "2 Manor Farm Court Old Wolverton Road Old Wolverton",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0937515,
+     51.5308149
+    ]
+   },
+   "properties": {
+    "id": "ch-10872118",
+    "name": "NOW VIDEO MEDIA GROUP LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2017,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "20-22 Wenlock Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0712026,
+     51.5156284
+    ]
+   },
+   "properties": {
+    "id": "ch-11536448",
+    "name": "NUSKA EVENT LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2020,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "102-105 Whitechapel High Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.04177,
+     51.45096
+    ]
+   },
+   "properties": {
+    "id": "ch-oc325120",
+    "name": "OCCAM FILM & VIDEO COMPANY LLP",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2006,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "13 Maclean Road Forest Hill",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.07292,
+     50.84439
+    ]
+   },
+   "properties": {
+    "id": "ch-13207652",
+    "name": "ONE MIND VIDEO FOR SCHOOLS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "Portsmouth",
+    "region": "",
+    "address": "26 Totland Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.15607,
+     52.9170252
+    ]
+   },
+   "properties": {
+    "id": "ch-13092730",
+    "name": "ONLINE MEDIA VIDEO PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2020,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Nottingham",
+    "region": "",
+    "address": "6 Court Gardens West Bridgford",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.0561434,
+     51.081018
+    ]
+   },
+   "properties": {
+    "id": "oscars-videos-38c68f",
+    "name": "Oscars Videos",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Barnstaple",
+    "region": "",
+    "address": "35 Bear Street, Barnstaple",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1238358,
+     51.5148159
+    ]
+   },
+   "properties": {
+    "id": "ch-12216602",
+    "name": "PHANTOGRAPHICS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2019,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "71-75 Shelton Street Covent Garden",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.086617,
+     52.4156155
+    ]
+   },
+   "properties": {
+    "id": "ch-02448473",
+    "name": "PIER VIDEO HIRE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1989,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "Aberystwyth",
+    "region": "",
+    "address": "The Royal Pier Marine Terrace",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.41505,
+     50.9161895
+    ]
+   },
+   "properties": {
+    "id": "ch-02075617",
+    "name": "PINEDENE VIDEO FILMS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1986,
+    "active_to": 2012,
+    "date_basis": "register",
+    "town": "Hants",
+    "region": "",
+    "address": "99 Hill Lane Southampton",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1221199,
+     51.5207125
+    ]
+   },
+   "properties": {
+    "id": "ch-16171154",
+    "name": "PREMIUMNOW LIMITED",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2025,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "27 Old Gloucester Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.5141979,
+     50.9187924
+    ]
+   },
+   "properties": {
+    "id": "ch-07301077",
+    "name": "PRIME TIME (HEDGE END) LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2010,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Southampton",
+    "region": "",
+    "address": "25 Rufus Gardens Totton",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.15977,
+     51.51993
+    ]
+   },
+   "properties": {
+    "id": "ch-11399282",
+    "name": "PROFESSIONAL VIDEO STORE LTD.",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Office 32 19-21 Crawford Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.07292,
+     50.84439
+    ]
+   },
+   "properties": {
+    "id": "ch-13207420",
+    "name": "PROJECT UNO LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2021,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Portsmouth",
+    "region": "",
+    "address": "26 Totland Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.1704266,
+     53.0338445
+    ]
+   },
+   "properties": {
+    "id": "pixel-busters-67dbe7",
+    "name": "Pixel Busters",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2026,
+    "active_to": null,
+    "date_basis": "current",
+    "town": "Stoke-on-Trent",
+    "region": "",
+    "address": "",
+    "description": "",
+    "url": "",
+    "source": "The Ham and Egger Files",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1068418,
+     51.5154345
+    ]
+   },
+   "properties": {
+    "id": "ch-02677912",
+    "name": "RITZ VIDEO FILM HIRE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1992,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Hill House 1 Little New Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2313759,
+     53.4717275
+    ]
+   },
+   "properties": {
+    "id": "ch-11659711",
+    "name": "ROSEBUD FILM AND VIDEO PRODUCTIONS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Manchester",
+    "region": "",
+    "address": "Flat 1a Silkin Close",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.429406,
+     50.9387144
+    ]
+   },
+   "properties": {
+    "id": "ch-15556507",
+    "name": "RYAN JONES TRADING LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2024,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Southampton",
+    "region": "",
+    "address": "Flat 9 Pinelands Court Coxford Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1238358,
+     51.5148159
+    ]
+   },
+   "properties": {
+    "id": "ch-14235364",
+    "name": "SALES VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2022,
+    "active_to": 2023,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "71-75 Shelton Street Covent Garden",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.08578,
+     51.52382
+    ]
+   },
+   "properties": {
+    "id": "ch-01830957",
+    "name": "SANKOFA FILM AND VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1984,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "52-58 Tabernacle Street Gotham Erskine Llp",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2986441,
+     51.5515261
+    ]
+   },
+   "properties": {
+    "id": "ch-08600017",
+    "name": "SGA VEDIO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2013,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Wembley",
+    "region": "",
+    "address": "13 Ealing Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.27458,
+     51.48623
+    ]
+   },
+   "properties": {
+    "id": "ch-06745923",
+    "name": "SIMON BRZESKWINSKI LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2008,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "32 St Marys Grove Chiswick",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     0.37161,
+     51.4399299
+    ]
+   },
+   "properties": {
+    "id": "ch-14897152",
+    "name": "SINICA VIDEO STORE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Gravesend",
+    "region": "",
+    "address": "58 Edwin Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.2257679,
+     51.4096201
+    ]
+   },
+   "properties": {
+    "id": "ch-08188679",
+    "name": "SQM RENTAL&EVENTS LTD.",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "590 Kingston Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.083554,
+     51.470235
+    ]
+   },
+   "properties": {
+    "id": "ch-14634542",
+    "name": "SSENDI ENTERTAINMENT LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Flat 5 Chatham House Mcneil Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2443174,
+     53.4740722
+    ]
+   },
+   "properties": {
+    "id": "ch-05022654",
+    "name": "STALWART FILM & VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2004,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "Manchester",
+    "region": "",
+    "address": "Suite Gb Ground Floor, Barclay House 35 Whitworth Street West",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0143248,
+     51.5121426
+    ]
+   },
+   "properties": {
+    "id": "ch-14796353",
+    "name": "STARLIGHT VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Floor 1 Office 25 22 Market Square",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0164952,
+     51.5051917
+    ]
+   },
+   "properties": {
+    "id": "ch-00240814",
+    "name": "STUDIO FILM AND VIDEO HOLDINGS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1929,
+    "active_to": 2018,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "15 Canada Square",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.42506,
+     53.41515
+    ]
+   },
+   "properties": {
+    "id": "ch-08711777",
+    "name": "SUCCESS VIDEO MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2013,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Manchester",
+    "region": "",
+    "address": "42 Cross Lane East Partington",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.4664521,
+     52.5235806
+    ]
+   },
+   "properties": {
+    "id": "star-video-6eff80",
+    "name": "Star Video",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Warwickshire",
+    "region": "",
+    "address": "32 Newdegate St., Nuneaton, Warwickshire",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-07846117",
+    "name": "TAPE IT YOURSELF LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2011,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "145-157 St John Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0883597,
+     51.5266775
+    ]
+   },
+   "properties": {
+    "id": "ch-14482860",
+    "name": "THE GREEN LIGHT RENTAL SERVICES LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2022,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "128 City Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.1505424,
+     52.6396088
+    ]
+   },
+   "properties": {
+    "id": "ch-02797363",
+    "name": "THE LEICESTER INDEPENDENT FILM AND VIDEO ASSOCIATION LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1993,
+    "active_to": 2011,
+    "date_basis": "register",
+    "town": "Leicester",
+    "region": "",
+    "address": "Fosse Arts Centre Mantle Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.11183,
+     51.24312
+    ]
+   },
+   "properties": {
+    "id": "ch-16230511",
+    "name": "THE VIDEO GAME STORE LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2025,
+    "active_to": 2026,
+    "date_basis": "register",
+    "town": "Winchester",
+    "region": "",
+    "address": "10 Goatsbeard House Winnall Mannor Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.4631829,
+     53.3841179
+    ]
+   },
+   "properties": {
+    "id": "ch-14681594",
+    "name": "THE WUB CLUB LTD",
+    "type": "shop",
+    "status": "open",
+    "years": "",
+    "active_from": 2023,
+    "active_to": null,
+    "date_basis": "register",
+    "town": "Sheffield",
+    "region": "",
+    "address": "Plot 22 Exchange Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.7616237,
+     54.6551317
+    ]
+   },
+   "properties": {
+    "id": "ch-14695096",
+    "name": "TOGETHER CONNECT CIC",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "Penrith",
+    "region": "",
+    "address": "Unit 4 Mason Court Penrith 40 Business Park",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.84755,
+     54.98142
+    ]
+   },
+   "properties": {
+    "id": "ch-02855189",
+    "name": "TONY GLOVER FILM AND VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 1993,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "Newcastle Upon Tyne",
+    "region": "",
+    "address": "13 Horsley Wood Cottages Horsley",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.2864384,
+     55.8655612
+    ]
+   },
+   "properties": {
+    "id": "telespot-ca73f1",
+    "name": "Telespot",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Glasgow",
+    "region": "",
+    "address": "1150 Argyle Street, Glasgow",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0689282,
+     50.9059718
+    ]
+   },
+   "properties": {
+    "id": "the-business-471611",
+    "name": "The Business",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Lewes Road",
+    "region": "",
+    "address": "Lewes Road",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1221199,
+     51.5207125
+    ]
+   },
+   "properties": {
+    "id": "ch-15054822",
+    "name": "UNISHOOT LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2025,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "27 Old Gloucester Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0209184,
+     52.5019896
+    ]
+   },
+   "properties": {
+    "id": "ch-03947802",
+    "name": "UXBRIDGE FILM & VIDEO LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2000,
+    "active_to": 2010,
+    "date_basis": "register",
+    "town": "Surrey",
+    "region": "",
+    "address": "Clive House,12/18 Queens Road Weybridge",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.22637,
+     53.01374
+    ]
+   },
+   "properties": {
+    "id": "ch-08226477",
+    "name": "VIDEO AND FILM PRODUCTIONS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2014,
+    "date_basis": "register",
+    "town": "Newcastle",
+    "region": "",
+    "address": "62 Broad Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1221199,
+     51.5207125
+    ]
+   },
+   "properties": {
+    "id": "ch-14850184",
+    "name": "VIDEO GAME STORE BORUNOVAS LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2023,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "27 Old Gloucester Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.11259,
+     52.78627
+    ]
+   },
+   "properties": {
+    "id": "ch-14241620",
+    "name": "VIDEO GLOBAL MEDIA LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2022,
+    "active_to": 2024,
+    "date_basis": "register",
+    "town": "Stafford",
+    "region": "",
+    "address": "7 Merrivale Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.30019,
+     55.8567
+    ]
+   },
+   "properties": {
+    "id": "ch-sc604885",
+    "name": "VIDEO GUY (FILM PRODUCTIONS) LTD.",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2018,
+    "active_to": 2019,
+    "date_basis": "register",
+    "town": "Glasgow",
+    "region": "",
+    "address": "Film City Glasgow 401 Govan Road Govan",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0937515,
+     51.5308149
+    ]
+   },
+   "properties": {
+    "id": "ch-09448098",
+    "name": "VIDEO MEDIA GROUP LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "20-22 Wenlock Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.0937515,
+     51.5308149
+    ]
+   },
+   "properties": {
+    "id": "ch-09588138",
+    "name": "VIDEO SHOP LONDON LTD",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "20-22 Wenlock Road",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.24052,
+     52.17501
+    ]
+   },
+   "properties": {
+    "id": "ch-04334759",
+    "name": "VIDEO TONITE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2001,
+    "active_to": 2021,
+    "date_basis": "register",
+    "town": "Worcester",
+    "region": "",
+    "address": "15 Calgary Drive",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     1.7490307,
+     52.47761
+    ]
+   },
+   "properties": {
+    "id": "vmv-video-2aa5ac",
+    "name": "VMV Video",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Lowestoft",
+    "region": "",
+    "address": "99 Raglan Street, Lowestoft",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.9734459,
+     53.4879835
+    ]
+   },
+   "properties": {
+    "id": "video-city-d42c4f",
+    "name": "Video City",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Liverpool",
+    "region": "",
+    "address": "28 Marian Square, Netherton, Liverpool",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.0575452,
+     52.5294983
+    ]
+   },
+   "properties": {
+    "id": "video-vision-48a6a2",
+    "name": "Video Vision",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Tipton",
+    "region": "",
+    "address": "3 Owen Street, Town Centre, Tipton",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.32965,
+     51.06487
+    ]
+   },
+   "properties": {
+    "id": "videoland-330114",
+    "name": "Videoland",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "West Sussex",
+    "region": "",
+    "address": "52 Springfield Road, Horsham, West Sussex",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.2195245,
+     51.7263732
+    ]
+   },
+   "properties": {
+    "id": "videosyncratic-b693fa",
+    "name": "Videosyncratic",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": null,
+    "active_to": null,
+    "date_basis": "unknown",
+    "town": "Oxford",
+    "region": "",
+    "address": "101 Cowley Road, Oxford",
+    "description": "",
+    "url": "",
+    "source": "VivaVHS: Ex-Rental - A Video Store Graveyard",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.66812,
+     56.73149
+    ]
+   },
+   "properties": {
+    "id": "ch-sc508100",
+    "name": "WS ASSETS LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2017,
+    "date_basis": "register",
+    "town": "Brechin",
+    "region": "",
+    "address": "4 Bearehill Glebe",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1291742,
+     51.6326589
+    ]
+   },
+   "properties": {
+    "id": "ch-09578584",
+    "name": "YINGJI MEDIA GROUP FINGER VIDEO ONLINE LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2015,
+    "active_to": 2016,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "Chase Business Centre 39-41 Chase Side",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.1422716,
+     51.5236964
+    ]
+   },
+   "properties": {
+    "id": "ch-08334011",
+    "name": "ZIGZAG VIDEO MEDIA LIMITED",
+    "type": "shop",
+    "status": "closed",
+    "years": "",
+    "active_from": 2012,
+    "active_to": 2015,
+    "date_basis": "register",
+    "town": "London",
+    "region": "",
+    "address": "37 Warren Street",
+    "description": "",
+    "url": "",
+    "source": "Companies House",
+    "sample": false
    }
   }
  ]

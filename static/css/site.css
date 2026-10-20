@@ -1049,6 +1049,62 @@ html.js .theme-toggle { display: inline-flex; }
 }
 .map-filters .field { margin: 0; }
 .map-filters .field-grow { grid-column: 1 / -1; }
+/* the trading-year filter */
+.filter-years {
+  grid-column: 1 / -1;
+  padding-bottom: .75rem;
+  margin-bottom: .25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.filter-years-label {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 .45rem;
+}
+.filter-years-controls { display: flex; align-items: center; gap: .5rem; }
+.filter-years-controls input {
+  width: 5.5rem;
+  font: inherit;
+  font-family: var(--mono);
+  font-size: .9rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--border) solid var(--ink);
+  padding: .5rem .55rem;
+  min-height: 44px;
+}
+.filter-years-dash {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-faint);
+}
+.filter-years-presets { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.chip-button {
+  font: inherit;
+  cursor: pointer;
+  min-height: 44px;
+  padding: .3rem .6rem;
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+.chip-button:hover { border-color: var(--accent); color: var(--accent-ink); }
+.chip-button.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.filter-years-note {
+  margin: .5rem 0 0;
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--ink-faint);
+  min-height: 1.2em;
+}
+
 .map-count {
   grid-column: 1 / -1;
   margin: 0;
@@ -1058,7 +1114,63 @@ html.js .theme-toggle { display: inline-flex; }
   letter-spacing: .08em;
   color: var(--ink-faint);
 }
-@media (min-width: 48rem) { .map-count { grid-column: auto; margin: 0 0 0 .5rem; } }
+@media (min-width: 48rem) { /* the trading-year filter */
+.filter-years {
+  grid-column: 1 / -1;
+  padding-bottom: .75rem;
+  margin-bottom: .25rem;
+  border-bottom: 1px solid var(--rule);
+}
+.filter-years-label {
+  font-family: var(--mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin: 0 0 .45rem;
+}
+.filter-years-controls { display: flex; align-items: center; gap: .5rem; }
+.filter-years-controls input {
+  width: 5.5rem;
+  font: inherit;
+  font-family: var(--mono);
+  font-size: .9rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: var(--border) solid var(--ink);
+  padding: .5rem .55rem;
+  min-height: 44px;
+}
+.filter-years-dash {
+  font-family: var(--mono);
+  font-size: .78rem;
+  color: var(--ink-faint);
+}
+.filter-years-presets { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.chip-button {
+  font: inherit;
+  cursor: pointer;
+  min-height: 44px;
+  padding: .3rem .6rem;
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+.chip-button:hover { border-color: var(--accent); color: var(--accent-ink); }
+.chip-button.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.filter-years-note {
+  margin: .5rem 0 0;
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--ink-faint);
+  min-height: 1.2em;
+}
+
+.map-count { grid-column: auto; margin: 0 0 0 .5rem; } }
 
 .map-canvas {
   height: min(62vh, 560px);
@@ -1180,13 +1292,18 @@ html.js .theme-toggle { display: inline-flex; }
 }
 
 /* markers: chunky pixel diamonds */
+/* the marker is a small diamond inside a larger transparent hit area, so
+   the pin stays dainty but the target is a comfortable size */
 .marker-dot {
+  position: absolute;
+  left: 50%;
+  top: 50%;
   display: block;
-  width: 16px; height: 16px;
+  width: 18px; height: 18px;
   background: var(--red);
   border: 2px solid var(--surface);
   box-shadow: 0 0 0 2px var(--ink);
-  transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .marker-dot.is-dim { background: var(--ink-faint); }
 .marker-cluster {
@@ -1217,6 +1334,12 @@ html.js .theme-toggle { display: inline-flex; }
   letter-spacing: .08em;
 }
 .popup-text { margin-top: .5rem; }
+.popup-source {
+  margin-top: .5rem;
+  font-family: var(--mono);
+  font-size: .68rem;
+  color: var(--ink-faint);
+}
 .popup-sample {
   display: inline-block;
   margin-top: .4rem;

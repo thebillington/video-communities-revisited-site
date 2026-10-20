@@ -22,6 +22,12 @@
   var counter = document.getElementById("map-count");
   var rows = Array.prototype.slice.call(document.querySelectorAll(".location-table tbody tr[data-id]"));
 
+  /* the trading-year filter */
+  var yearFrom = document.getElementById("year-from");
+  var yearTo = document.getElementById("year-to");
+  var presets = document.getElementById("year-presets");
+  var yearsNote = document.getElementById("years-note");
+
   var map = L.map(container, { scrollWheelZoom: false }).setView([parseFloat(centre[0]), parseFloat(centre[1])], zoom);
   L.tileLayer(tiles, { attribution: attribution, maxZoom: 18 }).addTo(map);
 
@@ -34,9 +40,22 @@
     return L.divIcon({
       className: "",
       html: '<span class="marker-dot' + dim + '"></span>',
-      iconSize: [18, 18],
-      iconAnchor: [9, 9]
+      iconSize: [44, 44],
+      iconAnchor: [22, 22]
     });
+  }
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function yearRange(entry) {
+    var from = entry.active_from;
+    var to = entry.active_to;
+    if (from === null || from === undefined || from === "") return null;
+    return { from: parseInt(from, 10), to: to === null || to === undefined || to === "" ? null : parseInt(to, 10) };
   }
 
   function popupFor(entry) {
@@ -47,14 +66,28 @@
     html += "</p>";
     if (entry.description) html += '<p class="popup-text">' + escapeHtml(entry.description) + "</p>";
     if (entry.url) html += '<p class="popup-text"><a href="' + escapeHtml(entry.url) + '">Visit website</a></p>';
+    if (entry.source) html += '<p class="popup-source">Source: ' + escapeHtml(entry.source) + "</p>";
     if (entry.sample) html += '<p class="popup-sample">Sample entry</p>';
     return html;
   }
 
-  function escapeHtml(value) {
-    return String(value == null ? "" : value)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  function currentYears() {
+    var from = yearFrom && yearFrom.value !== "" ? parseInt(yearFrom.value, 10) : null;
+    var to = yearTo && yearTo.value !== "" ? parseInt(yearTo.value, 10) : null;
+    if (from === null && to === null) return null;
+    if (from === null) from = 1900;
+    if (to === null) to = 2100;
+    if (from > to) { var swap = from; from = to; to = swap; }
+    return { from: from, to: to };
+  }
+
+  function matchesYears(entry, range) {
+    if (!range) return true;
+    var years = yearRange(entry);
+    if (!years) return false;
+    var starts = years.from;
+    var ends = years.to === null ? range.to : years.to;
+    return starts <= range.to && ends >= range.from;
   }
 
   function matches(entry) {
@@ -67,18 +100,21 @@
         .join(" ").toLowerCase();
       if (haystack.indexOf(query) === -1) return false;
     }
-    return true;
+    return matchesYears(entry, currentYears());
   }
 
   function apply() {
     var visible = 0;
+    var undated = 0;
+    var range = currentYears();
     cluster.clearLayers();
     var shown = [];
 
     entries.forEach(function (entry) {
       var row = document.getElementById("place-" + entry.id);
       var note = row ? row.nextElementSibling : null;
-      if (matches(entry)) {
+      var ok = matches(entry);
+      if (ok) {
         visible += 1;
         shown.push(entry);
         var marker = markers[entry.id];
@@ -96,8 +132,27 @@
     });
 
     map.addLayer(cluster);
+
+    // the list below is the authority on how many entries there are: some
+    // could not be placed on the map
+    var shownRows = 0;
+    var hiddenUndated = 0;
+    rows.forEach(function (row) {
+      if (!row.hidden) {
+        shownRows += 1;
+      } else if (range && !row.getAttribute("data-from")) {
+        hiddenUndated += 1;
+      }
+    });
     if (counter) {
-      counter.textContent = visible === 1 ? "1 entry" : visible + " entries";
+      counter.textContent = shownRows === 1 ? "1 entry" : shownRows + " entries";
+    }
+    if (yearsNote) {
+      var onMap = visible;
+      yearsNote.textContent = range
+        ? "Showing " + range.from + " to " + range.to + ". " + onMap + " on the map" +
+          (hiddenUndated ? ", " + hiddenUndated + " without dates hidden." : ".")
+        : onMap + " of " + rows.length + " on the map";
     }
     return shown;
   }
@@ -151,4 +206,24 @@
     element.addEventListener("input", apply);
     element.addEventListener("change", apply);
   });
+
+  if (yearFrom && yearTo) {
+    [yearFrom, yearTo].forEach(function (input) {
+      input.addEventListener("input", apply);
+      input.addEventListener("change", apply);
+    });
+  }
+
+  if (presets) {
+    presets.addEventListener("click", function (event) {
+      var button = event.target.closest("button[data-from]");
+      if (!button) return;
+      yearFrom.value = button.getAttribute("data-from");
+      yearTo.value = button.getAttribute("data-to");
+      Array.prototype.forEach.call(presets.querySelectorAll("button"), function (other) {
+        other.classList.toggle("is-active", other === button);
+      });
+      apply();
+    });
+  }
 })();

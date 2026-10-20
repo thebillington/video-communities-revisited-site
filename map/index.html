@@ -34,11 +34,11 @@
   <meta property="og:url" content="https://thebillington.co.uk/video-communities-revisited-site/map/">
   <meta name="twitter:card" content="summary">
   <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
-  <link rel="stylesheet" href="../static/css/fonts.css?v=4bd95064">
-  <link rel="stylesheet" href="../static/css/site.css?v=4bd95064">
-<link rel="stylesheet" href="../static/vendor/leaflet/leaflet.css?v=4bd95064">
-<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.css?v=4bd95064">
-<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.Default.css?v=4bd95064">
+  <link rel="stylesheet" href="../static/css/fonts.css?v=93a5b37a">
+  <link rel="stylesheet" href="../static/css/site.css?v=93a5b37a">
+<link rel="stylesheet" href="../static/vendor/leaflet/leaflet.css?v=93a5b37a">
+<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.css?v=93a5b37a">
+<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.Default.css?v=93a5b37a">
 </head>
 <body class="">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -130,6 +130,26 @@
 
   <section class="map-section">
     <form class="map-filters" id="map-filters" data-map="1" aria-label="Filter map entries">
+      <div class="filter-years">
+        <p class="filter-years-label" id="years-label">Trading years</p>
+        <div class="filter-years-controls" role="group" aria-labelledby="years-label">
+          <label class="visually-hidden" for="year-from">From year</label>
+          <input type="number" id="year-from" name="year_from" inputmode="numeric" placeholder="from" min="1900" max="2100" step="1">
+          <span class="filter-years-dash" aria-hidden="true">to</span>
+          <label class="visually-hidden" for="year-to">To year</label>
+          <input type="number" id="year-to" name="year_to" inputmode="numeric" placeholder="to" min="1900" max="2100" step="1">
+        </div>
+        <div class="filter-years-presets" id="year-presets">
+          <button type="button" class="chip chip-button" data-from="" data-to="">All years</button>
+          <button type="button" class="chip chip-button" data-from="1970" data-to="1979">1970s</button>
+          <button type="button" class="chip chip-button" data-from="1980" data-to="1989">1980s</button>
+          <button type="button" class="chip chip-button" data-from="1990" data-to="1999">1990s</button>
+          <button type="button" class="chip chip-button" data-from="2000" data-to="2009">2000s</button>
+          <button type="button" class="chip chip-button" data-from="2010" data-to="2019">2010s</button>
+          <button type="button" class="chip chip-button" data-from="2020" data-to="2029">2020s</button>
+        </div>
+        <p class="filter-years-note" id="years-note"></p>
+      </div>
       <div class="field field-inline">
         <label for="filter-type">Type</label>
         <select id="filter-type" name="type">
@@ -147,11 +167,54 @@
         <label for="filter-region">Region</label>
         <select id="filter-region" name="region">
           <option value="">All regions</option>
-          <option value="North West">North West</option>
-          <option value="Scotland">Scotland</option>
-          <option value="South West">South West</option>
-          <option value="Wales">Wales</option>
+          <option value="Banffshire">Banffshire</option>
+          <option value="Bedfordshire">Bedfordshire</option>
+          <option value="Berkshire">Berkshire</option>
+          <option value="Bucks">Bucks</option>
+          <option value="Caerphilly">Caerphilly</option>
+          <option value="Co. Tyrone">Co. Tyrone</option>
+          <option value="Derbyshire">Derbyshire</option>
+          <option value="Devon">Devon</option>
+          <option value="Dorset">Dorset</option>
+          <option value="East Midlands">East Midlands</option>
+          <option value="East Sussex">East Sussex</option>
+          <option value="East Yorkshire">East Yorkshire</option>
+          <option value="England">England</option>
+          <option value="Essex">Essex</option>
+          <option value="Gloucestershire">Gloucestershire</option>
+          <option value="Greater London">Greater London</option>
+          <option value="Greater Manchester">Greater Manchester</option>
+          <option value="Hampshire">Hampshire</option>
+          <option value="Hertfordshire">Hertfordshire</option>
+          <option value="Herts">Herts</option>
+          <option value="Kent">Kent</option>
+          <option value="Lancashire">Lancashire</option>
+          <option value="Lancs">Lancs</option>
+          <option value="Lincolnshire">Lincolnshire</option>
+          <option value="London">London</option>
+          <option value="London,">London,</option>
+          <option value="Luton">Luton</option>
+          <option value="Middlesex">Middlesex</option>
+          <option value="North Yorkshire">North Yorkshire</option>
+          <option value="Northamptonshire">Northamptonshire</option>
+          <option value="Northants">Northants</option>
+          <option value="Nottinghamshire">Nottinghamshire</option>
+          <option value="Orpington, Kent">Orpington, Kent</option>
+          <option value="Oxon">Oxon</option>
+          <option value="Peeblesshire">Peeblesshire</option>
+          <option value="Shropshire">Shropshire</option>
+          <option value="South Yorkshire">South Yorkshire</option>
+          <option value="Suffolk">Suffolk</option>
+          <option value="Surrey">Surrey</option>
+          <option value="Swansea">Swansea</option>
+          <option value="Warwickshire">Warwickshire</option>
           <option value="West Midlands">West Midlands</option>
+          <option value="West Sussex">West Sussex</option>
+          <option value="West Yorkshire">West Yorkshire</option>
+          <option value="West of England">West of England</option>
+          <option value="Wiltshire">Wiltshire</option>
+          <option value="Worcestershire">Worcestershire</option>
+          <option value="Yorkshire">Yorkshire</option>
         </select>
       </div>
       <div class="field field-inline">
@@ -168,7 +231,7 @@
         <input id="filter-search" name="search" type="search" placeholder="Name, town or keyword">
       </div>
       <p class="map-count" id="map-count" role="status" aria-live="polite">
-        5 entries
+        247 entries
       </p>
     </form>
 
@@ -193,6 +256,8 @@
       Map tiles &copy; OpenStreetMap contributors. Entry data is the project's
       own, released under
       <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>.
+      Companies House data is
+      <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">OGL v3</a>.
     </p>
   </section>
 
@@ -210,70 +275,3993 @@
         </tr>
       </thead>
       <tbody>
-        <tr id="place-example-northern-video-shop"
-            data-id="example-northern-video-shop"
+        <tr id="place-ch-sc251100"
+            data-id="ch-sc251100"
             data-type="shop"
-            data-region="North West"
-            data-status="closed">
+            data-region="Banffshire"
+            data-status="closed"
+            data-from="2003"
+            data-to="2014">
           <th scope="row">
-            Example Video (sample entry)
-<span class="chip chip-sample">sample</span><p class="location-desc">A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources.</p>          </th>
+            BANFF VIDEO LIBRARY LIMITED
+          </th>
           <td data-label="Type">shop</td>
-          <td data-label="Town">Kendal</td>
-          <td data-label="Years">1983–2004</td>
+          <td data-label="Town">Buckie</td>
+          <td data-label="Years">
+              2003–2014          </td>
           <td data-label="Status">closed</td>
         </tr>
-        <tr id="place-example-scottish-video-archive"
-            data-id="example-scottish-video-archive"
-            data-type="archive"
-            data-region="Scotland"
-            data-status="open">
+        <tr id="place-ch-04815908"
+            data-id="ch-04815908"
+            data-type="shop"
+            data-region="Bedfordshire"
+            data-status="closed"
+            data-from="2003"
+            data-to="2020">
           <th scope="row">
-            Example Video Archive (sample entry)
-<span class="chip chip-sample">sample</span><p class="location-desc">A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row.</p><a class="table-link" href="https://example.org/archive">Website</a>          </th>
-          <td data-label="Type">archive</td>
-          <td data-label="Town">Glasgow</td>
-          <td data-label="Years">1990–</td>
+            BOX OFFICE 24 LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leighton Buzzard</td>
+          <td data-label="Years">
+              2003–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04787127"
+            data-id="ch-04787127"
+            data-type="shop"
+            data-region="Bedfordshire"
+            data-status="closed"
+            data-from="2003"
+            data-to="2020">
+          <th scope="row">
+            MULTICOUNTRY CONSULTANTS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leighton Buzzard</td>
+          <td data-label="Years">
+              2003–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13569898"
+            data-id="ch-13569898"
+            data-type="shop"
+            data-region="Bedfordshire"
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            VANYA KIRILOVA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bedford</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07079907"
+            data-id="ch-07079907"
+            data-type="shop"
+            data-region="Berkshire"
+            data-status="open"
+            data-from="2009"
+            data-to="">
+          <th scope="row">
+            DYNAMIC MEDIA SOLUTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bracknell</td>
+          <td data-label="Years">
+              2009          </td>
           <td data-label="Status">open</td>
         </tr>
-        <tr id="place-example-bristol-tape-club"
-            data-id="example-bristol-tape-club"
-            data-type="club"
-            data-region="South West"
-            data-status="unknown">
+        <tr id="place-ch-16587233"
+            data-id="ch-16587233"
+            data-type="shop"
+            data-region="Bucks"
+            data-status="open"
+            data-from="2025"
+            data-to="">
           <th scope="row">
-            Example Tape Club (sample entry)
-<span class="chip chip-sample">sample</span><p class="location-desc">A members&#39; club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry.</p>          </th>
-          <td data-label="Type">club</td>
-          <td data-label="Town">Bristol</td>
-          <td data-label="Years">1988–1996</td>
-          <td data-label="Status">unknown</td>
+            PLAYBACK VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Princes Risborough</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
         </tr>
-        <tr id="place-example-wales-collection"
-            data-id="example-wales-collection"
-            data-type="collection"
-            data-region="Wales"
-            data-status="unknown">
+        <tr id="place-ch-17421257"
+            data-id="ch-17421257"
+            data-type="shop"
+            data-region="Caerphilly"
+            data-status="open"
+            data-from="2026"
+            data-to="">
           <th scope="row">
-            Example Private Collection (sample entry)
-<span class="chip chip-sample">sample</span><p class="location-desc">A private Betamax and VHS collection opened to researchers by appointment. Sample row.</p>          </th>
-          <td data-label="Type">collection</td>
-          <td data-label="Town">Cardiff</td>
-          <td data-label="Years">1979–</td>
-          <td data-label="Status">unknown</td>
+            MOVIE ONE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Blackwood</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
         </tr>
-        <tr id="place-example-midlands-swap-meet"
-            data-id="example-midlands-swap-meet"
-            data-type="market"
+        <tr id="place-ch-ni609466"
+            data-id="ch-ni609466"
+            data-type="shop"
+            data-region="Co. Tyrone"
+            data-status="closed"
+            data-from="2011"
+            data-to="2013">
+          <th scope="row">
+            DVDS &amp; MORE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Gortin</td>
+          <td data-label="Years">
+              2011–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15438288"
+            data-id="ch-15438288"
+            data-type="shop"
+            data-region="Derbyshire"
+            data-status="open"
+            data-from="2024"
+            data-to="">
+          <th scope="row">
+            80S VIDEO SHOP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Alfreton</td>
+          <td data-label="Years">
+              2024          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-05727812"
+            data-id="ch-05727812"
+            data-type="shop"
+            data-region="Devon"
+            data-status="closed"
+            data-from="2006"
+            data-to="2026">
+          <th scope="row">
+            ASPECT FILM AND VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Exeter</td>
+          <td data-label="Years">
+              2006–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02724846"
+            data-id="ch-02724846"
+            data-type="shop"
+            data-region="Dorset"
+            data-status="closed"
+            data-from="1992"
+            data-to="2025">
+          <th scope="row">
+            UTRILLO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bournemouth</td>
+          <td data-label="Years">
+              1992–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-01615434"
+            data-id="ch-01615434"
+            data-type="shop"
+            data-region="East Midlands"
+            data-status="closed"
+            data-from="1982"
+            data-to="2010">
+          <th scope="row">
+            INTERMEDIA FILM AND VIDEO (NOTTINGHAM) LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bulwell</td>
+          <td data-label="Years">
+              1982–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07083520"
+            data-id="ch-07083520"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2009"
+            data-to="2016">
+          <th scope="row">
+            AMPLE FILM &amp; VIDEO PRODUCERS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2009–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07177717"
+            data-id="ch-07177717"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            NATURAL FILM &amp; VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07177726"
+            data-id="ch-07177726"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            NATURAL FILM &amp; VIDEO PRODUCERS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07193355"
+            data-id="ch-07193355"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            NATURAL VIDEO &amp; FILM EDITS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07193281"
+            data-id="ch-07193281"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            NATURAL VIDEO &amp; FILM EFFECTS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07193447"
+            data-id="ch-07193447"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            NATURAL VIDEO &amp; FILM LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07068491"
+            data-id="ch-07068491"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2009"
+            data-to="2016">
+          <th scope="row">
+            TIDY VIDEO &amp; FILM EDITS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2009–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07068523"
+            data-id="ch-07068523"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2009"
+            data-to="2016">
+          <th scope="row">
+            TIDY VIDEO &amp; FILM EFFECTS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2009–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07062511"
+            data-id="ch-07062511"
+            data-type="shop"
+            data-region="East Sussex"
+            data-status="closed"
+            data-from="2009"
+            data-to="2016">
+          <th scope="row">
+            TIDY VIDEO &amp; FILM LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crowborough</td>
+          <td data-label="Years">
+              2009–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06641962"
+            data-id="ch-06641962"
+            data-type="shop"
+            data-region="East Yorkshire"
+            data-status="closed"
+            data-from="2008"
+            data-to="2010">
+          <th scope="row">
+            REAL VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">York</td>
+          <td data-label="Years">
+              2008–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-05151417"
+            data-id="ch-05151417"
+            data-type="shop"
+            data-region="England"
+            data-status="closed"
+            data-from="2004"
+            data-to="2011">
+          <th scope="row">
+            414 FILM &amp; VIDEO PRODUCTIONS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town"></td>
+          <td data-label="Years">
+              2004–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02165090"
+            data-id="ch-02165090"
+            data-type="shop"
+            data-region="England"
+            data-status="closed"
+            data-from="1987"
+            data-to="2011">
+          <th scope="row">
+            FILM &amp; VIDEO DESIGN LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town"></td>
+          <td data-label="Years">
+              1987–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02266757"
+            data-id="ch-02266757"
+            data-type="shop"
+            data-region="England"
+            data-status="closed"
+            data-from="1988"
+            data-to="2017">
+          <th scope="row">
+            FILM AND VIDEO UMBRELLA LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town"></td>
+          <td data-label="Years">
+              1988–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-01691031"
+            data-id="ch-01691031"
+            data-type="shop"
+            data-region="England"
+            data-status="closed"
+            data-from="1983"
+            data-to="2011">
+          <th scope="row">
+            ORIGINAL FILM VIDEO PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town"></td>
+          <td data-label="Years">
+              1983–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13820970"
+            data-id="ch-13820970"
+            data-type="shop"
+            data-region="England"
+            data-status="open"
+            data-from="2021"
+            data-to="">
+          <th scope="row">
+            SEYONS DREAM ARTS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-video-future-783e29"
+            data-id="video-future-783e29"
+            data-type="shop"
+            data-region="England"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Video Future
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Longton</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-03668870"
+            data-id="ch-03668870"
+            data-type="shop"
+            data-region="Essex"
+            data-status="closed"
+            data-from="1998"
+            data-to="2014">
+          <th scope="row">
+            A K VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Romford</td>
+          <td data-label="Years">
+              1998–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09379521"
+            data-id="ch-09379521"
+            data-type="shop"
+            data-region="Essex"
+            data-status="closed"
+            data-from="2015"
+            data-to="2016">
+          <th scope="row">
+            VIDEO AUDIO MASTER LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Harlow</td>
+          <td data-label="Years">
+              2015–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04738327"
+            data-id="ch-04738327"
+            data-type="shop"
+            data-region="Gloucestershire"
+            data-status="closed"
+            data-from="2003"
+            data-to="2014">
+          <th scope="row">
+            A TOUCH OF DUTCH LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Dursley</td>
+          <td data-label="Years">
+              2003–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12512075"
+            data-id="ch-12512075"
+            data-type="shop"
+            data-region="Greater London"
+            data-status="closed"
+            data-from="2020"
+            data-to="2021">
+          <th scope="row">
+            SPESO SHOP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2020–2021          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12333466"
+            data-id="ch-12333466"
+            data-type="shop"
+            data-region="Greater London"
+            data-status="closed"
+            data-from="2019"
+            data-to="2022">
+          <th scope="row">
+            THE VIDEO CLUB PRODUCTIONS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2019–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-b-v-c-bolton-video-centre-517dde"
+            data-id="b-v-c-bolton-video-centre-517dde"
+            data-type="shop"
+            data-region="Greater Manchester"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            B.V.C. - Bolton Video Centre
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Little Lever</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-deane-video-centre-ff9aa2"
+            data-id="deane-video-centre-ff9aa2"
+            data-type="shop"
+            data-region="Greater Manchester"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Deane Video Centre
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bolton</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-09504423"
+            data-id="ch-09504423"
+            data-type="shop"
+            data-region="Greater Manchester"
+            data-status="closed"
+            data-from="2015"
+            data-to="2017">
+          <th scope="row">
+            IN HOUSE ENTERTAINMENT LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Stockport</td>
+          <td data-label="Years">
+              2015–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-jubilee-films-76fa90"
+            data-id="jubilee-films-76fa90"
+            data-type="shop"
+            data-region="Greater Manchester"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Jubilee Films
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ashton-under-Lyne</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-the-movie-box-263f40"
+            data-id="the-movie-box-263f40"
+            data-type="shop"
+            data-region="Greater Manchester"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            The Movie Box
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-02865510"
+            data-id="ch-02865510"
+            data-type="shop"
+            data-region="Hampshire"
+            data-status="closed"
+            data-from="1993"
+            data-to="2013">
+          <th scope="row">
+            INTERNATIONAL FILM &amp; VIDEO SERVICES LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Andover</td>
+          <td data-label="Years">
+              1993–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-05408582"
+            data-id="ch-05408582"
+            data-type="shop"
+            data-region="Hampshire"
+            data-status="closed"
+            data-from="2005"
+            data-to="2010">
+          <th scope="row">
+            THE VIDEO SHOP LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ramsdean, Petersfield</td>
+          <td data-label="Years">
+              2005–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08475530"
+            data-id="ch-08475530"
+            data-type="shop"
+            data-region="Hampshire"
+            data-status="closed"
+            data-from="2013"
+            data-to="2014">
+          <th scope="row">
+            VIDEO STREAM MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Basingstoke</td>
+          <td data-label="Years">
+              2013–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10744598"
+            data-id="ch-10744598"
+            data-type="shop"
+            data-region="Hertfordshire"
+            data-status="closed"
+            data-from="2017"
+            data-to="2019">
+          <th scope="row">
+            BUSHEY FILM AND VIDEO PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Pinner</td>
+          <td data-label="Years">
+              2017–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06694951"
+            data-id="ch-06694951"
+            data-type="shop"
+            data-region="Hertfordshire"
+            data-status="closed"
+            data-from="2008"
+            data-to="2026">
+          <th scope="row">
+            DIGITAL FILM AND VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Royston</td>
+          <td data-label="Years">
+              2008–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-gtv-tv-video-5c0190"
+            data-id="gtv-tv-video-5c0190"
+            data-type="shop"
+            data-region="Hertfordshire"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            GTV TV &amp; Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Watford</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-07403646"
+            data-id="ch-07403646"
+            data-type="shop"
+            data-region="Hertfordshire"
+            data-status="closed"
+            data-from="2010"
+            data-to="2015">
+          <th scope="row">
+            PRIMETIME SWADLINCOTE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Borehamwood</td>
+          <td data-label="Years">
+              2010–2015          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07330192"
+            data-id="ch-07330192"
+            data-type="shop"
+            data-region="Herts"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            MEDIA CIRCUS VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Barnet</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04939269"
+            data-id="ch-04939269"
+            data-type="shop"
+            data-region="Kent"
+            data-status="closed"
+            data-from="2003"
+            data-to="2011">
+          <th scope="row">
+            DRESSAGE MASTERS VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bromley</td>
+          <td data-label="Years">
+              2003–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13823323"
+            data-id="ch-13823323"
+            data-type="shop"
+            data-region="Lancashire"
+            data-status="closed"
+            data-from="2021"
+            data-to="2026">
+          <th scope="row">
+            MOVIE DIRECT LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Blackburn</td>
+          <td data-label="Years">
+              2021–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12822426"
+            data-id="ch-12822426"
+            data-type="shop"
+            data-region="Lancashire"
+            data-status="closed"
+            data-from="2020"
+            data-to="2026">
+          <th scope="row">
+            MOVIES DIRECT LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Blackburn</td>
+          <td data-label="Years">
+              2020–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08987569"
+            data-id="ch-08987569"
+            data-type="shop"
+            data-region="Lancs"
+            data-status="closed"
+            data-from="2014"
+            data-to="2016">
+          <th scope="row">
+            VIDEO MEDIA PRESENTATION LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Preston</td>
+          <td data-label="Years">
+              2014–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07010237"
+            data-id="ch-07010237"
+            data-type="shop"
+            data-region="Lincolnshire"
+            data-status="closed"
+            data-from="2009"
+            data-to="2012">
+          <th scope="row">
+            MARTIN BROADLEY IN-STORE VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Grantham</td>
+          <td data-label="Years">
+              2009–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10985693"
+            data-id="ch-10985693"
+            data-type="shop"
+            data-region="Lincolnshire"
+            data-status="closed"
+            data-from="2017"
+            data-to="2018">
+          <th scope="row">
+            VIDEO MEDIA STUDIO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Lincoln</td>
+          <td data-label="Years">
+              2017–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-01610694"
+            data-id="ch-01610694"
+            data-type="shop"
+            data-region="London"
+            data-status="closed"
+            data-from="1982"
+            data-to="2011">
+          <th scope="row">
+            FAMILY VIDEO LIBRARY (LONDON) LIMITED(THE)
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">North Finchley</td>
+          <td data-label="Years">
+              1982–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13533857"
+            data-id="ch-13533857"
+            data-type="shop"
+            data-region="London,"
+            data-status="closed"
+            data-from="2021"
+            data-to="2022">
+          <th scope="row">
+            THROWBACKTV LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ruislip,</td>
+          <td data-label="Years">
+              2021–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-shahenshah-videos-323337"
+            data-id="shahenshah-videos-323337"
+            data-type="shop"
+            data-region="Luton"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Shahenshah Videos
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Luton</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-06564249"
+            data-id="ch-06564249"
+            data-type="shop"
+            data-region="Middlesex"
+            data-status="closed"
+            data-from="2008"
+            data-to="2011">
+          <th scope="row">
+            ARTIKAL FILMS AND VIDEO PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Harrow</td>
+          <td data-label="Years">
+              2008–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02400350"
+            data-id="ch-02400350"
+            data-type="shop"
+            data-region="Middlesex"
+            data-status="closed"
+            data-from="1989"
+            data-to="2012">
+          <th scope="row">
+            BURBANK INTERNATIONAL VIDEO &amp; FILMS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Pinner</td>
+          <td data-label="Years">
+              1989–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07620920"
+            data-id="ch-07620920"
+            data-type="shop"
+            data-region="Middlesex"
+            data-status="closed"
+            data-from="2011"
+            data-to="2015">
+          <th scope="row">
+            HUXLEY FILM &amp; VIDEO SERVICES LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">South Harrow</td>
+          <td data-label="Years">
+              2011–2015          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04052024"
+            data-id="ch-04052024"
+            data-type="shop"
+            data-region="Middlesex"
+            data-status="closed"
+            data-from="2000"
+            data-to="2011">
+          <th scope="row">
+            M.G. FILMS &amp; VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Edgware</td>
+          <td data-label="Years">
+              2000–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07364120"
+            data-id="ch-07364120"
+            data-type="shop"
+            data-region="North Yorkshire"
+            data-status="closed"
+            data-from="2010"
+            data-to="2016">
+          <th scope="row">
+            QOOB LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Harrogate</td>
+          <td data-label="Years">
+              2010–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02146319"
+            data-id="ch-02146319"
+            data-type="shop"
+            data-region="Northamptonshire"
+            data-status="closed"
+            data-from="1987"
+            data-to="2016">
+          <th scope="row">
+            INTERNATIONAL MEDIA COMMUNICATIONS (VIDEO) LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Corby</td>
+          <td data-label="Years">
+              1987–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02650356"
+            data-id="ch-02650356"
+            data-type="shop"
+            data-region="Northants"
+            data-status="open"
+            data-from="1991"
+            data-to="">
+          <th scope="row">
+            WHITE HOUSE VIDEOS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Rushden</td>
+          <td data-label="Years">
+              1991          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-13771685"
+            data-id="ch-13771685"
+            data-type="shop"
+            data-region="Nottinghamshire"
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            APNAFLIX LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Nottingham</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-03004782"
+            data-id="ch-03004782"
+            data-type="shop"
+            data-region="Orpington, Kent"
+            data-status="closed"
+            data-from="1994"
+            data-to="2018">
+          <th scope="row">
+            VIDEO U.K. (RETAIL) LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Roberts Mews</td>
+          <td data-label="Years">
+              1994–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07789113"
+            data-id="ch-07789113"
+            data-type="shop"
+            data-region="Oxon"
+            data-status="closed"
+            data-from="2011"
+            data-to="2013">
+          <th scope="row">
+            BACKLIGHT FILM AND VIDEO PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Banbury</td>
+          <td data-label="Years">
+              2011–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-sc257888"
+            data-id="ch-sc257888"
+            data-type="shop"
+            data-region="Peeblesshire"
+            data-status="closed"
+            data-from="2003"
+            data-to="2012">
+          <th scope="row">
+            FILM AND VIDEO RIGHTS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">West Linton</td>
+          <td data-label="Years">
+              2003–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06814206"
+            data-id="ch-06814206"
+            data-type="shop"
+            data-region="Shropshire"
+            data-status="closed"
+            data-from="2009"
+            data-to="2018">
+          <th scope="row">
+            CARADOC DVD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Shrewsbury</td>
+          <td data-label="Years">
+              2009–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08219277"
+            data-id="ch-08219277"
+            data-type="shop"
+            data-region="South Yorkshire"
+            data-status="closed"
+            data-from="2012"
+            data-to="2015">
+          <th scope="row">
+            ARTIST FILM AND VIDEO PRODUCTION LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Sheffield</td>
+          <td data-label="Years">
+              2012–2015          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07775404"
+            data-id="ch-07775404"
+            data-type="shop"
+            data-region="South Yorkshire"
+            data-status="open"
+            data-from="2011"
+            data-to="">
+          <th scope="row">
+            VIDEO GAMES (WATH) LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Rotherham</td>
+          <td data-label="Years">
+              2011          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-video-rentals-f463c2"
+            data-id="video-rentals-f463c2"
+            data-type="shop"
+            data-region="South Yorkshire"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Video Rentals
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">The Village Top Shop in Thorpe Hesley</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-northgate-video-dvd-44b01c"
+            data-id="northgate-video-dvd-44b01c"
+            data-type="shop"
+            data-region="Suffolk"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Northgate Video &amp; DVD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bury St Edmunds (still operating</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-tvl-allstar-video-9f15b8"
+            data-id="tvl-allstar-video-9f15b8"
+            data-type="shop"
+            data-region="Suffolk"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            TVL Allstar Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Haverhill (still operating)</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-04954843"
+            data-id="ch-04954843"
+            data-type="shop"
+            data-region="Surrey"
+            data-status="closed"
+            data-from="2003"
+            data-to="2018">
+          <th scope="row">
+            BLUECHIP DATA LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Farnham</td>
+          <td data-label="Years">
+              2003–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-03849496"
+            data-id="ch-03849496"
+            data-type="shop"
+            data-region="Surrey"
+            data-status="closed"
+            data-from="1999"
+            data-to="2014">
+          <th scope="row">
+            CRANLEIGH PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Caterham</td>
+          <td data-label="Years">
+              1999–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12514618"
+            data-id="ch-12514618"
+            data-type="shop"
+            data-region="Surrey"
+            data-status="open"
+            data-from="2020"
+            data-to="">
+          <th scope="row">
+            EV ENTERPRISES &amp; TRADING LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Croydon</td>
+          <td data-label="Years">
+              2020          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-01606500"
+            data-id="ch-01606500"
+            data-type="shop"
+            data-region="Surrey"
+            data-status="closed"
+            data-from="1982"
+            data-to="2017">
+          <th scope="row">
+            VIDEO FILM WORLD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Woking</td>
+          <td data-label="Years">
+              1982–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-express-f42483"
+            data-id="video-express-f42483"
+            data-type="shop"
+            data-region="Swansea"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Video Express
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Swansea</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-07418246"
+            data-id="ch-07418246"
+            data-type="shop"
+            data-region="Warwickshire"
+            data-status="closed"
+            data-from="2010"
+            data-to="2013">
+          <th scope="row">
+            GAMES SURFER LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Stratford Upon Avon</td>
+          <td data-label="Years">
+              2010–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-oc349942"
+            data-id="ch-oc349942"
+            data-type="shop"
+            data-region="Warwickshire"
+            data-status="closed"
+            data-from="2009"
+            data-to="2016">
+          <th scope="row">
+            WEB VIDEO STORE LLP
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Rugby</td>
+          <td data-label="Years">
+              2009–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-05533437"
+            data-id="ch-05533437"
+            data-type="shop"
             data-region="West Midlands"
-            data-status="open">
+            data-status="closed"
+            data-from="2005"
+            data-to="2014">
           <th scope="row">
-            Example Swap Meet (sample entry)
-<span class="chip chip-sample">sample</span><p class="location-desc">A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry.</p>          </th>
-          <td data-label="Type">market</td>
+            EAT DRINK FILM VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town"></td>
+          <td data-label="Years">
+              2005–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13404809"
+            data-id="ch-13404809"
+            data-type="shop"
+            data-region="West Midlands"
+            data-status="closed"
+            data-from="2021"
+            data-to="2025">
+          <th scope="row">
+            MIRZA VIDEO ENTERTAINMENT LIMITED
+          </th>
+          <td data-label="Type">shop</td>
           <td data-label="Town">Birmingham</td>
-          <td data-label="Years">1996–</td>
+          <td data-label="Years">
+              2021–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07805727"
+            data-id="ch-07805727"
+            data-type="shop"
+            data-region="West Sussex"
+            data-status="closed"
+            data-from="2011"
+            data-to="2016">
+          <th scope="row">
+            REFLEX DVD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Chichester</td>
+          <td data-label="Years">
+              2011–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09034209"
+            data-id="ch-09034209"
+            data-type="shop"
+            data-region="West Sussex"
+            data-status="closed"
+            data-from="2014"
+            data-to="2016">
+          <th scope="row">
+            SELSEY DVD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Selsey</td>
+          <td data-label="Years">
+              2014–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07071313"
+            data-id="ch-07071313"
+            data-type="shop"
+            data-region="West Yorkshire"
+            data-status="closed"
+            data-from="2009"
+            data-to="2013">
+          <th scope="row">
+            2EAZI LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leeds</td>
+          <td data-label="Years">
+              2009–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06887147"
+            data-id="ch-06887147"
+            data-type="shop"
+            data-region="West Yorkshire"
+            data-status="closed"
+            data-from="2009"
+            data-to="2012">
+          <th scope="row">
+            VENDAFILM LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leeds</td>
+          <td data-label="Years">
+              2009–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-years-e12407"
+            data-id="video-years-e12407"
+            data-type="shop"
+            data-region="West Yorkshire"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Video Years
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leeds (still operating)</td>
+          <td data-label="Years">
+              2026          </td>
           <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-20th-century-flicks-05d7a5"
+            data-id="20th-century-flicks-05d7a5"
+            data-type="shop"
+            data-region="West of England"
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            20th Century Flicks
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bristol (still operating</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-04458252"
+            data-id="ch-04458252"
+            data-type="shop"
+            data-region="Wiltshire"
+            data-status="closed"
+            data-from="2002"
+            data-to="2012">
+          <th scope="row">
+            VIDEO FILM SERVICES (STUDIO) LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Trowbridge</td>
+          <td data-label="Years">
+              2002–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08777736"
+            data-id="ch-08777736"
+            data-type="shop"
+            data-region="Worcestershire"
+            data-status="closed"
+            data-from="2013"
+            data-to="2017">
+          <th scope="row">
+            VIDEODROME LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Kidderminster</td>
+          <td data-label="Years">
+              2013–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11472471"
+            data-id="ch-11472471"
+            data-type="shop"
+            data-region="Yorkshire"
+            data-status="closed"
+            data-from="2018"
+            data-to="2020">
+          <th scope="row">
+            ACROMUDDLE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Todmorden</td>
+          <td data-label="Years">
+              2018–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-20th-century-flicks-b850ce"
+            data-id="20th-century-flicks-b850ce"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            20th Century Flicks
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bristol</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-07630099"
+            data-id="ch-07630099"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2011"
+            data-to="2022">
+          <th scope="row">
+            2MZ VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leeds</td>
+          <td data-label="Years">
+              2011–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11405748"
+            data-id="ch-11405748"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2019">
+          <th scope="row">
+            AERONCYBEX LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bolton</td>
+          <td data-label="Years">
+              2018–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15288539"
+            data-id="ch-15288539"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2025">
+          <th scope="row">
+            AGRM SHOP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15188674"
+            data-id="ch-15188674"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            ALBERTRAM LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02445361"
+            data-id="ch-02445361"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1989"
+            data-to="2011">
+          <th scope="row">
+            APOLLO VIDEO FILM HIRE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              1989–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11473814"
+            data-id="ch-11473814"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2021">
+          <th scope="row">
+            APOLLO VIDEO STORE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2018–2021          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10817330"
+            data-id="ch-10817330"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2017"
+            data-to="2024">
+          <th scope="row">
+            ASPECT FILM AND VIDEO EBT LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bristol</td>
+          <td data-label="Years">
+              2017–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10146713"
+            data-id="ch-10146713"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2016"
+            data-to="2018">
+          <th scope="row">
+            AUDIO VISUAL 365 LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2016–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14919808"
+            data-id="ch-14919808"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            AVA VIDEO MEDIA CO., LTD.
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-avc-506deb"
+            data-id="avc-506deb"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            AVC
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Alton</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-01338685"
+            data-id="ch-01338685"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1977"
+            data-to="2022">
+          <th scope="row">
+            AVROHURST LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Essex</td>
+          <td data-label="Years">
+              1977–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ace-video-club-42df65"
+            data-id="ace-video-club-42df65"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Ace Video Club
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">45 South Market Road</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13472602"
+            data-id="ch-13472602"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2026">
+          <th scope="row">
+            BIG ISSUE EBIKES BRISTOL LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12038414"
+            data-id="ch-12038414"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2019"
+            data-to="2021">
+          <th scope="row">
+            BLACKBULL LIGHTING FOR FILM, TELEVISION AND VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2019–2021          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12816102"
+            data-id="ch-12816102"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2020"
+            data-to="2024">
+          <th scope="row">
+            BLOCKBUSTER STUDIOS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2020–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02992298"
+            data-id="ch-02992298"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1994"
+            data-to="2015">
+          <th scope="row">
+            BROADCAST &amp; PROFESSIONAL FINANCE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Watford</td>
+          <td data-label="Years">
+              1994–2015          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16215054"
+            data-id="ch-16215054"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2025"
+            data-to="2026">
+          <th scope="row">
+            BUNDLES SHOP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2025–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14743211"
+            data-id="ch-14743211"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2025">
+          <th scope="row">
+            CAMBRIDGE FILM &amp; VIDEO COMPANY LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Cardiff</td>
+          <td data-label="Years">
+              2023–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13149091"
+            data-id="ch-13149091"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2022">
+          <th scope="row">
+            CB MEDIA VIDEO SERVICES LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Blackwood</td>
+          <td data-label="Years">
+              2021–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-ni710777"
+            data-id="ch-ni710777"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2024"
+            data-to="2025">
+          <th scope="row">
+            CJAICO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Belfast</td>
+          <td data-label="Years">
+              2024–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12999425"
+            data-id="ch-12999425"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2020"
+            data-to="2022">
+          <th scope="row">
+            CRYSTAL CLEAR MEDIA SERVICES LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2020–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-compton-video-902d2e"
+            data-id="compton-video-902d2e"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Compton Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Compton</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-crown-video-120b5a"
+            data-id="crown-video-120b5a"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Crown Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Deysbrook Lane</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-ni024602"
+            data-id="ch-ni024602"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1990"
+            data-to="2026">
+          <th scope="row">
+            DE FACTO FILM AND VIDEO PRODUCTION LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Londonderry</td>
+          <td data-label="Years">
+              1990–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-03276140"
+            data-id="ch-03276140"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1996"
+            data-to="2014">
+          <th scope="row">
+            DE LAGE LANDEN TECHNOLOGY FINANCE UK LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Watford</td>
+          <td data-label="Years">
+              1996–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13049304"
+            data-id="ch-13049304"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2020"
+            data-to="">
+          <th scope="row">
+            DEUTSCHE INDUSTRIE VIDEO SYSTEM LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2020          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-13708758"
+            data-id="ch-13708758"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            DH SCOOTERS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16877682"
+            data-id="ch-16877682"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2025"
+            data-to="">
+          <th scope="row">
+            DISC EXPRESS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Cambridge</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-15034345"
+            data-id="ch-15034345"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            EIUTE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Cardiff</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15152151"
+            data-id="ch-15152151"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            ENCERPOW LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Cardiff</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08746633"
+            data-id="ch-08746633"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2013"
+            data-to="2017">
+          <th scope="row">
+            ENJOY RENTALS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Grimsby</td>
+          <td data-label="Years">
+              2013–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07007007"
+            data-id="ch-07007007"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2009"
+            data-to="2020">
+          <th scope="row">
+            ENTERTAINMENT POD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2009–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13618508"
+            data-id="ch-13618508"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2024">
+          <th scope="row">
+            EVRIT PLUS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Basildon</td>
+          <td data-label="Years">
+              2021–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07388090"
+            data-id="ch-07388090"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2010"
+            data-to="2012">
+          <th scope="row">
+            EXTREME VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Blackburn</td>
+          <td data-label="Years">
+              2010–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-express-video-a35121"
+            data-id="express-video-a35121"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Express Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">96 St Peter&#39;s Street</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10916516"
+            data-id="ch-10916516"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2017"
+            data-to="">
+          <th scope="row">
+            FAMOUS VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Croydon</td>
+          <td data-label="Years">
+              2017          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-13817454"
+            data-id="ch-13817454"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            FANGYUAN INFORMATION SERVICE CO., LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06723184"
+            data-id="ch-06723184"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2008"
+            data-to="">
+          <th scope="row">
+            FARDIS MEDIA LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2008          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-07665401"
+            data-id="ch-07665401"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2011"
+            data-to="2014">
+          <th scope="row">
+            FILM &amp; VIDEO ENGINEERING LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ipswich</td>
+          <td data-label="Years">
+              2011–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07903118"
+            data-id="ch-07903118"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2012"
+            data-to="2013">
+          <th scope="row">
+            FILM AND VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Sevenoaks</td>
+          <td data-label="Years">
+              2012–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06856901"
+            data-id="ch-06856901"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2009"
+            data-to="2014">
+          <th scope="row">
+            FILMNIGHT UK LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2009–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04168649"
+            data-id="ch-04168649"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2001"
+            data-to="2016">
+          <th scope="row">
+            FORTMAY LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Middlesex</td>
+          <td data-label="Years">
+              2001–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13061244"
+            data-id="ch-13061244"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2020"
+            data-to="2022">
+          <th scope="row">
+            FUTURE VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2020–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-fast-forward-88d6fd"
+            data-id="fast-forward-88d6fd"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Fast Forward
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ayr</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-16167150"
+            data-id="ch-16167150"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2025"
+            data-to="2026">
+          <th scope="row">
+            GAME SURGE RENTALS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2025–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09826994"
+            data-id="ch-09826994"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2023">
+          <th scope="row">
+            GAS FILM &amp; VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Salford</td>
+          <td data-label="Years">
+              2015–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16822210"
+            data-id="ch-16822210"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2025"
+            data-to="">
+          <th scope="row">
+            GOD MODE GAME RENTALS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bristol</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-16507869"
+            data-id="ch-16507869"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2025"
+            data-to="2026">
+          <th scope="row">
+            GODZILLA LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bradford</td>
+          <td data-label="Years">
+              2025–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13195815"
+            data-id="ch-13195815"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2025">
+          <th scope="row">
+            GP VIDEO LIBRARY LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Sheffield</td>
+          <td data-label="Years">
+              2021–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-sc678702"
+            data-id="ch-sc678702"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2020"
+            data-to="2022">
+          <th scope="row">
+            GREENWOODS RESTAURANT LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Hamilton</td>
+          <td data-label="Years">
+              2020–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-ni691098"
+            data-id="ch-ni691098"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2022"
+            data-to="2023">
+          <th scope="row">
+            GXKMEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Belfast</td>
+          <td data-label="Years">
+              2022–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-great-films-38dda3"
+            data-id="great-films-38dda3"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Great Films
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">82 South End</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-h-c-s-video-04bcf7"
+            data-id="h-c-s-video-04bcf7"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            H.C.S. Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Portsmouth</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04608277"
+            data-id="ch-04608277"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2002"
+            data-to="2017">
+          <th scope="row">
+            HOI POLLOI (FILM &amp; VIDEO) LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Co Durham</td>
+          <td data-label="Years">
+              2002–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16847348"
+            data-id="ch-16847348"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2025"
+            data-to="">
+          <th scope="row">
+            HUSKY PROVIDERS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-09893596"
+            data-id="ch-09893596"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2016">
+          <th scope="row">
+            IMOSION FILM AND VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2015–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-17043136"
+            data-id="ch-17043136"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            INKWE STUDIOS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bristol</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-15650357"
+            data-id="ch-15650357"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2024"
+            data-to="2025">
+          <th scope="row">
+            INSTALLATION AND DESIGN LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2024–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11128766"
+            data-id="ch-11128766"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2018"
+            data-to="">
+          <th scope="row">
+            IPLAY RENTALS LTD.
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bognor Regis</td>
+          <td data-label="Years">
+              2018          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-irene-and-joe-s-video-movie-club-d8510b"
+            data-id="irene-and-joe-s-video-movie-club-d8510b"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Irene and Joe&#39;s Video Movie Club
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">50 Dalton Road</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-j-j-faffea"
+            data-id="j-j-faffea"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            J &amp; J
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Princes End</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13112475"
+            data-id="ch-13112475"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2022">
+          <th scope="row">
+            JALOUX FILM AND VIDEO HIRE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021–2022          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-jf-drake-1235a5"
+            data-id="jf-drake-1235a5"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            JF Drake
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Norfolk</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15347546"
+            data-id="ch-15347546"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2023"
+            data-to="">
+          <th scope="row">
+            JOBS UK KENDAL LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Birmingham</td>
+          <td data-label="Years">
+              2023          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-14911667"
+            data-id="ch-14911667"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2026">
+          <th scope="row">
+            JOBS UK TELFORD LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Birmingham</td>
+          <td data-label="Years">
+              2023–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-jack-beanstalk-video-d60124"
+            data-id="jack-beanstalk-video-d60124"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Jack Beanstalk Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-john-s-videos-e72532"
+            data-id="john-s-videos-e72532"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            John&#39;s Videos
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Crawley</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-03172196"
+            data-id="ch-03172196"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1996"
+            data-to="2017">
+          <th scope="row">
+            LABRYS FILM &amp; VIDEO PRODUCTIONS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Penzance</td>
+          <td data-label="Years">
+              1996–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16690651"
+            data-id="ch-16690651"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2025"
+            data-to="">
+          <th scope="row">
+            LHCM GROUP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Mildenhall</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-17141092"
+            data-id="ch-17141092"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            LIGHT AND SALT LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-11696208"
+            data-id="ch-11696208"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2020">
+          <th scope="row">
+            LOOPKEY FILMS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2018–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13485766"
+            data-id="ch-13485766"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            MASALA LIFE FILMS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Slough</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15276770"
+            data-id="ch-15276770"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2025">
+          <th scope="row">
+            MAYFIELD VIEWS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Liverpool</td>
+          <td data-label="Years">
+              2023–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04327926"
+            data-id="ch-04327926"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2001"
+            data-to="2013">
+          <th scope="row">
+            MEDIA VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">West Sussex</td>
+          <td data-label="Years">
+              2001–2013          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07190899"
+            data-id="ch-07190899"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2010"
+            data-to="2017">
+          <th scope="row">
+            MNS WORLD LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Colchester</td>
+          <td data-label="Years">
+              2010–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13377072"
+            data-id="ch-13377072"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2021">
+          <th scope="row">
+            MOP INVESTMENTS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2021–2021          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-05618182"
+            data-id="ch-05618182"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2005"
+            data-to="2016">
+          <th scope="row">
+            MOVIES PLUS 247 LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">East Sussex</td>
+          <td data-label="Years">
+              2005–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-movies-bc923a"
+            data-id="movies-bc923a"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Movies
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Hampshire</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09310870"
+            data-id="ch-09310870"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2014"
+            data-to="2026">
+          <th scope="row">
+            NEMORIN CREATIVE FILM &amp; VIDEO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2014–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08320034"
+            data-id="ch-08320034"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2012"
+            data-to="2023">
+          <th scope="row">
+            NICHOLS TRADING LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Milton Keynes</td>
+          <td data-label="Years">
+              2012–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-10872118"
+            data-id="ch-10872118"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2017"
+            data-to="2019">
+          <th scope="row">
+            NOW VIDEO MEDIA GROUP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2017–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11536448"
+            data-id="ch-11536448"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2020">
+          <th scope="row">
+            NUSKA EVENT LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2018–2020          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-northgate-video-dvd-889aa3"
+            data-id="northgate-video-dvd-889aa3"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Northgate Video &amp; DVD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bury St Edmunds</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-oc325120"
+            data-id="ch-oc325120"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2006"
+            data-to="2011">
+          <th scope="row">
+            OCCAM FILM &amp; VIDEO COMPANY LLP
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2006–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13207652"
+            data-id="ch-13207652"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2023">
+          <th scope="row">
+            ONE MIND VIDEO FOR SCHOOLS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Portsmouth</td>
+          <td data-label="Years">
+              2021–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13092730"
+            data-id="ch-13092730"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2020"
+            data-to="2024">
+          <th scope="row">
+            ONLINE MEDIA VIDEO PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Nottingham</td>
+          <td data-label="Years">
+              2020–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-oscars-videos-38c68f"
+            data-id="oscars-videos-38c68f"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Oscars Videos
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Barnstaple</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-12216602"
+            data-id="ch-12216602"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2019"
+            data-to="2023">
+          <th scope="row">
+            PHANTOGRAPHICS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2019–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02448473"
+            data-id="ch-02448473"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1989"
+            data-to="2016">
+          <th scope="row">
+            PIER VIDEO HIRE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Aberystwyth</td>
+          <td data-label="Years">
+              1989–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02075617"
+            data-id="ch-02075617"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1986"
+            data-to="2012">
+          <th scope="row">
+            PINEDENE VIDEO FILMS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Hants</td>
+          <td data-label="Years">
+              1986–2012          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-pj-s-video-5aed9c"
+            data-id="pj-s-video-5aed9c"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            PJ&#39;s Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ilford</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16171154"
+            data-id="ch-16171154"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2025"
+            data-to="">
+          <th scope="row">
+            PREMIUMNOW LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2025          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-07301077"
+            data-id="ch-07301077"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2010"
+            data-to="2017">
+          <th scope="row">
+            PRIME TIME (HEDGE END) LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Southampton</td>
+          <td data-label="Years">
+              2010–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11399282"
+            data-id="ch-11399282"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2019">
+          <th scope="row">
+            PROFESSIONAL VIDEO STORE LTD.
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2018–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-13207420"
+            data-id="ch-13207420"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2021"
+            data-to="2024">
+          <th scope="row">
+            PROJECT UNO LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Portsmouth</td>
+          <td data-label="Years">
+              2021–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-park-lane-video-aacb15"
+            data-id="park-lane-video-aacb15"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Park Lane Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Hornchurch</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-pixel-busters-67dbe7"
+            data-id="pixel-busters-67dbe7"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Pixel Busters
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Stoke-on-Trent</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-playback-video-a003ea"
+            data-id="playback-video-a003ea"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Playback Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Princes Risborough</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-plaza-video-306516"
+            data-id="plaza-video-306516"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Plaza Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Reading</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02677912"
+            data-id="ch-02677912"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1992"
+            data-to="2014">
+          <th scope="row">
+            RITZ VIDEO FILM HIRE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              1992–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-rm-videos-87d14b"
+            data-id="rm-videos-87d14b"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            RM Videos
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">South Benfleet</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-11659711"
+            data-id="ch-11659711"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2025">
+          <th scope="row">
+            ROSEBUD FILM AND VIDEO PRODUCTIONS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2018–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15556507"
+            data-id="ch-15556507"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2024"
+            data-to="2025">
+          <th scope="row">
+            RYAN JONES TRADING LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Southampton</td>
+          <td data-label="Years">
+              2024–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-raven-video-427c67"
+            data-id="raven-video-427c67"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Raven Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Claregate</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-roxy-video-33582d"
+            data-id="roxy-video-33582d"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Roxy Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">100 High Street</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-s-r-video-2ee45d"
+            data-id="s-r-video-2ee45d"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            S &amp; R Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Woodseats</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14235364"
+            data-id="ch-14235364"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2022"
+            data-to="2023">
+          <th scope="row">
+            SALES VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2022–2023          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-01830957"
+            data-id="ch-01830957"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1984"
+            data-to="2010">
+          <th scope="row">
+            SANKOFA FILM AND VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              1984–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08600017"
+            data-id="ch-08600017"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2013"
+            data-to="2025">
+          <th scope="row">
+            SGA VEDIO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Wembley</td>
+          <td data-label="Years">
+              2013–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-06745923"
+            data-id="ch-06745923"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2008"
+            data-to="2016">
+          <th scope="row">
+            SIMON BRZESKWINSKI LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2008–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14897152"
+            data-id="ch-14897152"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            SINICA VIDEO STORE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Gravesend</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08188679"
+            data-id="ch-08188679"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2012"
+            data-to="2016">
+          <th scope="row">
+            SQM RENTAL&amp;EVENTS LTD.
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2012–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14634542"
+            data-id="ch-14634542"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            SSENDI ENTERTAINMENT LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-05022654"
+            data-id="ch-05022654"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2004"
+            data-to="2010">
+          <th scope="row">
+            STALWART FILM &amp; VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2004–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14796353"
+            data-id="ch-14796353"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            STARLIGHT VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-00240814"
+            data-id="ch-00240814"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1929"
+            data-to="2018">
+          <th scope="row">
+            STUDIO FILM AND VIDEO HOLDINGS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              1929–2018          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08711777"
+            data-id="ch-08711777"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2013"
+            data-to="2017">
+          <th scope="row">
+            SUCCESS VIDEO MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Manchester</td>
+          <td data-label="Years">
+              2013–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-snips-movies-c0d5d5"
+            data-id="snips-movies-c0d5d5"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Snips Movies
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Bebington</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-st-ives-video-services-f341a3"
+            data-id="st-ives-video-services-f341a3"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            St Ives Video Services
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">St Ives</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-star-video-6eff80"
+            data-id="star-video-6eff80"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Star Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Warwickshire</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-stones-video-library-sweet-shop-vaporiser-shop-4df1b0"
+            data-id="stones-video-library-sweet-shop-vaporiser-shop-4df1b0"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Stones Video Library &amp; Sweet Shop &amp; Vaporiser Shop
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Lowestoft</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-supreme-video-60d574"
+            data-id="supreme-video-60d574"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Supreme Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Ilford</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-07846117"
+            data-id="ch-07846117"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2011"
+            data-to="2014">
+          <th scope="row">
+            TAPE IT YOURSELF LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2011–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14482860"
+            data-id="ch-14482860"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2022"
+            data-to="">
+          <th scope="row">
+            THE GREEN LIGHT RENTAL SERVICES LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2022          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-02797363"
+            data-id="ch-02797363"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1993"
+            data-to="2011">
+          <th scope="row">
+            THE LEICESTER INDEPENDENT FILM AND VIDEO ASSOCIATION LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leicester</td>
+          <td data-label="Years">
+              1993–2011          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-16230511"
+            data-id="ch-16230511"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2025"
+            data-to="2026">
+          <th scope="row">
+            THE VIDEO GAME STORE LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Winchester</td>
+          <td data-label="Years">
+              2025–2026          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14681594"
+            data-id="ch-14681594"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2023"
+            data-to="">
+          <th scope="row">
+            THE WUB CLUB LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Sheffield</td>
+          <td data-label="Years">
+              2023          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-ch-14695096"
+            data-id="ch-14695096"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2025">
+          <th scope="row">
+            TOGETHER CONNECT CIC
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Penrith</td>
+          <td data-label="Years">
+              2023–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-02855189"
+            data-id="ch-02855189"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="1993"
+            data-to="2019">
+          <th scope="row">
+            TONY GLOVER FILM AND VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Newcastle Upon Tyne</td>
+          <td data-label="Years">
+              1993–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-tvl-allstar-video-8d2ac3"
+            data-id="tvl-allstar-video-8d2ac3"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            TVL Allstar Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Haverhill</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-telespot-ca73f1"
+            data-id="telespot-ca73f1"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Telespot
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Glasgow</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-the-business-471611"
+            data-id="the-business-471611"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            The Business
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Lewes Road</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-15054822"
+            data-id="ch-15054822"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2025">
+          <th scope="row">
+            UNISHOOT LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2025          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-03947802"
+            data-id="ch-03947802"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2000"
+            data-to="2010">
+          <th scope="row">
+            UXBRIDGE FILM &amp; VIDEO LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Surrey</td>
+          <td data-label="Years">
+              2000–2010          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08226477"
+            data-id="ch-08226477"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2012"
+            data-to="2014">
+          <th scope="row">
+            VIDEO AND FILM PRODUCTIONS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Newcastle</td>
+          <td data-label="Years">
+              2012–2014          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14850184"
+            data-id="ch-14850184"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2023"
+            data-to="2024">
+          <th scope="row">
+            VIDEO GAME STORE BORUNOVAS LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2023–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-14241620"
+            data-id="ch-14241620"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2022"
+            data-to="2024">
+          <th scope="row">
+            VIDEO GLOBAL MEDIA LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Stafford</td>
+          <td data-label="Years">
+              2022–2024          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-sc604885"
+            data-id="ch-sc604885"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2018"
+            data-to="2019">
+          <th scope="row">
+            VIDEO GUY (FILM PRODUCTIONS) LTD.
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Glasgow</td>
+          <td data-label="Years">
+              2018–2019          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09448098"
+            data-id="ch-09448098"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2017">
+          <th scope="row">
+            VIDEO MEDIA GROUP LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2015–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09588138"
+            data-id="ch-09588138"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2016">
+          <th scope="row">
+            VIDEO SHOP LONDON LTD
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2015–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-04334759"
+            data-id="ch-04334759"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2001"
+            data-to="2021">
+          <th scope="row">
+            VIDEO TONITE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Worcester</td>
+          <td data-label="Years">
+              2001–2021          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-vmv-video-2aa5ac"
+            data-id="vmv-video-2aa5ac"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            VMV Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Lowestoft</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-videodyssey-fd0b1b"
+            data-id="videodyssey-fd0b1b"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            VideOdyssey
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Toxteth</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-video-city-d42c4f"
+            data-id="video-city-d42c4f"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Video City
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Liverpool</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-exchange-5b6207"
+            data-id="video-exchange-5b6207"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Video Exchange
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">180 Saltmarket</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-village-ffff04"
+            data-id="video-village-ffff04"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Video Village
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-vision-48a6a2"
+            data-id="video-vision-48a6a2"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Video Vision
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Tipton</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-world-27fd93"
+            data-id="video-world-27fd93"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Video World
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Swinton</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-video-years-0818b4"
+            data-id="video-years-0818b4"
+            data-type="shop"
+            data-region=""
+            data-status="open"
+            data-from="2026"
+            data-to="">
+          <th scope="row">
+            Video Years
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Leeds</td>
+          <td data-label="Years">
+              2026          </td>
+          <td data-label="Status">open</td>
+        </tr>
+        <tr id="place-videoland-330114"
+            data-id="videoland-330114"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Videoland
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">West Sussex</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-videostar-99ab49"
+            data-id="videostar-99ab49"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Videostar
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Whitehawk Road</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-videosyncratic-b693fa"
+            data-id="videosyncratic-b693fa"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            Videosyncratic
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Oxford</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-sc508100"
+            data-id="ch-sc508100"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2017">
+          <th scope="row">
+            WS ASSETS LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Brechin</td>
+          <td data-label="Years">
+              2015–2017          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-west-end-video-8ec4f5"
+            data-id="west-end-video-8ec4f5"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from=""
+            data-to="">
+          <th scope="row">
+            West End Video
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">Church Gresley</td>
+          <td data-label="Years">
+              not recorded
+          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-09578584"
+            data-id="ch-09578584"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2015"
+            data-to="2016">
+          <th scope="row">
+            YINGJI MEDIA GROUP FINGER VIDEO ONLINE LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2015–2016          </td>
+          <td data-label="Status">closed</td>
+        </tr>
+        <tr id="place-ch-08334011"
+            data-id="ch-08334011"
+            data-type="shop"
+            data-region=""
+            data-status="closed"
+            data-from="2012"
+            data-to="2015">
+          <th scope="row">
+            ZIGZAG VIDEO MEDIA LIMITED
+          </th>
+          <td data-label="Type">shop</td>
+          <td data-label="Town">London</td>
+          <td data-label="Years">
+              2012–2015          </td>
+          <td data-label="Status">closed</td>
         </tr>
       </tbody>
     </table>
@@ -349,9 +4337,9 @@
     </div>
   </footer>
 
-  <script src="../static/js/site.js?v=4bd95064" defer></script>
-<script src="../static/vendor/leaflet/leaflet.js?v=4bd95064" defer></script>
-<script src="../static/vendor/markercluster/leaflet.markercluster.js?v=4bd95064" defer></script>
-<script src="../static/js/map.js?v=4bd95064" defer></script>
+  <script src="../static/js/site.js?v=93a5b37a" defer></script>
+<script src="../static/vendor/leaflet/leaflet.js?v=93a5b37a" defer></script>
+<script src="../static/vendor/markercluster/leaflet.markercluster.js?v=93a5b37a" defer></script>
+<script src="../static/js/map.js?v=93a5b37a" defer></script>
 </body>
 </html>
