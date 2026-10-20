@@ -34,11 +34,11 @@
   <meta property="og:url" content="https://thebillington.co.uk/video-communities-revisited-site/map/">
   <meta name="twitter:card" content="summary">
   <link rel="alternate" type="application/rss+xml" title="Video Communities Revisited — stories" href="../feed.xml">
-  <link rel="stylesheet" href="../static/css/fonts.css?v=93a5b37a">
-  <link rel="stylesheet" href="../static/css/site.css?v=93a5b37a">
-<link rel="stylesheet" href="../static/vendor/leaflet/leaflet.css?v=93a5b37a">
-<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.css?v=93a5b37a">
-<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.Default.css?v=93a5b37a">
+  <link rel="stylesheet" href="../static/css/fonts.css?v=8e0740c5">
+  <link rel="stylesheet" href="../static/css/site.css?v=8e0740c5">
+<link rel="stylesheet" href="../static/vendor/leaflet/leaflet.css?v=8e0740c5">
+<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.css?v=8e0740c5">
+<link rel="stylesheet" href="../static/vendor/markercluster/MarkerCluster.Default.css?v=8e0740c5">
 </head>
 <body class="">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -139,6 +139,12 @@
           <label class="visually-hidden" for="year-to">To year</label>
           <input type="number" id="year-to" name="year_to" inputmode="numeric" placeholder="to" min="1900" max="2100" step="1">
         </div>
+        <div class="filter-still-open">
+          <button type="button" class="chip chip-button chip-toggle" id="still-trading" aria-pressed="false">
+            <span class="chip-tick" aria-hidden="true">✓</span> Still trading
+            <span class="chip-count">45</span>
+          </button>
+        </div>
         <div class="filter-years-presets" id="year-presets">
           <button type="button" class="chip chip-button" data-from="" data-to="">All years</button>
           <button type="button" class="chip chip-button" data-from="1970" data-to="1979">1970s</button>
@@ -221,9 +227,9 @@
         <label for="filter-status">Status</label>
         <select id="filter-status" name="status">
           <option value="">Any status</option>
-          <option value="open">Still trading</option>
-          <option value="closed">Closed</option>
-          <option value="unknown">Unknown</option>
+          <option value="open">Still trading (45)</option>
+          <option value="closed">Closed (202)</option>
+          <option value="unknown">Unknown (0)</option>
         </select>
       </div>
       <div class="field field-inline field-grow">
@@ -252,6 +258,11 @@
       </noscript>
     </div>
 
+    <p class="map-hint">
+      Hold <kbd>&#8984;</kbd> (or <kbd>Ctrl</kbd>) while scrolling to zoom the
+      map; otherwise the page scrolls as usual. Click any entry in the list
+      below to zoom the map to it.
+    </p>
     <p class="map-attribution">
       Map tiles &copy; OpenStreetMap contributors. Entry data is the project's
       own, released under
@@ -269,6 +280,7 @@
         <tr>
           <th scope="col">Name</th>
           <th scope="col">Type</th>
+          <th scope="col">Address</th>
           <th scope="col">Town</th>
           <th scope="col">Years</th>
           <th scope="col">Status</th>
@@ -286,6 +298,8 @@
             BANFF VIDEO LIBRARY LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              1a Cluny Square, AB56 1AH          </td>
           <td data-label="Town">Buckie</td>
           <td data-label="Years">
               2003–2014          </td>
@@ -302,6 +316,8 @@
             BOX OFFICE 24 LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Plover Road, LU7 4AW          </td>
           <td data-label="Town">Leighton Buzzard</td>
           <td data-label="Years">
               2003–2020          </td>
@@ -318,6 +334,8 @@
             MULTICOUNTRY CONSULTANTS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Plover Road, LU7 4AW          </td>
           <td data-label="Town">Leighton Buzzard</td>
           <td data-label="Years">
               2003–2020          </td>
@@ -334,6 +352,8 @@
             VANYA KIRILOVA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              28 Grafton Road, MK40 1DJ          </td>
           <td data-label="Town">Bedford</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -350,6 +370,8 @@
             DYNAMIC MEDIA SOLUTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 7 Bilton Industrial Estate Lovelace, RG12 8YT          </td>
           <td data-label="Town">Bracknell</td>
           <td data-label="Years">
               2009          </td>
@@ -366,6 +388,8 @@
             PLAYBACK VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              10 High Street, HP27 0AX          </td>
           <td data-label="Town">Princes Risborough</td>
           <td data-label="Years">
               2025          </td>
@@ -382,6 +406,8 @@
             MOVIE ONE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 20, Penmaen Small Business Centre, Block D Penmaen Road Pontllanfraith, NP12 2DZ          </td>
           <td data-label="Town">Blackwood</td>
           <td data-label="Years">
               2026          </td>
@@ -398,6 +424,8 @@
             DVDS &amp; MORE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              31 Lenamore Road, BT79 8QA          </td>
           <td data-label="Town">Gortin</td>
           <td data-label="Years">
               2011–2013          </td>
@@ -414,6 +442,8 @@
             80S VIDEO SHOP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              11 King Street, DE55 7AF          </td>
           <td data-label="Town">Alfreton</td>
           <td data-label="Years">
               2024          </td>
@@ -430,6 +460,8 @@
             ASPECT FILM AND VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              5 Barnfield Crescent, EX1 1QT          </td>
           <td data-label="Town">Exeter</td>
           <td data-label="Years">
               2006–2026          </td>
@@ -446,6 +478,8 @@
             UTRILLO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              149 Queens Park Avenue, BH8 9HB          </td>
           <td data-label="Town">Bournemouth</td>
           <td data-label="Years">
               1992–2025          </td>
@@ -462,6 +496,8 @@
             INTERMEDIA FILM AND VIDEO (NOTTINGHAM) LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              14-18 Broad Street Nottingham, NG1 3AL          </td>
           <td data-label="Town">Bulwell</td>
           <td data-label="Years">
               1982–2010          </td>
@@ -478,6 +514,8 @@
             AMPLE FILM &amp; VIDEO PRODUCERS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2009–2016          </td>
@@ -494,6 +532,8 @@
             NATURAL FILM &amp; VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -510,6 +550,8 @@
             NATURAL FILM &amp; VIDEO PRODUCERS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -526,6 +568,8 @@
             NATURAL VIDEO &amp; FILM EDITS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -542,6 +586,8 @@
             NATURAL VIDEO &amp; FILM EFFECTS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -558,6 +604,8 @@
             NATURAL VIDEO &amp; FILM LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -574,6 +622,8 @@
             TIDY VIDEO &amp; FILM EDITS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2009–2016          </td>
@@ -590,6 +640,8 @@
             TIDY VIDEO &amp; FILM EFFECTS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2009–2016          </td>
@@ -606,6 +658,8 @@
             TIDY VIDEO &amp; FILM LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Pines Boars Head, TN6 3HD          </td>
           <td data-label="Town">Crowborough</td>
           <td data-label="Years">
               2009–2016          </td>
@@ -622,6 +676,8 @@
             REAL VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Middleton House Main Street East Cottingwith, YO42 4TN          </td>
           <td data-label="Town">York</td>
           <td data-label="Years">
               2008–2010          </td>
@@ -638,6 +694,8 @@
             414 FILM &amp; VIDEO PRODUCTIONS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              241 Crystal Palace Road London, SE22 9JQ          </td>
           <td data-label="Town"></td>
           <td data-label="Years">
               2004–2011          </td>
@@ -654,6 +712,8 @@
             FILM &amp; VIDEO DESIGN LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              136 Kensington Church Street London, W8 4BH          </td>
           <td data-label="Town"></td>
           <td data-label="Years">
               1987–2011          </td>
@@ -670,6 +730,8 @@
             FILM AND VIDEO UMBRELLA LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              8 Vine Yard London, SE1 1QL          </td>
           <td data-label="Town"></td>
           <td data-label="Years">
               1988–2017          </td>
@@ -686,6 +748,8 @@
             ORIGINAL FILM VIDEO PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              84 Saint Dionis Road London, SW6 4TU          </td>
           <td data-label="Town"></td>
           <td data-label="Years">
               1983–2011          </td>
@@ -702,6 +766,8 @@
             SEYONS DREAM ARTS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              86-90 Paul Street, EC2A 4NE          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021          </td>
@@ -718,6 +784,8 @@
             Video Future
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Longton, Stoke-on-Trent, UK, ST3 1BF          </td>
           <td data-label="Town">Longton</td>
           <td data-label="Years">
               2026          </td>
@@ -734,6 +802,8 @@
             A K VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Suite D, The Business Centre Faringdon Avenue, RM3 8EN          </td>
           <td data-label="Town">Romford</td>
           <td data-label="Years">
               1998–2014          </td>
@@ -750,6 +820,8 @@
             VIDEO AUDIO MASTER LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 9 Marbridge House Harolds Road, CM19 5BJ          </td>
           <td data-label="Town">Harlow</td>
           <td data-label="Years">
               2015–2016          </td>
@@ -766,6 +838,8 @@
             A TOUCH OF DUTCH LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              23 Chapel Street Cam, GL11 5NX          </td>
           <td data-label="Town">Dursley</td>
           <td data-label="Years">
               2003–2014          </td>
@@ -782,6 +856,8 @@
             SPESO SHOP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              71-75 Shelton Street, WC2H 9JQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2020–2021          </td>
@@ -798,6 +874,8 @@
             THE VIDEO CLUB PRODUCTIONS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              56 Station Road, SW13 0LP          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2019–2022          </td>
@@ -814,6 +892,8 @@
             B.V.C. - Bolton Video Centre
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Little Lever, Bolton, UK, BL4 8NP          </td>
           <td data-label="Town">Little Lever</td>
           <td data-label="Years">
               2026          </td>
@@ -830,6 +910,8 @@
             Deane Video Centre
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Deane, Bolton BL3, UK, BL1 1RU          </td>
           <td data-label="Town">Bolton</td>
           <td data-label="Years">
               2026          </td>
@@ -846,6 +928,8 @@
             IN HOUSE ENTERTAINMENT LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              42 42 Matley Green, SK5 8JH          </td>
           <td data-label="Town">Stockport</td>
           <td data-label="Years">
               2015–2017          </td>
@@ -862,6 +946,8 @@
             Jubilee Films
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Old St, Ashton-under-Lyne OL6, UK, OL6 7TZ          </td>
           <td data-label="Town">Ashton-under-Lyne</td>
           <td data-label="Years">
               2026          </td>
@@ -878,6 +964,8 @@
             The Movie Box
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              345 Deansgate, Manchester M3 4LG, UK          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2026          </td>
@@ -894,6 +982,8 @@
             INTERNATIONAL FILM &amp; VIDEO SERVICES LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Home Orchard Home Orchard Upper Clatford, SP11 7QD          </td>
           <td data-label="Town">Andover</td>
           <td data-label="Years">
               1993–2013          </td>
@@ -910,6 +1000,8 @@
             THE VIDEO SHOP LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Room 2 Finance House Rookery Business Park, GU32 1RU          </td>
           <td data-label="Town">Ramsdean, Petersfield</td>
           <td data-label="Years">
               2005–2010          </td>
@@ -926,6 +1018,8 @@
             VIDEO STREAM MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              49 Coates Close Brighton Hill, RG22 4EF          </td>
           <td data-label="Town">Basingstoke</td>
           <td data-label="Years">
               2013–2014          </td>
@@ -942,6 +1036,8 @@
             BUSHEY FILM AND VIDEO PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              109 Hill Road, HA5 1LD          </td>
           <td data-label="Town">Pinner</td>
           <td data-label="Years">
               2017–2019          </td>
@@ -958,6 +1054,8 @@
             DIGITAL FILM AND VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Tan House 15 South End Bassingbourn, SG8 5NJ          </td>
           <td data-label="Town">Royston</td>
           <td data-label="Years">
               2008–2026          </td>
@@ -974,6 +1072,8 @@
             GTV TV &amp; Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              356 St Albans Rd, Watford WD24 6PQ, UK, WD17 2DN          </td>
           <td data-label="Town">Watford</td>
           <td data-label="Years">
               2026          </td>
@@ -990,6 +1090,8 @@
             PRIMETIME SWADLINCOTE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Suite 7 Elstree House Elstree Way, WD6 1SD          </td>
           <td data-label="Town">Borehamwood</td>
           <td data-label="Years">
               2010–2015          </td>
@@ -1006,6 +1108,8 @@
             MEDIA CIRCUS VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              30 Kingwell Road, EN4 0HY          </td>
           <td data-label="Town">Barnet</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -1022,6 +1126,8 @@
             DRESSAGE MASTERS VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Leonard House 5-7 Newman Road, BR1 1RJ          </td>
           <td data-label="Town">Bromley</td>
           <td data-label="Years">
               2003–2011          </td>
@@ -1038,6 +1144,8 @@
             MOVIE DIRECT LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              38 Hastings Close, BB1 1QB          </td>
           <td data-label="Town">Blackburn</td>
           <td data-label="Years">
               2021–2026          </td>
@@ -1054,6 +1162,8 @@
             MOVIES DIRECT LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              38 Hastings Close, BB1 1QB          </td>
           <td data-label="Town">Blackburn</td>
           <td data-label="Years">
               2020–2026          </td>
@@ -1070,6 +1180,8 @@
             VIDEO MEDIA PRESENTATION LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Windgate House Office 6, No 5 Tarleton Business Park Tarleton, PR4 6JF          </td>
           <td data-label="Town">Preston</td>
           <td data-label="Years">
               2014–2016          </td>
@@ -1086,6 +1198,8 @@
             MARTIN BROADLEY IN-STORE VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 5 Belton Lane Industrial Estate, NG31 9HN          </td>
           <td data-label="Town">Grantham</td>
           <td data-label="Years">
               2009–2012          </td>
@@ -1102,6 +1216,8 @@
             VIDEO MEDIA STUDIO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              142b High Street 142b High Street, LN5 7PJ          </td>
           <td data-label="Town">Lincoln</td>
           <td data-label="Years">
               2017–2018          </td>
@@ -1118,6 +1234,8 @@
             FAMILY VIDEO LIBRARY (LONDON) LIMITED(THE)
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Pearl Assurance House 319 Ballards Lane, N12 8LY          </td>
           <td data-label="Town">North Finchley</td>
           <td data-label="Years">
               1982–2011          </td>
@@ -1134,6 +1252,8 @@
             THROWBACKTV LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              2nd Floor College House 17 King Edwards Road,, HA4 7AE          </td>
           <td data-label="Town">Ruislip,</td>
           <td data-label="Years">
               2021–2022          </td>
@@ -1150,6 +1270,8 @@
             Shahenshah Videos
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Alder Cres, Luton LU3, UK, LU1 2YN          </td>
           <td data-label="Town">Luton</td>
           <td data-label="Years">
               2026          </td>
@@ -1166,6 +1288,8 @@
             ARTIKAL FILMS AND VIDEO PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              132-134 College Road, HA1 1BQ          </td>
           <td data-label="Town">Harrow</td>
           <td data-label="Years">
               2008–2011          </td>
@@ -1182,6 +1306,8 @@
             BURBANK INTERNATIONAL VIDEO &amp; FILMS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              2 High Road Eastcote, HA5 2EW          </td>
           <td data-label="Town">Pinner</td>
           <td data-label="Years">
               1989–2012          </td>
@@ -1198,6 +1324,8 @@
             HUXLEY FILM &amp; VIDEO SERVICES LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Pentax House South Hill Avenue, HA2 0DU          </td>
           <td data-label="Town">South Harrow</td>
           <td data-label="Years">
               2011–2015          </td>
@@ -1214,6 +1342,8 @@
             M.G. FILMS &amp; VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3rd Floor Rear Middlesex House 29-45 High Street, HA8 7LH          </td>
           <td data-label="Town">Edgware</td>
           <td data-label="Years">
               2000–2011          </td>
@@ -1230,6 +1360,8 @@
             QOOB LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              37 Kent Road, HG1 2ET          </td>
           <td data-label="Town">Harrogate</td>
           <td data-label="Years">
               2010–2016          </td>
@@ -1246,6 +1378,8 @@
             INTERNATIONAL MEDIA COMMUNICATIONS (VIDEO) LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              C/O Tayto Group Limited Princewood Road Earlstrees Industrial Estate, NN17 4AP          </td>
           <td data-label="Town">Corby</td>
           <td data-label="Years">
               1987–2016          </td>
@@ -1262,6 +1396,8 @@
             WHITE HOUSE VIDEOS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              155 Wellingborough Road, NN10 9TB          </td>
           <td data-label="Town">Rushden</td>
           <td data-label="Years">
               1991          </td>
@@ -1278,6 +1414,8 @@
             APNAFLIX LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              26 Woodhall Road, NG8 1JX          </td>
           <td data-label="Town">Nottingham</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -1294,6 +1432,8 @@
             VIDEO U.K. (RETAIL) LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              C/O Le Fort &amp; Company Britannia House, BR6 0JP          </td>
           <td data-label="Town">Roberts Mews</td>
           <td data-label="Years">
               1994–2018          </td>
@@ -1310,6 +1450,8 @@
             BACKLIGHT FILM AND VIDEO PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              22 Fergusson Road, OX16 3HQ          </td>
           <td data-label="Town">Banbury</td>
           <td data-label="Years">
               2011–2013          </td>
@@ -1326,6 +1468,8 @@
             FILM AND VIDEO RIGHTS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Lamancha House Lamancha, EH46 7BD          </td>
           <td data-label="Town">West Linton</td>
           <td data-label="Years">
               2003–2012          </td>
@@ -1342,6 +1486,8 @@
             CARADOC DVD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Emstrey House Shrewsbury Business Park, SY2 6LG          </td>
           <td data-label="Town">Shrewsbury</td>
           <td data-label="Years">
               2009–2018          </td>
@@ -1358,6 +1504,8 @@
             ARTIST FILM AND VIDEO PRODUCTION LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              51 Clarkegrove Road, S10 2NH          </td>
           <td data-label="Town">Sheffield</td>
           <td data-label="Years">
               2012–2015          </td>
@@ -1374,6 +1522,8 @@
             VIDEO GAMES (WATH) LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              75 High Street Wath-Upon-Dearne, S63 7QB          </td>
           <td data-label="Town">Rotherham</td>
           <td data-label="Years">
               2011          </td>
@@ -1390,6 +1540,8 @@
             Video Rentals
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Thorpe Hesley, UK          </td>
           <td data-label="Town">The Village Top Shop in Thorpe Hesley</td>
           <td data-label="Years">
               2026          </td>
@@ -1406,6 +1558,8 @@
             Northgate Video &amp; DVD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              74 Northgate St, Bury St Edmunds, Bury Saint Edmunds IP33 1JD, UK          </td>
           <td data-label="Town">Bury St Edmunds (still operating</td>
           <td data-label="Years">
               2026          </td>
@@ -1422,6 +1576,8 @@
             TVL Allstar Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              T V L Allstar Video, Haverhill CB9 8HB, UK, CB9 8GY          </td>
           <td data-label="Town">Haverhill (still operating)</td>
           <td data-label="Years">
               2026          </td>
@@ -1438,6 +1594,8 @@
             BLUECHIP DATA LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              9 St. Georges Yard, GU9 7LW          </td>
           <td data-label="Town">Farnham</td>
           <td data-label="Years">
               2003–2018          </td>
@@ -1454,6 +1612,8 @@
             CRANLEIGH PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              8 Aldercombe Lane, CR3 6ED          </td>
           <td data-label="Town">Caterham</td>
           <td data-label="Years">
               1999–2014          </td>
@@ -1470,6 +1630,8 @@
             EV ENTERPRISES &amp; TRADING LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              330 London Road, CR0 2TJ          </td>
           <td data-label="Town">Croydon</td>
           <td data-label="Years">
               2020          </td>
@@ -1486,6 +1648,8 @@
             VIDEO FILM WORLD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Oakleigh Castle Road, GU21 4ET          </td>
           <td data-label="Town">Woking</td>
           <td data-label="Years">
               1982–2017          </td>
@@ -1502,6 +1666,8 @@
             Video Express
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              St Helen&#39;s Rd, Swansea SA1 4BE, UK, SA1 3BN          </td>
           <td data-label="Town">Swansea</td>
           <td data-label="Years">
               2026          </td>
@@ -1518,6 +1684,8 @@
             GAMES SURFER LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              43 Cordelia Close, CV37 0AN          </td>
           <td data-label="Town">Stratford Upon Avon</td>
           <td data-label="Years">
               2010–2013          </td>
@@ -1534,6 +1702,8 @@
             WEB VIDEO STORE LLP
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Boughton Leigh House Brownsover Road, CV21 1QL          </td>
           <td data-label="Town">Rugby</td>
           <td data-label="Years">
               2009–2016          </td>
@@ -1550,6 +1720,8 @@
             EAT DRINK FILM VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              69 Great Hampton Street Birmingham, B18 6EW          </td>
           <td data-label="Town"></td>
           <td data-label="Years">
               2005–2014          </td>
@@ -1566,6 +1738,8 @@
             MIRZA VIDEO ENTERTAINMENT LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              315 Green Lane Small Heath, B9 5PN          </td>
           <td data-label="Town">Birmingham</td>
           <td data-label="Years">
               2021–2025          </td>
@@ -1582,6 +1756,8 @@
             REFLEX DVD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              1st Floor 119 High Street Selsey, PO20 0QB          </td>
           <td data-label="Town">Chichester</td>
           <td data-label="Years">
               2011–2016          </td>
@@ -1598,6 +1774,8 @@
             SELSEY DVD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              1st Floor, 119 High Street, PO20 0QB          </td>
           <td data-label="Town">Selsey</td>
           <td data-label="Years">
               2014–2016          </td>
@@ -1614,6 +1792,8 @@
             2EAZI LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              6 Norman Place, LS8 2AW          </td>
           <td data-label="Town">Leeds</td>
           <td data-label="Years">
               2009–2013          </td>
@@ -1630,6 +1810,8 @@
             VENDAFILM LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              27 Flax House Navigation Walk Dock Street, LS10 1JH          </td>
           <td data-label="Town">Leeds</td>
           <td data-label="Years">
               2009–2012          </td>
@@ -1646,6 +1828,8 @@
             Video Years
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              7B Crown St, Leeds LS2 7DA, UK, LS26 0NX          </td>
           <td data-label="Town">Leeds (still operating)</td>
           <td data-label="Years">
               2026          </td>
@@ -1662,6 +1846,8 @@
             20th Century Flicks
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              19 Christmas Steps, Bristol BS1 5BS, UK          </td>
           <td data-label="Town">Bristol (still operating</td>
           <td data-label="Years">
               2026          </td>
@@ -1678,6 +1864,8 @@
             VIDEO FILM SERVICES (STUDIO) LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              17 Everleigh Close, BA14 0UZ          </td>
           <td data-label="Town">Trowbridge</td>
           <td data-label="Years">
               2002–2012          </td>
@@ -1694,6 +1882,8 @@
             VIDEODROME LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Church Street, DY10 2AD          </td>
           <td data-label="Town">Kidderminster</td>
           <td data-label="Years">
               2013–2017          </td>
@@ -1710,6 +1900,8 @@
             ACROMUDDLE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Suite 1 Fielden House 41 Rochdale Road, OL14 6LD          </td>
           <td data-label="Town">Todmorden</td>
           <td data-label="Years">
               2018–2020          </td>
@@ -1726,6 +1918,9 @@
             20th Century Flicks
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Bristol</td>
           <td data-label="Years">
               2026          </td>
@@ -1742,6 +1937,8 @@
             2MZ VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              66 Brian Crescent, LS15 7PN          </td>
           <td data-label="Town">Leeds</td>
           <td data-label="Years">
               2011–2022          </td>
@@ -1758,6 +1955,8 @@
             AERONCYBEX LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              546 Chorley Old Road, BL1 6AB          </td>
           <td data-label="Town">Bolton</td>
           <td data-label="Years">
               2018–2019          </td>
@@ -1774,6 +1973,8 @@
             AGRM SHOP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              7 Coronation Road, Dephna House, Launchese #105, NW10 7PQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2025          </td>
@@ -1790,6 +1991,8 @@
             ALBERTRAM LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              85 Great Portland Street, W1W 7LT          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -1806,6 +2009,8 @@
             APOLLO VIDEO FILM HIRE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Pearl Assurance House 319 Ballards Lane, N12 8LY          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               1989–2011          </td>
@@ -1822,6 +2027,8 @@
             APOLLO VIDEO STORE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              5th Floor Fourways House 57 Hilton Street Oscillate Recordings, M1 2EJ          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2018–2021          </td>
@@ -1838,6 +2045,8 @@
             ASPECT FILM AND VIDEO EBT LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              2-10 Kings Parade Mews Kings Parade Avenue, BS8 2RE          </td>
           <td data-label="Town">Bristol</td>
           <td data-label="Years">
               2017–2024          </td>
@@ -1854,6 +2063,8 @@
             AUDIO VISUAL 365 LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              11 Alma Grove, SE1 5PY          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2016–2018          </td>
@@ -1870,6 +2081,8 @@
             AVA VIDEO MEDIA CO., LTD.
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              20 Fenchurch St, EC3M 3BY          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -1886,6 +2099,8 @@
             AVC
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              6 Turk Street, Alton          </td>
           <td data-label="Town">Alton</td>
           <td data-label="Years">
               not recorded
@@ -1903,6 +2118,8 @@
             AVROHURST LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              186 Beehive Lane Chelmsford, CM2 9SJ          </td>
           <td data-label="Town">Essex</td>
           <td data-label="Years">
               1977–2022          </td>
@@ -1919,6 +2136,8 @@
             Ace Video Club
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              45 South Market Road          </td>
           <td data-label="Town">45 South Market Road</td>
           <td data-label="Years">
               not recorded
@@ -1936,6 +2155,8 @@
             BIG ISSUE EBIKES BRISTOL LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              82 St John Street, EC1M 4JN          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021–2026          </td>
@@ -1952,6 +2173,8 @@
             BLACKBULL LIGHTING FOR FILM, TELEVISION AND VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Mills Three Mill Lane, E3 3DU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2019–2021          </td>
@@ -1968,6 +2191,8 @@
             BLOCKBUSTER STUDIOS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              54a Geldeston Road, E5 8SB          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2020–2024          </td>
@@ -1984,6 +2209,8 @@
             BROADCAST &amp; PROFESSIONAL FINANCE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Building 7 Croxley Green Business Park Hatters Lane, WD18 8YN          </td>
           <td data-label="Town">Watford</td>
           <td data-label="Years">
               1994–2015          </td>
@@ -2000,6 +2227,8 @@
             BUNDLES SHOP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              128 City Road, EC1V 2NX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2025–2026          </td>
@@ -2016,6 +2245,8 @@
             CAMBRIDGE FILM &amp; VIDEO COMPANY LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              14743211 - COMPANIES HOUSE DEFAULT ADDRESS, CF14 8LH          </td>
           <td data-label="Town">Cardiff</td>
           <td data-label="Years">
               2023–2025          </td>
@@ -2032,6 +2263,8 @@
             CB MEDIA VIDEO SERVICES LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              16 Lon Rhymni Gellihaf, NP12 2QZ          </td>
           <td data-label="Town">Blackwood</td>
           <td data-label="Years">
               2021–2022          </td>
@@ -2048,6 +2281,8 @@
             CJAICO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              13 Moyle Walk, BT8 7ER          </td>
           <td data-label="Town">Belfast</td>
           <td data-label="Years">
               2024–2025          </td>
@@ -2064,6 +2299,8 @@
             CRYSTAL CLEAR MEDIA SERVICES LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              30 Chesilton Road, SW6 5AB          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2020–2022          </td>
@@ -2080,6 +2317,8 @@
             Compton Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              37 Bridgnorth Road, Compton          </td>
           <td data-label="Town">Compton</td>
           <td data-label="Years">
               not recorded
@@ -2097,6 +2336,8 @@
             Crown Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Deysbrook Lane          </td>
           <td data-label="Town">Deysbrook Lane</td>
           <td data-label="Years">
               not recorded
@@ -2114,6 +2355,8 @@
             DE FACTO FILM AND VIDEO PRODUCTION LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              43 Clarendon Street, BT48 7ER          </td>
           <td data-label="Town">Londonderry</td>
           <td data-label="Years">
               1990–2026          </td>
@@ -2130,6 +2373,8 @@
             DE LAGE LANDEN TECHNOLOGY FINANCE UK LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Building 7 Croxley Green Business Park Hatters Lane, WD18 8YN          </td>
           <td data-label="Town">Watford</td>
           <td data-label="Years">
               1996–2014          </td>
@@ -2146,6 +2391,8 @@
             DEUTSCHE INDUSTRIE VIDEO SYSTEM LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              71-75 Shelton Street Covent Garden, WC2H 9JQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2020          </td>
@@ -2162,6 +2409,8 @@
             DH SCOOTERS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              233 South Lambeth Road, SW8 1XR          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -2178,6 +2427,8 @@
             DISC EXPRESS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              57 Vickers Way Upper Cambourne, CB23 6EP          </td>
           <td data-label="Town">Cambridge</td>
           <td data-label="Years">
               2025          </td>
@@ -2194,6 +2445,8 @@
             EIUTE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              15034345 - COMPANIES HOUSE DEFAULT ADDRESS, CF14 8LH          </td>
           <td data-label="Town">Cardiff</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -2210,6 +2463,8 @@
             ENCERPOW LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              15152151 - COMPANIES HOUSE DEFAULT ADDRESS, CF14 8LH          </td>
           <td data-label="Town">Cardiff</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -2226,6 +2481,8 @@
             ENJOY RENTALS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              6-8 Freeman Street, DN32 7AA          </td>
           <td data-label="Town">Grimsby</td>
           <td data-label="Years">
               2013–2017          </td>
@@ -2242,6 +2499,8 @@
             ENTERTAINMENT POD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Assist House 25 Lombard Road, SW19 3TZ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2009–2020          </td>
@@ -2258,6 +2517,8 @@
             EVRIT PLUS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              11 Maplin Gardens, SS14 1SR          </td>
           <td data-label="Town">Basildon</td>
           <td data-label="Years">
               2021–2024          </td>
@@ -2274,6 +2535,8 @@
             EXTREME VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              42 Durham Road, BB1 9NH          </td>
           <td data-label="Town">Blackburn</td>
           <td data-label="Years">
               2010–2012          </td>
@@ -2290,6 +2553,8 @@
             Express Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              96 St Peter&#39;s Street          </td>
           <td data-label="Town">96 St Peter&#39;s Street</td>
           <td data-label="Years">
               not recorded
@@ -2307,6 +2572,8 @@
             FAMOUS VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              117 Academy Gardens, CR0 6QL          </td>
           <td data-label="Town">Croydon</td>
           <td data-label="Years">
               2017          </td>
@@ -2323,6 +2590,8 @@
             FANGYUAN INFORMATION SERVICE CO., LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit G1 Capital House 61 Amhurst Road, E8 1LL          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -2339,6 +2608,8 @@
             FARDIS MEDIA LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              21 Howberry Close Edgware, HA8 6TA          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2008          </td>
@@ -2355,6 +2626,8 @@
             FILM &amp; VIDEO ENGINEERING LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Webbs Chandlery Pin Mill, IP9 1JP          </td>
           <td data-label="Town">Ipswich</td>
           <td data-label="Years">
               2011–2014          </td>
@@ -2371,6 +2644,8 @@
             FILM AND VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Iconic House London Road Polhill Halstead, TN14 7AA          </td>
           <td data-label="Town">Sevenoaks</td>
           <td data-label="Years">
               2012–2013          </td>
@@ -2387,6 +2662,8 @@
             FILMNIGHT UK LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Olympia House Armitage Road, NW11 8RQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2009–2014          </td>
@@ -2403,6 +2680,8 @@
             FORTMAY LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              78 Cambridge Road Hounslow, TW4 7BH          </td>
           <td data-label="Town">Middlesex</td>
           <td data-label="Years">
               2001–2016          </td>
@@ -2419,6 +2698,8 @@
             FUTURE VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Flat 1805, 1, Bagshaw Building Wards Place, E14 9DU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2020–2022          </td>
@@ -2435,6 +2716,9 @@
             Fast Forward
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Ayr</td>
           <td data-label="Years">
               2026          </td>
@@ -2451,6 +2735,8 @@
             GAME SURGE RENTALS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              13 North Dene, NW7 3AT          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2025–2026          </td>
@@ -2467,6 +2753,8 @@
             GAS FILM &amp; VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              6th Floor The Landing Media City Uk, M50 2ST          </td>
           <td data-label="Town">Salford</td>
           <td data-label="Years">
               2015–2023          </td>
@@ -2483,6 +2771,8 @@
             GOD MODE GAME RENTALS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              8 Lambrook Road, BS16 2EZ          </td>
           <td data-label="Town">Bristol</td>
           <td data-label="Years">
               2025          </td>
@@ -2499,6 +2789,8 @@
             GODZILLA LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              4 Hastings Avenue, BD5 9PR          </td>
           <td data-label="Town">Bradford</td>
           <td data-label="Years">
               2025–2026          </td>
@@ -2515,6 +2807,8 @@
             GP VIDEO LIBRARY LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 1 Riverside Court Don Road, S9 2TJ          </td>
           <td data-label="Town">Sheffield</td>
           <td data-label="Years">
               2021–2025          </td>
@@ -2531,6 +2825,8 @@
             GREENWOODS RESTAURANT LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              9 Donaldson Street, ML3 0NT          </td>
           <td data-label="Town">Hamilton</td>
           <td data-label="Years">
               2020–2022          </td>
@@ -2547,6 +2843,8 @@
             GXKMEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              NI691098 - COMPANIES HOUSE DEFAULT ADDRESS 2nd Floor The Linenhall 32-38 Linenhall Street, BT2 8BG          </td>
           <td data-label="Town">Belfast</td>
           <td data-label="Years">
               2022–2023          </td>
@@ -2563,6 +2861,8 @@
             Great Films
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              82 South End          </td>
           <td data-label="Town">82 South End</td>
           <td data-label="Years">
               not recorded
@@ -2580,6 +2880,8 @@
             H.C.S. Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              140/144 Fratton Road, Portsmouth          </td>
           <td data-label="Town">Portsmouth</td>
           <td data-label="Years">
               not recorded
@@ -2597,6 +2899,8 @@
             HOI POLLOI (FILM &amp; VIDEO) LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Rowlands House, Portobello Road Birtley, DH3 3RY          </td>
           <td data-label="Town">Co Durham</td>
           <td data-label="Years">
               2002–2017          </td>
@@ -2613,6 +2917,8 @@
             HUSKY PROVIDERS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Barlow Road Levenshulme, M19 3DH          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2025          </td>
@@ -2629,6 +2935,8 @@
             IMOSION FILM AND VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              10 Penns Almshouses Greenwich South Street, SE10 8NU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2015–2016          </td>
@@ -2645,6 +2953,8 @@
             INKWE STUDIOS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              119 Chessel Street, BS3 3DG          </td>
           <td data-label="Town">Bristol</td>
           <td data-label="Years">
               2026          </td>
@@ -2661,6 +2971,8 @@
             INSTALLATION AND DESIGN LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              24-26, Arcadia Avenue Fin009/14940, N3 2JU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2024–2025          </td>
@@ -2677,6 +2989,8 @@
             IPLAY RENTALS LTD.
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Business Incubation Centre Upper Bognor Road, PO21 1HR          </td>
           <td data-label="Town">Bognor Regis</td>
           <td data-label="Years">
               2018          </td>
@@ -2693,6 +3007,8 @@
             Irene and Joe&#39;s Video Movie Club
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              50 Dalton Road          </td>
           <td data-label="Town">50 Dalton Road</td>
           <td data-label="Years">
               not recorded
@@ -2710,6 +3026,8 @@
             J &amp; J
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              High Street, Princes End          </td>
           <td data-label="Town">Princes End</td>
           <td data-label="Years">
               not recorded
@@ -2727,6 +3045,8 @@
             JALOUX FILM AND VIDEO HIRE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3d Somerfield Road, N4 2JN          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021–2022          </td>
@@ -2743,6 +3063,8 @@
             JF Drake
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              219-221 Queens Road, Norwich, Norfolk, NR1 3AE          </td>
           <td data-label="Town">Norfolk</td>
           <td data-label="Years">
               not recorded
@@ -2760,6 +3082,8 @@
             JOBS UK KENDAL LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              270 Slade Road, B23 7LX          </td>
           <td data-label="Town">Birmingham</td>
           <td data-label="Years">
               2023          </td>
@@ -2776,6 +3100,8 @@
             JOBS UK TELFORD LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              270 Slade Road, B23 7LX          </td>
           <td data-label="Town">Birmingham</td>
           <td data-label="Years">
               2023–2026          </td>
@@ -2792,6 +3118,8 @@
             Jack Beanstalk Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              142-144 Burton Road, West Didsbury, Manchester, M20 1JQ          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               not recorded
@@ -2809,6 +3137,8 @@
             John&#39;s Videos
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              25 Dobson Road, Langley Green, Crawley          </td>
           <td data-label="Town">Crawley</td>
           <td data-label="Years">
               not recorded
@@ -2826,6 +3156,8 @@
             LABRYS FILM &amp; VIDEO PRODUCTIONS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              11 Alverton Terrace Alverton Terrace, TR18 4JH          </td>
           <td data-label="Town">Penzance</td>
           <td data-label="Years">
               1996–2017          </td>
@@ -2842,6 +3174,8 @@
             LHCM GROUP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              82a James Carter Road, IP28 7DE          </td>
           <td data-label="Town">Mildenhall</td>
           <td data-label="Years">
               2025          </td>
@@ -2858,6 +3192,8 @@
             LIGHT AND SALT LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              128 City Road, London Ec1v 2nx, EC1V 2NX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2026          </td>
@@ -2874,6 +3210,8 @@
             LOOPKEY FILMS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              20-22 Wenlock Road, N1 7GU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2018–2020          </td>
@@ -2890,6 +3228,8 @@
             MASALA LIFE FILMS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Flat 5 114 Windsor Road, SL1 2JA          </td>
           <td data-label="Town">Slough</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -2906,6 +3246,8 @@
             MAYFIELD VIEWS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              64 Bardsay Road, L4 5SG          </td>
           <td data-label="Town">Liverpool</td>
           <td data-label="Years">
               2023–2025          </td>
@@ -2922,6 +3264,8 @@
             MEDIA VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              9 Merton Close Bognor Regis, PO21 5SQ          </td>
           <td data-label="Town">West Sussex</td>
           <td data-label="Years">
               2001–2013          </td>
@@ -2938,6 +3282,8 @@
             MNS WORLD LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              10 St Margaret&#39;s Cross Wick Road Langham, CO4 5PE          </td>
           <td data-label="Town">Colchester</td>
           <td data-label="Years">
               2010–2017          </td>
@@ -2954,6 +3300,8 @@
             MOP INVESTMENTS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              109 Lancaster Gate, W2 3NW          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2021–2021          </td>
@@ -2970,6 +3318,8 @@
             MOVIES PLUS 247 LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              86 Lewes Road Brighton, BN2 3HZ          </td>
           <td data-label="Town">East Sussex</td>
           <td data-label="Years">
               2005–2016          </td>
@@ -2986,6 +3336,8 @@
             Movies
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              123 Winter Road, Southsea, Hampshire, PO4 8DS          </td>
           <td data-label="Town">Hampshire</td>
           <td data-label="Years">
               not recorded
@@ -3003,6 +3355,8 @@
             NEMORIN CREATIVE FILM &amp; VIDEO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              C/O RRS DEPARTMENT S&amp;W Partners Llp 45 Gresham Street, EC2V 7BG          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2014–2026          </td>
@@ -3019,6 +3373,8 @@
             NICHOLS TRADING LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              2 Manor Farm Court Old Wolverton Road Old Wolverton, MK12 5NN          </td>
           <td data-label="Town">Milton Keynes</td>
           <td data-label="Years">
               2012–2023          </td>
@@ -3035,6 +3391,8 @@
             NOW VIDEO MEDIA GROUP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              20-22 Wenlock Road, N1 7GU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2017–2019          </td>
@@ -3051,6 +3409,8 @@
             NUSKA EVENT LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              102-105 Whitechapel High Street, E1 7RA          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2018–2020          </td>
@@ -3067,6 +3427,9 @@
             Northgate Video &amp; DVD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Bury St Edmunds</td>
           <td data-label="Years">
               2026          </td>
@@ -3083,6 +3446,8 @@
             OCCAM FILM &amp; VIDEO COMPANY LLP
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              13 Maclean Road Forest Hill, SE23 1PB          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2006–2011          </td>
@@ -3099,6 +3464,8 @@
             ONE MIND VIDEO FOR SCHOOLS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              26 Totland Road, PO6 3HS          </td>
           <td data-label="Town">Portsmouth</td>
           <td data-label="Years">
               2021–2023          </td>
@@ -3115,6 +3482,8 @@
             ONLINE MEDIA VIDEO PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              6 Court Gardens West Bridgford, NG2 7SN          </td>
           <td data-label="Town">Nottingham</td>
           <td data-label="Years">
               2020–2024          </td>
@@ -3131,6 +3500,8 @@
             Oscars Videos
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              35 Bear Street, Barnstaple, EX32 7BZ          </td>
           <td data-label="Town">Barnstaple</td>
           <td data-label="Years">
               not recorded
@@ -3148,6 +3519,8 @@
             PHANTOGRAPHICS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              71-75 Shelton Street Covent Garden, WC2H 9JQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2019–2023          </td>
@@ -3164,6 +3537,8 @@
             PIER VIDEO HIRE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              The Royal Pier Marine Terrace, SY23 2AZ          </td>
           <td data-label="Town">Aberystwyth</td>
           <td data-label="Years">
               1989–2016          </td>
@@ -3180,6 +3555,8 @@
             PINEDENE VIDEO FILMS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              99 Hill Lane Southampton, SO15 5AE          </td>
           <td data-label="Town">Hants</td>
           <td data-label="Years">
               1986–2012          </td>
@@ -3196,6 +3573,8 @@
             PJ&#39;s Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Longwood Gardens, Ilford          </td>
           <td data-label="Town">Ilford</td>
           <td data-label="Years">
               not recorded
@@ -3213,6 +3592,8 @@
             PREMIUMNOW LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              27 Old Gloucester Street, WC1N 3AX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2025          </td>
@@ -3229,6 +3610,8 @@
             PRIME TIME (HEDGE END) LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              25 Rufus Gardens Totton, SO40 8TA          </td>
           <td data-label="Town">Southampton</td>
           <td data-label="Years">
               2010–2017          </td>
@@ -3245,6 +3628,8 @@
             PROFESSIONAL VIDEO STORE LTD.
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Office 32 19-21 Crawford Street, W1H 1PJ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2018–2019          </td>
@@ -3261,6 +3646,8 @@
             PROJECT UNO LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              26 Totland Road, PO6 3HS          </td>
           <td data-label="Town">Portsmouth</td>
           <td data-label="Years">
               2021–2024          </td>
@@ -3277,6 +3664,8 @@
             Park Lane Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              75 Park Lane, Hornchurch          </td>
           <td data-label="Town">Hornchurch</td>
           <td data-label="Years">
               not recorded
@@ -3294,6 +3683,9 @@
             Pixel Busters
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Stoke-on-Trent</td>
           <td data-label="Years">
               2026          </td>
@@ -3310,6 +3702,9 @@
             Playback Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Princes Risborough</td>
           <td data-label="Years">
               2026          </td>
@@ -3326,6 +3721,8 @@
             Plaza Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              D The Colonnade Overdown Road, Tilehurst, Reading          </td>
           <td data-label="Town">Reading</td>
           <td data-label="Years">
               not recorded
@@ -3343,6 +3740,8 @@
             RITZ VIDEO FILM HIRE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Hill House 1 Little New Street, EC4A 3TR          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               1992–2014          </td>
@@ -3359,6 +3758,8 @@
             RM Videos
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              89 High Road, South Benfleet          </td>
           <td data-label="Town">South Benfleet</td>
           <td data-label="Years">
               not recorded
@@ -3376,6 +3777,8 @@
             ROSEBUD FILM AND VIDEO PRODUCTIONS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Flat 1a Silkin Close, M13 9UY          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2018–2025          </td>
@@ -3392,6 +3795,8 @@
             RYAN JONES TRADING LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Flat 9 Pinelands Court Coxford Road, SO16 5SS          </td>
           <td data-label="Town">Southampton</td>
           <td data-label="Years">
               2024–2025          </td>
@@ -3408,6 +3813,8 @@
             Raven Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              51 Pendeford Avenue, Claregate          </td>
           <td data-label="Town">Claregate</td>
           <td data-label="Years">
               not recorded
@@ -3425,6 +3832,8 @@
             Roxy Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              100 High Street          </td>
           <td data-label="Town">100 High Street</td>
           <td data-label="Years">
               not recorded
@@ -3442,6 +3851,8 @@
             S &amp; R Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              796 Chesterfield Road, Woodseats          </td>
           <td data-label="Town">Woodseats</td>
           <td data-label="Years">
               not recorded
@@ -3459,6 +3870,8 @@
             SALES VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              71-75 Shelton Street Covent Garden, WC2H 9JQ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2022–2023          </td>
@@ -3475,6 +3888,8 @@
             SANKOFA FILM AND VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              52-58 Tabernacle Street Gotham Erskine Llp, EC2A 4NJ          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               1984–2010          </td>
@@ -3491,6 +3906,8 @@
             SGA VEDIO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              13 Ealing Road, HA0 4AA          </td>
           <td data-label="Town">Wembley</td>
           <td data-label="Years">
               2013–2025          </td>
@@ -3507,6 +3924,8 @@
             SIMON BRZESKWINSKI LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              32 St Marys Grove Chiswick, W4 3LN          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2008–2016          </td>
@@ -3523,6 +3942,8 @@
             SINICA VIDEO STORE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              58 Edwin Street, DA12 1EL          </td>
           <td data-label="Town">Gravesend</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -3539,6 +3960,8 @@
             SQM RENTAL&amp;EVENTS LTD.
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              590 Kingston Road, SW20 8DN          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2012–2016          </td>
@@ -3555,6 +3978,8 @@
             SSENDI ENTERTAINMENT LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Flat 5 Chatham House Mcneil Road, SE5 8PN          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -3571,6 +3996,8 @@
             STALWART FILM &amp; VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Suite Gb Ground Floor, Barclay House 35 Whitworth Street West, M1 5NG          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2004–2010          </td>
@@ -3587,6 +4014,8 @@
             STARLIGHT VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Floor 1 Office 25 22 Market Square, E14 6BU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -3603,6 +4032,8 @@
             STUDIO FILM AND VIDEO HOLDINGS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              15 Canada Square, E14 5GL          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               1929–2018          </td>
@@ -3619,6 +4050,8 @@
             SUCCESS VIDEO MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              42 Cross Lane East Partington, M31 4FR          </td>
           <td data-label="Town">Manchester</td>
           <td data-label="Years">
               2013–2017          </td>
@@ -3635,6 +4068,9 @@
             Snips Movies
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Bebington</td>
           <td data-label="Years">
               2026          </td>
@@ -3651,6 +4087,8 @@
             St Ives Video Services
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              10 Fore Street, St Ives          </td>
           <td data-label="Town">St Ives</td>
           <td data-label="Years">
               not recorded
@@ -3668,6 +4106,8 @@
             Star Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              32 Newdegate St., Nuneaton, Warwickshire, CV11 4EU          </td>
           <td data-label="Town">Warwickshire</td>
           <td data-label="Years">
               not recorded
@@ -3685,6 +4125,9 @@
             Stones Video Library &amp; Sweet Shop &amp; Vaporiser Shop
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Lowestoft</td>
           <td data-label="Years">
               2026          </td>
@@ -3701,6 +4144,8 @@
             Supreme Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Longwood Gardens, Ilford          </td>
           <td data-label="Town">Ilford</td>
           <td data-label="Years">
               not recorded
@@ -3718,6 +4163,8 @@
             TAPE IT YOURSELF LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              145-157 St John Street, EC1V 4PW          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2011–2014          </td>
@@ -3734,6 +4181,8 @@
             THE GREEN LIGHT RENTAL SERVICES LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              128 City Road, EC1V 2NX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2022          </td>
@@ -3750,6 +4199,8 @@
             THE LEICESTER INDEPENDENT FILM AND VIDEO ASSOCIATION LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Fosse Arts Centre Mantle Road, LE3 5HG          </td>
           <td data-label="Town">Leicester</td>
           <td data-label="Years">
               1993–2011          </td>
@@ -3766,6 +4217,8 @@
             THE VIDEO GAME STORE LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              10 Goatsbeard House Winnall Mannor Road, RG22 4JW          </td>
           <td data-label="Town">Winchester</td>
           <td data-label="Years">
               2025–2026          </td>
@@ -3782,6 +4235,8 @@
             THE WUB CLUB LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Plot 22 Exchange Street, S2 5TS          </td>
           <td data-label="Town">Sheffield</td>
           <td data-label="Years">
               2023          </td>
@@ -3798,6 +4253,8 @@
             TOGETHER CONNECT CIC
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Unit 4 Mason Court Penrith 40 Business Park, CA11 9GR          </td>
           <td data-label="Town">Penrith</td>
           <td data-label="Years">
               2023–2025          </td>
@@ -3814,6 +4271,8 @@
             TONY GLOVER FILM AND VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              13 Horsley Wood Cottages Horsley, NE15 0NR          </td>
           <td data-label="Town">Newcastle Upon Tyne</td>
           <td data-label="Years">
               1993–2019          </td>
@@ -3830,6 +4289,9 @@
             TVL Allstar Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Haverhill</td>
           <td data-label="Years">
               2026          </td>
@@ -3846,6 +4308,8 @@
             Telespot
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              1150 Argyle Street, Glasgow, G3 8TE          </td>
           <td data-label="Town">Glasgow</td>
           <td data-label="Years">
               not recorded
@@ -3863,6 +4327,8 @@
             The Business
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Lewes Road          </td>
           <td data-label="Town">Lewes Road</td>
           <td data-label="Years">
               not recorded
@@ -3880,6 +4346,8 @@
             UNISHOOT LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              27 Old Gloucester Street, WC1N 3AX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2025          </td>
@@ -3896,6 +4364,8 @@
             UXBRIDGE FILM &amp; VIDEO LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Clive House,12/18 Queens Road Weybridge, KT13 9XB          </td>
           <td data-label="Town">Surrey</td>
           <td data-label="Years">
               2000–2010          </td>
@@ -3912,6 +4382,8 @@
             VIDEO AND FILM PRODUCTIONS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              62 Broad Street, ST5 2BL          </td>
           <td data-label="Town">Newcastle</td>
           <td data-label="Years">
               2012–2014          </td>
@@ -3928,6 +4400,8 @@
             VIDEO GAME STORE BORUNOVAS LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              27 Old Gloucester Street, WC1N 3AX          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2023–2024          </td>
@@ -3944,6 +4418,8 @@
             VIDEO GLOBAL MEDIA LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              7 Merrivale Road, ST17 9EB          </td>
           <td data-label="Town">Stafford</td>
           <td data-label="Years">
               2022–2024          </td>
@@ -3960,6 +4436,8 @@
             VIDEO GUY (FILM PRODUCTIONS) LTD.
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Film City Glasgow 401 Govan Road Govan, G51 2QJ          </td>
           <td data-label="Town">Glasgow</td>
           <td data-label="Years">
               2018–2019          </td>
@@ -3976,6 +4454,8 @@
             VIDEO MEDIA GROUP LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              20-22 Wenlock Road, N1 7GU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2015–2017          </td>
@@ -3992,6 +4472,8 @@
             VIDEO SHOP LONDON LTD
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              20-22 Wenlock Road, N1 7GU          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2015–2016          </td>
@@ -4008,6 +4490,8 @@
             VIDEO TONITE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              15 Calgary Drive, WR2 4DW          </td>
           <td data-label="Town">Worcester</td>
           <td data-label="Years">
               2001–2021          </td>
@@ -4024,6 +4508,8 @@
             VMV Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              99 Raglan Street, Lowestoft, NR32 2JU          </td>
           <td data-label="Town">Lowestoft</td>
           <td data-label="Years">
               not recorded
@@ -4041,6 +4527,9 @@
             VideOdyssey
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Toxteth</td>
           <td data-label="Years">
               2026          </td>
@@ -4057,6 +4546,8 @@
             Video City
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              28 Marian Square, Netherton, Liverpool, L30 5QA          </td>
           <td data-label="Town">Liverpool</td>
           <td data-label="Years">
               not recorded
@@ -4074,6 +4565,8 @@
             Video Exchange
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              180 Saltmarket          </td>
           <td data-label="Town">180 Saltmarket</td>
           <td data-label="Years">
               not recorded
@@ -4091,6 +4584,8 @@
             Video Village
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              92 Fulham Palace Road, Hammersmith, London          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               not recorded
@@ -4108,6 +4603,8 @@
             Video Vision
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              3 Owen Street, Town Centre, Tipton, DY4 8EZ          </td>
           <td data-label="Town">Tipton</td>
           <td data-label="Years">
               not recorded
@@ -4125,6 +4622,9 @@
             Video World
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Swinton</td>
           <td data-label="Years">
               not recorded
@@ -4142,6 +4642,9 @@
             Video Years
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              <span class="muted">not recorded</span>
+          </td>
           <td data-label="Town">Leeds</td>
           <td data-label="Years">
               2026          </td>
@@ -4158,6 +4661,8 @@
             Videoland
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              52 Springfield Road, Horsham, West Sussex, RH12 2PD          </td>
           <td data-label="Town">West Sussex</td>
           <td data-label="Years">
               not recorded
@@ -4175,6 +4680,8 @@
             Videostar
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Black Rock Video Store, 2 The Broadway, Whitehawk Road          </td>
           <td data-label="Town">Whitehawk Road</td>
           <td data-label="Years">
               not recorded
@@ -4192,6 +4699,8 @@
             Videosyncratic
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              101 Cowley Road, Oxford, OX4 3TH          </td>
           <td data-label="Town">Oxford</td>
           <td data-label="Years">
               not recorded
@@ -4209,6 +4718,8 @@
             WS ASSETS LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              4 Bearehill Glebe, DD9 6XE          </td>
           <td data-label="Town">Brechin</td>
           <td data-label="Years">
               2015–2017          </td>
@@ -4225,6 +4736,8 @@
             West End Video
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              19-21 Church Street, Church Gresley          </td>
           <td data-label="Town">Church Gresley</td>
           <td data-label="Years">
               not recorded
@@ -4242,6 +4755,8 @@
             YINGJI MEDIA GROUP FINGER VIDEO ONLINE LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              Chase Business Centre 39-41 Chase Side, N14 5BP          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2015–2016          </td>
@@ -4258,6 +4773,8 @@
             ZIGZAG VIDEO MEDIA LIMITED
           </th>
           <td data-label="Type">shop</td>
+          <td data-label="Address">
+              37 Warren Street, W1T 6AD          </td>
           <td data-label="Town">London</td>
           <td data-label="Years">
               2012–2015          </td>
@@ -4265,6 +4782,9 @@
         </tr>
       </tbody>
     </table>
+    <p class="list-more">
+      <button type="button" class="btn btn-ghost btn-small" id="show-more" hidden></button>
+    </p>
   </section>
 
   <section class="band-tight band-tint">
@@ -4337,9 +4857,9 @@
     </div>
   </footer>
 
-  <script src="../static/js/site.js?v=93a5b37a" defer></script>
-<script src="../static/vendor/leaflet/leaflet.js?v=93a5b37a" defer></script>
-<script src="../static/vendor/markercluster/leaflet.markercluster.js?v=93a5b37a" defer></script>
-<script src="../static/js/map.js?v=93a5b37a" defer></script>
+  <script src="../static/js/site.js?v=8e0740c5" defer></script>
+<script src="../static/vendor/leaflet/leaflet.js?v=8e0740c5" defer></script>
+<script src="../static/vendor/markercluster/leaflet.markercluster.js?v=8e0740c5" defer></script>
+<script src="../static/js/map.js?v=8e0740c5" defer></script>
 </body>
 </html>
