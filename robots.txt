@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thebillington.github.io/video-communities-revisited-site/sitemap.xml

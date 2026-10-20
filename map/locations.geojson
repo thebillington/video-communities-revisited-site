@@ -1,0 +1,120 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.7449,
+     54.3284
+    ]
+   },
+   "properties": {
+    "id": "example-northern-video-shop",
+    "name": "Example Video (sample entry)",
+    "type": "shop",
+    "status": "closed",
+    "years": "1983–2004",
+    "town": "Kendal",
+    "region": "North West",
+    "address": "1 Example Street",
+    "description": "A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources.",
+    "url": "",
+    "sample": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -4.2518,
+     55.8642
+    ]
+   },
+   "properties": {
+    "id": "example-scottish-video-archive",
+    "name": "Example Video Archive (sample entry)",
+    "type": "archive",
+    "status": "open",
+    "years": "1990–",
+    "town": "Glasgow",
+    "region": "Scotland",
+    "address": "",
+    "description": "A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row.",
+    "url": "https://example.org/archive",
+    "sample": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.5879,
+     51.4545
+    ]
+   },
+   "properties": {
+    "id": "example-bristol-tape-club",
+    "name": "Example Tape Club (sample entry)",
+    "type": "club",
+    "status": "unknown",
+    "years": "1988–1996",
+    "town": "Bristol",
+    "region": "South West",
+    "address": "",
+    "description": "A members' club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry.",
+    "url": "",
+    "sample": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.1791,
+     51.4816
+    ]
+   },
+   "properties": {
+    "id": "example-wales-collection",
+    "name": "Example Private Collection (sample entry)",
+    "type": "collection",
+    "status": "unknown",
+    "years": "1979–",
+    "town": "Cardiff",
+    "region": "Wales",
+    "address": "",
+    "description": "A private Betamax and VHS collection opened to researchers by appointment. Sample row.",
+    "url": "",
+    "sample": true
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.8904,
+     52.4862
+    ]
+   },
+   "properties": {
+    "id": "example-midlands-swap-meet",
+    "name": "Example Swap Meet (sample entry)",
+    "type": "market",
+    "status": "open",
+    "years": "1996–",
+    "town": "Birmingham",
+    "region": "West Midlands",
+    "address": "",
+    "description": "A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry.",
+    "url": "",
+    "sample": true
+   }
+  }
+ ]
+}

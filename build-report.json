@@ -1,0 +1,33 @@
+{
+ "generated": "2026-10-20T17:00:00+00:00",
+ "pages": 22,
+ "errors": [],
+ "warnings": [
+  "locations.yml[0] (Example Video (sample entry)): still marked as sample data",
+  "locations.yml[1] (Example Tape Club (sample entry)): still marked as sample data",
+  "locations.yml[2] (Example Swap Meet (sample entry)): still marked as sample data",
+  "locations.yml[3] (Example Video Archive (sample entry)): still marked as sample data",
+  "locations.yml[4] (Example Private Collection (sample entry)): still marked as sample data",
+  "team.yml[0]: still marked as sample data",
+  "team.yml[1]: still marked as sample data",
+  "team.yml[2]: still marked as sample data",
+  "team.yml[3]: still marked as sample data",
+  "partners.yml[0]: still marked as sample data",
+  "partners.yml[1]: still marked as sample data",
+  "outputs.yml[0]: still marked as sample data",
+  "outputs.yml[1]: still marked as sample data",
+  "outputs.yml[2]: still marked as sample data",
+  "outputs.yml[3]: still marked as sample data",
+  "outputs.yml[4]: still marked as sample data",
+  "events.yml[0]: still marked as sample data",
+  "events.yml[1]: still marked as sample data",
+  "events.yml[2]: still marked as sample data",
+  "events.yml[3]: still marked as sample data",
+  "site.yml: 'institution' still contains placeholder text",
+  "site.yml: 'funder_award' still contains placeholder text",
+  "team.yml[0]: 'name' still contains placeholder text",
+  "team.yml[1]: 'name' still contains placeholder text",
+  "team.yml[2]: 'name' still contains placeholder text",
+  "team.yml[3]: 'name' still contains placeholder text"
+ ]
+}

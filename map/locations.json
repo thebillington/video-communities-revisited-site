@@ -1,0 +1,62 @@
+[
+ {
+  "id": "example-northern-video-shop",
+  "name": "Example Video (sample entry)",
+  "type": "shop",
+  "status": "closed",
+  "years": "1983–2004",
+  "town": "Kendal",
+  "region": "North West",
+  "lat": 54.3284,
+  "lng": -2.7449,
+  "sample": true
+ },
+ {
+  "id": "example-scottish-video-archive",
+  "name": "Example Video Archive (sample entry)",
+  "type": "archive",
+  "status": "open",
+  "years": "1990–",
+  "town": "Glasgow",
+  "region": "Scotland",
+  "lat": 55.8642,
+  "lng": -4.2518,
+  "sample": true
+ },
+ {
+  "id": "example-bristol-tape-club",
+  "name": "Example Tape Club (sample entry)",
+  "type": "club",
+  "status": "unknown",
+  "years": "1988–1996",
+  "town": "Bristol",
+  "region": "South West",
+  "lat": 51.4545,
+  "lng": -2.5879,
+  "sample": true
+ },
+ {
+  "id": "example-wales-collection",
+  "name": "Example Private Collection (sample entry)",
+  "type": "collection",
+  "status": "unknown",
+  "years": "1979–",
+  "town": "Cardiff",
+  "region": "Wales",
+  "lat": 51.4816,
+  "lng": -3.1791,
+  "sample": true
+ },
+ {
+  "id": "example-midlands-swap-meet",
+  "name": "Example Swap Meet (sample entry)",
+  "type": "market",
+  "status": "open",
+  "years": "1996–",
+  "town": "Birmingham",
+  "region": "West Midlands",
+  "lat": 52.4862,
+  "lng": -1.8904,
+  "sample": true
+ }
+]

@@ -1,0 +1,6 @@
+id,name,type,status,years,town,region,lat,lng,url,description
+example-northern-video-shop,Example Video (sample entry),shop,closed,1983–2004,Kendal,North West,54.3284,-2.7449,,"A family-run rental shop that traded for two decades from a converted corner unit, remembered for its horror aisle and Saturday morning queue. Sample row: replace with a real entry and its sources."
+example-scottish-video-archive,Example Video Archive (sample entry),archive,open,1990–,Glasgow,Scotland,55.8642,-4.2518,https://example.org/archive,"A regional collection holding rental-shop stock, trade press and equipment alongside its tape holdings. Sample row."
+example-bristol-tape-club,Example Tape Club (sample entry),club,unknown,1988–1996,Bristol,South West,51.4545,-2.5879,,"A members' club that met monthly to screen and swap tapes, with a photocopied newsletter. Sample row: replace with a real entry."
+example-wales-collection,Example Private Collection (sample entry),collection,unknown,1979–,Cardiff,Wales,51.4816,-3.1791,,A private Betamax and VHS collection opened to researchers by appointment. Sample row.
+example-midlands-swap-meet,Example Swap Meet (sample entry),market,open,1996–,Birmingham,West Midlands,52.4862,-1.8904,,"A monthly stall market for tapes, discs and players, still running in a community hall. Sample row: replace with a real entry."
