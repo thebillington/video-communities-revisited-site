@@ -6,9 +6,9 @@ Everything in this repository is produced automatically by the build that runs i
 the project's private source repository. **Do not edit files here, and do not
 open pull requests here** — changes would be overwritten by the next build.
 
-- Live site: https://thebillington.github.io/video-communities-revisited-site/
+- Live site: https://thebillington.co.uk/video-communities-revisited-site/
 - Source and editing guide: the private repository, `thebillington/video-communities-revisited`
-- Built: 2026-10-20 17:00 UTC
+- Built: 2026-10-20 17:01 UTC
 - Generator: `site/build.py` (Python, Jinja2 + Markdown + YAML)
 
 The site is plain HTML, CSS and a small amount of JavaScript, with no

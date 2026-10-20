@@ -1,7 +1,7 @@
 Title: Video Communities Revisited
-URL: https://thebillington.github.io/video-communities-revisited-site/
+URL: https://thebillington.co.uk/video-communities-revisited-site/
 Generator: site/build.py (Python; Jinja2, Markdown, YAML)
-Built: 2026-10-20 17:00:00 UTC
+Built: 2026-10-20 17:01:41 UTC
 Contact: hello@example.ac.uk
 License: Text CC BY 4.0; map dataset CC0 1.0
 Note: This repository is generated. Do not edit: changes are overwritten on the

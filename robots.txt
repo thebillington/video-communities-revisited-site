@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thebillington.github.io/video-communities-revisited-site/sitemap.xml
+Sitemap: https://thebillington.co.uk/video-communities-revisited-site/sitemap.xml
